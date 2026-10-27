@@ -1,0 +1,22 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Paula Everhart    DOB: 01/19/1972    Member ID: SYN-100445
+Date of service: 05/29/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Walking about 20 minutes most days with a neighbor.
+Denies chest pain, shortness of breath, or palpitations.
+Notes BP was 125/84 when checked at urgent care a few months ago.
+Reports A1c was normal at her last check.
+
+OBJECTIVE
+Vitals: HR 62, Temp 98.6 F, Wt 83 kg, SpO2 99%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 05/29/2026

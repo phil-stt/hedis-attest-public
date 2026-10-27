@@ -1,0 +1,7 @@
+code: PDC-RAS
+name: "Medication Adherence for Hypertension (RAS antagonists)"
+star_weight: 1
+collection: "pharmacy claims (PQA)"
+chart_lever: none
+status: registry_only
+closes: "Pharmacy claims; no chart lever."

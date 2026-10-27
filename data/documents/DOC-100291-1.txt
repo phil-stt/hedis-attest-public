@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Priya Vantongeren, MD
+Patient: Floyd Oyelaran    DOB: 12/08/1966    Member ID: SYN-100291
+Date of service: 03/18/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Here for routine follow-up of chronic conditions.
+Mild low back stiffness after gardening, improving with heat.
+Past surgical/procedural history: cholecystectomy; colonoscopy in 2021 with two small polyps removed.
+
+OBJECTIVE
+Vitals: HR 76, Temp 98.2 F, Wt 77 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Insomnia: sleep hygiene handout given; reassess next visit.
+Follow up in 3 months.
+
+Electronically signed by Priya Vantongeren, MD on 03/18/2026

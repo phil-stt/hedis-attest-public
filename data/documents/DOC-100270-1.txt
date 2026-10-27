@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Samuel Achterberg, NP
+Patient: Rufus Castellano    DOB: 08/02/1955    Member ID: SYN-100270
+Date of service: 08/13/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+Requests refills of maintenance medications.
+
+OBJECTIVE
+Vitals: HR 65, Temp 98.4 F, Wt 83 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Goals of care meeting with patient and son: comfort care discussed and elected. Palliative care referral placed.
+Type 2 diabetes: relax glycemic targets; stop glipizide.
+Follow up in 3 months.
+
+Electronically signed by Samuel Achterberg, NP on 08/13/2026

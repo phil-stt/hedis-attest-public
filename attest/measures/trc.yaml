@@ -1,0 +1,52 @@
+code: TRC
+name: Transitions of Care
+star_weight: 1
+collection: admin + hybrid (ECDS MY2029)
+chart_lever: strong
+status: active
+prompt: trc.v3
+submission_channel: hybrid (medical record review)
+closes: "Four indicators per inpatient discharge; each is documented in the outpatient record within its window."
+exclusions: [hospice, palliative_care]
+synthetic_age: [50, 88]
+indicators:
+  NIA:
+    name: Notification of Inpatient Admission
+    closes: Documentation that the PCP received notification of the inpatient admission on the day of admission or the following day.
+    family: event_window
+    fields: [admission_date, notification_date]
+    field_schema: {admission_date: {type: string}, notification_date: {type: string}}
+    field_labels: {admission_date: Admission date, notification_date: Notification received}
+    params: {anchor_field: admission_date, event_field: notification_date, window_days: [0, 1]}
+  RDI:
+    name: Receipt of Discharge Information
+    closes: Documentation that the PCP received discharge information on the day of discharge or the following day.
+    family: event_window
+    fields: [discharge_date, receipt_date]
+    field_schema: {discharge_date: {type: string}, receipt_date: {type: string}}
+    field_labels: {discharge_date: Discharge date, receipt_date: Discharge information received}
+    params: {anchor_field: discharge_date, event_field: receipt_date, window_days: [0, 1]}
+  PED:
+    name: Patient Engagement After Inpatient Discharge
+    closes: An office visit, home visit, telehealth or telephone visit within 30 days after discharge (not the discharge day itself).
+    family: event_window
+    fields: [discharge_date, engagement_date, encounter_type]
+    field_schema:
+      discharge_date: {type: string}
+      engagement_date: {type: string}
+      encounter_type: {type: string, enum: [office_visit, home_visit, telehealth, telephone_visit, e_visit]}
+    field_labels: {discharge_date: Discharge date, engagement_date: Engagement date, encounter_type: Encounter}
+    params: {anchor_field: discharge_date, event_field: engagement_date, window_days: [1, 30],
+             category_field: encounter_type, eligible_categories: [office_visit, home_visit, telehealth, telephone_visit, e_visit]}
+  MRP:
+    name: Medication Reconciliation Post-Discharge
+    closes: Discharge medications reconciled with current medications by a prescribing practitioner, clinical pharmacist, or registered nurse, from the discharge day through 30 days after.
+    family: event_window
+    fields: [discharge_date, reconciliation_date, author_role]
+    field_schema:
+      discharge_date: {type: string}
+      reconciliation_date: {type: string}
+      author_role: {type: string, enum: [prescribing_practitioner, clinical_pharmacist, registered_nurse, other]}
+    field_labels: {discharge_date: Discharge date, reconciliation_date: Reconciliation date, author_role: Reconciled by}
+    params: {anchor_field: discharge_date, event_field: reconciliation_date, window_days: [0, 30],
+             category_field: author_role, eligible_categories: [prescribing_practitioner, clinical_pharmacist, registered_nurse]}

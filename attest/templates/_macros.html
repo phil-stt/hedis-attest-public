@@ -1,0 +1,21 @@
+{% macro status_badge(status, label) -%}
+  {%- set cls = {'finding_ready': 'b-ai', 'abstained': 'b-abstain', 'accepted': 'b-human'}.get(status, 'b-gray') -%}
+  <span class="badge {{ cls }}">{{ label }}</span>
+{%- endmacro %}
+
+{% macro finding_badge(ftype, labels) -%}
+  {%- set cls = {'numerator': 'b-ai', 'exclusion': 'b-ai', 'abstain': 'b-abstain'}.get(ftype, 'b-gray') -%}
+  <span class="badge {{ cls }}">{{ labels[ftype] }}</span>
+{%- endmacro %}
+
+{% macro confidence(value) -%}
+  {%- if value is not none -%}
+  <span class="conf"><span class="bar"><span style="width: {{ (value * 100) | round | int }}%"></span></span>{{ '%.2f' | format(value) }}</span>
+  {%- else -%}<span class="muted">-</span>{%- endif -%}
+{%- endmacro %}
+
+{% macro fmt(value) -%}
+  {%- if value is none -%}<span class="muted">-</span>
+  {%- elif value is string -%}{{ value | replace('_', ' ') }}
+  {%- else -%}{{ value }}{%- endif -%}
+{%- endmacro %}

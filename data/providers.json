@@ -1,0 +1,32 @@
+[
+  {
+    "provider_id": "PRV-01",
+    "name": "Dana Okonjo-Lind, MD",
+    "clinic": "Riverbend Family Medicine"
+  },
+  {
+    "provider_id": "PRV-02",
+    "name": "Marcus Tellefsen, DO",
+    "clinic": "Riverbend Family Medicine"
+  },
+  {
+    "provider_id": "PRV-03",
+    "name": "Priya Vantongeren, MD",
+    "clinic": "Northgate Primary Care"
+  },
+  {
+    "provider_id": "PRV-04",
+    "name": "Samuel Achterberg, NP",
+    "clinic": "Northgate Primary Care"
+  },
+  {
+    "provider_id": "PRV-05",
+    "name": "Helena Quarshie, MD",
+    "clinic": "Lakeshore Internal Medicine"
+  },
+  {
+    "provider_id": "PRV-06",
+    "name": "Theo Brannigan, PA-C",
+    "clinic": "Lakeshore Internal Medicine"
+  }
+]

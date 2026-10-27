@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Attest{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/queue">Attest<small>audit-grade evidence for HEDIS gap closure</small></a>
+    <nav class="nav">
+      <a href="/today" class="{{ 'active' if page == 'today' }}">Today's set</a>
+      <a href="/queue" class="{{ 'active' if page == 'queue' }}">Review queue</a>
+      <a href="/qa" class="{{ 'active' if page == 'qa' }}">QA</a>
+      <a href="/supervise" class="{{ 'active' if page == 'supervise' }}">Supervisor</a>
+      <a href="/eval" class="{{ 'active' if page == 'eval' }}">Eval</a>
+      <a href="/insights" class="{{ 'active' if page == 'insights' }}">Insights</a>
+      <a href="/measures" class="{{ 'active' if page == 'measures' }}">Measures</a>
+      <a href="/experiments" class="{{ 'active' if page == 'experiments' }}">Experiments</a>
+    </nav>
+    <span class="who">Synthetic data only · MY{{ my }} · {{ reviewer }} · arm <span class="mono">{{ surface }}</span>{% if arm_override %} (override){% endif %}</span>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

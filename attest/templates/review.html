@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% from "_macros.html" import finding_badge, confidence, fmt %}
+{% block title %}{{ gap.gap_id }} · Attest{% endblock %}
+{% block content %}
+<div class="crumbs">
+  {% if in_set %}
+  <a href="/today">Today's set</a> <span>/</span> <span class="mono">{{ gap.gap_id }}</span>
+  <span class="muted">· {{ in_set.position }} of {{ in_set.size }}{% if in_set.kind == 'stretch' %} (stretch){% endif %} · {{ in_set.done }} done</span>
+  <span class="spacer"></span>
+  {% if in_set.next_gap %}<a class="btn" href="/gap/{{ in_set.next_gap }}">Next in set →</a>{% else %}<a class="btn" href="/today">Back to the set →</a>{% endif %}
+  {% else %}
+  <a href="/queue">Review queue</a> <span>/</span> <span class="mono">{{ gap.gap_id }}</span>
+  <span class="spacer"></span>
+  {% if next_gap %}<a class="btn" href="/gap/{{ next_gap }}">Next gap →</a>{% endif %}
+  {% endif %}
+</div>
+
+<div class="review">
+  <section class="card">
+    {% if docs %}
+    <div class="doc-tabs">
+      {% for d in docs %}
+      <a class="{{ 'on' if d.active }}" href="?doc={{ d.doc_id }}">
+        {{ d.doc_type | replace('_', ' ') }} · {{ d.doc_date }}{% if d.source_id and not d.source_id.startswith('src-ehr') and d.source_id != 'src-synthetic-ehr' %} · <span class="muted">{{ d.source_id | replace('src-', '') }}</span>{% endif %}
+        {%- if d.has_evidence %}<span class="ev">●</span>{% endif %}
+      </a>
+      {% endfor %}
+    </div>
+    <pre class="doc">{{ body }}</pre>
+    {% else %}
+    <div class="card-pad muted">No chart retrieved for this gap yet. It belongs in the chart chase queue.</div>
+    {% endif %}
+  </section>
+
+  <aside class="side">
+    <div class="card card-pad">
+      <div class="measure-line"><span class="code">{{ spec.key }}</span>{{ spec.name }}</div>
+      <div class="closes">{{ spec.closes }}</div>
+      <div class="meta" style="margin-top:10px">
+        <span>{{ member.name }} · {{ member.member_id }} · age {{ member.age_at_my_end }}{% if member.region %} · {{ member.region }}{% endif %}</span>
+        <span>PCP {{ provider.name }}</span>
+        {% if tranche %}<span>{{ tranche.name }}</span>{% endif %}
+      </div>
+      {% if identities %}
+      <div class="meta identities">
+        <span class="muted">Known to</span>
+        {% for i in identities %}<span><span class="mono">{{ i.source_id | replace('src-', '') }}</span> as <span class="mono">{{ i.source_member_ref }}</span></span>{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if finding %}
+    <div class="card card-pad">
+      <div class="finding-head">
+        <h2 style="margin:0">Attest finding</h2>
+        {{ finding_badge(finding.finding_type, finding_labels) }}
+      </div>
+
+      {% if finding.finding_type == 'abstain' %}
+      <div class="reason"><strong>Why Attest abstained:</strong> {{ reason_labels.get(finding.abstain_reason, finding.abstain_reason) }}</div>
+      {% endif %}
+
+      {% if finding.finding_type == 'numerator' %}
+      <dl class="fields">
+        {% for k in fields %}<dt>{{ field_labels[k] }}</dt><dd>{{ fmt(finding.fields.get(k)) }}</dd>{% endfor %}
+      </dl>
+      {% elif finding.finding_type == 'exclusion' %}
+      <dl class="fields">
+        {% for k in ['exclusion_type', 'supporting_date'] %}<dt>{{ field_labels[k] }}</dt><dd>{{ fmt(finding.fields.get(k)) }}</dd>{% endfor %}
+      </dl>
+      {% endif %}
+
+      {% if finding.evidence %}
+      <dl class="fields"><dt>Evidence</dt><dd>{% for e in finding.evidence %}<q>{{ e.quote }}</q>{% if not loop.last %}<br>{% endif %}{% endfor %}</dd></dl>
+      {% endif %}
+
+      <p class="rationale">{{ finding.rationale }}</p>
+
+      <dl class="fields">
+        <dt>Confidence</dt><dd>{{ confidence(finding.get('confidence')) }}</dd>
+      </dl>
+      {% if finding.router %}
+      <div class="meta" style="margin-bottom:6px">
+        <span>Router ({{ finding.router.model }}): {{ finding.router.decision }}{% if finding.router.qa_sample %} · QA sample of a skip{% endif %}{% if finding.router.reason %} · {{ finding.router.reason }}{% endif %}</span>
+      </div>
+      {% endif %}
+      <div class="meta">
+        {% set call = finding.call or {} %}
+        <span>Model {{ call.model_served or call.model_requested or '-' }}</span>
+        <span>Prompt {{ call.prompt_version or '-' }}</span>
+        <span>Run {{ call.timestamp or '-' }}</span>
+      </div>
+    </div>
+
+    <div class="card card-pad">
+      <details {% if finding.model_finding_type or expand == 'checks' %}open{% endif %}>
+        {% set checks = finding.rule_checks or [] %}
+        <summary>Rule checks {% if checks %}({{ checks | selectattr('passed') | list | length }}/{{ checks | length }} passed){% else %}(apply to proposed evidence only){% endif %}</summary>
+        {% if finding.model_finding_type %}
+        <p class="check-fail">The model proposed {{ finding_labels[finding.model_finding_type] | lower }}; a rule check changed it.</p>
+        {% endif %}
+        <ul>
+          {% for c in checks %}
+          <li class="{{ 'check-ok' if c.passed else 'check-fail' }}">{{ '✓' if c.passed else '✗' }} {{ c.rule | replace('_', ' ') }}: {{ c.detail }}</li>
+          {% else %}<li class="muted">No checks apply to this finding type.</li>{% endfor %}
+        </ul>
+      </details>
+      <details style="margin-top:10px" {% if expand == 'considered' %}open{% endif %}>
+        <summary>Everything Attest considered ({{ (finding.candidates_considered or []) | length }})</summary>
+        <ul>
+          {% for c in (finding.candidates_considered or []) %}
+          <li><q>{{ c.quote }}</q> <span class="mono">{{ c.doc_id }}</span><br><span class="muted">{{ c.assessment }}</span></li>
+          {% else %}<li class="muted">Nothing relevant found in the chart.</li>{% endfor %}
+        </ul>
+      </details>
+    </div>
+    {% endif %}
+
+    {% if record %}
+    <div class="card card-pad record">
+      <h2>Record created</h2>
+      <p class="hint" style="margin-top:0">Accepted by {{ record.reviewer }} at {{ record.created_at }}. This record is what gets submitted.</p>
+      <pre>{{ record_json }}</pre>
+    </div>
+    {% elif decision %}
+    <div class="card card-pad">
+      <h2>Decision</h2>
+      <div class="decided">
+        {{ {'reject': 'Rejected', 'needs_more': 'Sent back to chart chase', 'accept': 'Accepted'}[decision.action] }}
+        by {{ decision.reviewer }} at {{ decision.decided_at }}{% if decision.reason %} · {{ decision.reason }}{% endif %}{% if decision.note %} · “{{ decision.note }}”{% endif %}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if lock %}
+    <div class="card card-pad">
+      <h2>In review</h2>
+      <div class="decided">{{ lock.reviewer }} is reviewing this gap (lease until {{ lock.until }}). Read-only until they decide or the lease expires.</div>
+    </div>
+    {% elif finding and not record and (not decision or decision.action == 'needs_more') %}
+    <div class="card card-pad">
+      <h2>Your decision</h2>
+      {% set can_accept = finding.finding_type in ['numerator', 'exclusion'] and finding.evidence_spans %}
+      <form method="post" action="/gap/{{ gap.gap_id }}/decision" class="actions">
+        <input type="hidden" name="action" value="accept">
+        <button class="accept" {{ 'disabled' if not can_accept }}>Accept</button>
+        {% if not can_accept %}<span class="hint" style="margin:0">Nothing to accept: Attest did not propose evidence. A person resolves this one.</span>{% endif %}
+      </form>
+      <form method="post" action="/gap/{{ gap.gap_id }}/decision">
+        <input type="hidden" name="action" value="reject">
+        <div class="action-row">
+          <select name="reason" required>
+            <option value="" disabled selected>Reject: pick a reason</option>
+            {% for r in reject_reasons %}<option>{{ r }}</option>{% endfor %}
+          </select>
+          <button>Reject</button>
+        </div>
+      </form>
+      <form method="post" action="/gap/{{ gap.gap_id }}/decision">
+        <input type="hidden" name="action" value="needs_more">
+        <div class="action-row">
+          <input type="text" name="note" placeholder="Note for chart chase (optional)" style="flex:1; min-width: 180px">
+          <button>Needs more</button>
+        </div>
+      </form>
+    </div>
+    {% endif %}
+  </aside>
+</div>
+{% endblock %}

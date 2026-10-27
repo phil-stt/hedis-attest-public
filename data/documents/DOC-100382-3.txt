@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Edith Castellano    DOB: 07/01/1968    Member ID: SYN-100382
+Date of service: 09/12/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Reports intermittent right knee pain with stairs, worse in the morning.
+Here for routine follow-up of chronic conditions.
+
+OBJECTIVE
+Vitals: BP 136/91, HR 69, Temp 98.6 F, Wt 58 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Hypertension: above goal today after stopping amlodipine on own; restart and recheck.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Reviewed outside lab report.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 09/12/2026

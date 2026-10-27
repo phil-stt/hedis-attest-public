@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Nestor Kowalczyk    DOB: 10/26/1973    Member ID: SYN-100340
+Date of service: 09/01/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+Walking about 20 minutes most days with a neighbor.
+
+OBJECTIVE
+Vitals: HR 76, Temp 98.2 F, Wt 97 kg, SpO2 95%
+POC HbA1c today: 7.5%
+
+ASSESSMENT AND PLAN
+Health maintenance: influenza vaccine administered today.
+Type 2 diabetes: improved since dose increase; continue metformin and empagliflozin.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 09/01/2026

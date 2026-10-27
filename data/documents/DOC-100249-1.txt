@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Wendell Pemberton    DOB: 02/19/1969    Member ID: SYN-100249
+Date of service: 03/02/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+Requests refills of maintenance medications.
+
+OBJECTIVE
+Vitals: Blood pressure 132/81 mmHg (seated, left arm), HR 70, Temp 98.2 F, Wt 77 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 03/02/2026

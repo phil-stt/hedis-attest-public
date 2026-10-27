@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Nestor Underhill    DOB: 03/09/1959    Member ID: SYN-100424
+Date of service: 07/29/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Here for routine follow-up of chronic conditions.
+Mild low back stiffness after gardening, improving with heat.
+
+OBJECTIVE
+Vitals: HR 80, Temp 97.9 F, Wt 74 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Hypertension: BP under control on current regimen, continue lisinopril.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Reviewed outside lab report.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 07/29/2026

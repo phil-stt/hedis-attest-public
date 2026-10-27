@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% from "_macros.html" import status_badge, finding_badge, confidence %}
+{% block title %}Today's set · Attest{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Today's set</h1>
+  <span class="sub">{{ day.strftime('%A %-d %B') }} · {{ reviewer }}. A dealt set, mixed by finding type. Every decision counts the same; a catch counts extra.</span>
+</div>
+
+{% if not current %}
+<div class="card card-pad" style="max-width:720px">
+  <h2>Deal a set</h2>
+  <p style="margin:0 0 10px">{{ set_size }} gaps from one tranche, in the pool's mix of findings to confirm, abstains to resolve, and charts with nothing found. Gaps in another reviewer's set are left out.</p>
+  <form method="post" action="/today/deal" class="actions">
+    <input type="hidden" name="kind" value="daily">
+    {% if tranches %}
+    <select name="tranche">
+      <option value="">Any tranche</option>
+      {% for t in tranches.values() %}<option value="{{ t.tranche_id }}" {{ 'selected' if t.tranche_id == default_tranche }}>{{ t.name }}</option>{% endfor %}
+    </select>
+    {% endif %}
+    <button type="submit" class="accept">Deal {{ set_size }}</button>
+  </form>
+</div>
+{% else %}
+{% set tally = current.tally %}
+<div class="counters set-counters">
+  <div class="card counter human"><div class="label">Accepted</div><div class="value">{{ tally.get('accepted', 0) }}</div></div>
+  <div class="card counter catch"><div class="label">Catches</div><div class="value">{{ tally.get('caught', 0) }}</div><div class="muted small">wrong proposals rejected</div></div>
+  <div class="card counter abstain"><div class="label">Abstains resolved</div><div class="value">{{ tally.get('resolved', 0) }}</div></div>
+  <div class="card counter"><div class="label">Confirmed no evidence</div><div class="value">{{ tally.get('confirmed', 0) }}</div></div>
+  <div class="card counter"><div class="label">Needs more</div><div class="value">{{ tally.get('needs_more', 0) }}</div></div>
+</div>
+
+<div class="card card-pad" style="margin-bottom:12px">
+  <div class="progress-head">
+    <strong>{{ 'Stretch set' if current.kind == 'stretch' else 'Daily set' }}</strong>
+    <span class="muted">{{ current.done }} of {{ current.size }} decided{% if current.tranche_id and current.tranche_id in tranches %} · {{ tranches[current.tranche_id].name }}{% endif %}{% if sets | length > 1 %} · set {{ sets | length }} today{% endif %}</span>
+    <span class="spacer"></span>
+    {% if current.complete %}
+      <span class="badge b-human">Set complete</span>
+    {% elif current.next_gap %}
+      <a class="btn primary" href="/gap/{{ current.next_gap }}">Continue →</a>
+    {% endif %}
+  </div>
+  <div class="progress" role="progressbar" aria-valuenow="{{ current.pct }}" aria-valuemin="0" aria-valuemax="100"><span style="width:{{ current.pct }}%"></span></div>
+  {% if current.complete %}
+  <div class="actions" style="margin-top:12px">
+    {% if current.size == 0 %}
+    <span class="muted">Nothing was open to deal{% if current.tranche_id %} in this tranche{% endif %}. Try another tranche.</span>
+    <form method="post" action="/today/deal" class="actions">
+      <input type="hidden" name="kind" value="daily">
+      {% if tranches %}<select name="tranche"><option value="">Any tranche</option>{% for t in tranches.values() %}<option value="{{ t.tranche_id }}">{{ t.name }}</option>{% endfor %}</select>{% endif %}
+      <button type="submit">Deal again</button>
+    </form>
+    {% else %}
+    <span>Done for the day. If you have time, a stretch set of {{ stretch_size }} is here; it is optional and it is not a score.</span>
+    <form method="post" action="/today/deal" class="actions">
+      <input type="hidden" name="kind" value="stretch">
+      <input type="hidden" name="tranche" value="{{ current.tranche_id or '' }}">
+      <button type="submit">Deal a stretch set of {{ stretch_size }}</button>
+    </form>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
+<div class="card">
+  <table class="queue">
+    <thead><tr><th>#</th><th>Gap</th><th>Member</th><th>Measure</th><th>Attest says</th><th>Confidence</th><th>Your decision</th></tr></thead>
+    <tbody>
+      {% for i in current['items'] %}
+      <tr class="row {{ 'done' if i.decision }}" onclick="location.href='/gap/{{ i.gap.gap_id }}'">
+        <td class="muted">{{ loop.index }}</td>
+        <td><a class="rowlink mono" href="/gap/{{ i.gap.gap_id }}">{{ i.gap.gap_id }}</a></td>
+        <td>{{ i.member.name }}</td>
+        <td>{{ i.gap.measure }}{% if i.gap.indicator %}:{{ i.gap.indicator }}{% endif %}</td>
+        <td>{% if i.finding %}{{ finding_badge(i.finding.finding_type, finding_labels) }}{% endif %}</td>
+        <td>{{ confidence(i.finding.confidence if i.finding else none) }}</td>
+        <td>{% if i.kind == 'accepted' %}<span class="badge b-human">Accepted</span>
+            {% elif i.kind == 'caught' %}<span class="badge b-catch">Catch</span>
+            {% elif i.kind == 'resolved' %}<span class="badge b-abstain">Resolved</span>
+            {% elif i.kind == 'confirmed' %}<span class="badge b-gray">Confirmed</span>
+            {% elif i.kind == 'needs_more' %}<span class="badge b-gray">Needs more</span>
+            {% else %}<span class="muted">-</span>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+<p class="footnote">How this is scored: a resolved abstain and a justified reject count exactly like an accept. A catch (rejecting a proposal that was wrong) is the best outcome there is, because that is the error Attest exists to stop. A sample of accepts goes to QA; the audited error rate, not the count, is what the supervisor view and the experiment compare. There is no leaderboard.</p>
+{% endblock %}

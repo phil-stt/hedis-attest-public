@@ -1,0 +1,10 @@
+DISCHARGE SUMMARY
+Facility: Mercy Vale Regional Medical Center
+Patient: Thea Brightwater    Member ID: SYN-100515
+Admitted: 02/13/2026    Discharged: 02/16/2026
+
+Principal diagnosis: community-acquired pneumonia.
+Hospital course: treated with ceftriaxone and azithromycin, transitioned to oral antibiotics, afebrile x48h.
+Vital signs at discharge: BP 123/64, HR 80, SpO2 96% on room air.
+Discharge medications: amoxicillin-clavulanate x5 days; home medications unchanged.
+Follow-up: PCP within 7 days.

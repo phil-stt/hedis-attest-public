@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Lakeshore Internal Medicine
+Provider: Theo Brannigan, PA-C
+Patient: Wanda Jablonski    DOB: 06/12/1973    Member ID: SYN-100354
+Date of service: 06/15/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Mild low back stiffness after gardening, improving with heat.
+Walking about 20 minutes most days with a neighbor.
+
+OBJECTIVE
+Vitals: HR 86, Temp 98.2 F, Wt 85 kg, SpO2 99%
+
+ASSESSMENT AND PLAN
+Health maintenance: influenza vaccine administered today.
+Follow up in 3 months.
+
+Electronically signed by Theo Brannigan, PA-C on 06/15/2026

@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Wendell Ashdown    DOB: 12/18/1965    Member ID: SYN-100214
+Date of service: 06/22/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Walking about 20 minutes most days with a neighbor.
+
+OBJECTIVE
+Vitals: HR 64, Temp 98.4 F, Wt 107 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Allergic rhinitis: continue loratadine, add saline rinses.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 06/22/2026

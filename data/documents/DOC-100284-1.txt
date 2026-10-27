@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Edith Quintero    DOB: 04/02/1968    Member ID: SYN-100284
+Date of service: 08/17/2026
+Visit type: Telephone follow-up
+
+SUBJECTIVE
+Denies chest pain, shortness of breath, or palpitations.
+Sleeping poorly over the last month; discussed sleep hygiene.
+Calling to review medications after her nurse BP check here last Wednesday: 124/79. No dizziness.
+
+OBJECTIVE
+Vitals: not obtained (remote visit)
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 08/17/2026

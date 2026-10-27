@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Lakeshore Internal Medicine
+Provider: Theo Brannigan, PA-C
+Patient: Fern Bellweather    DOB: 07/13/1957    Member ID: SYN-100396
+Date of service: 06/13/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Mild low back stiffness after gardening, improving with heat.
+Denies chest pain, shortness of breath, or palpitations.
+She had a colonoscopy years ago and does not remember when; says it was fine.
+
+OBJECTIVE
+Vitals: HR 83, Temp 97.9 F, Wt 102 kg, SpO2 95%
+
+ASSESSMENT AND PLAN
+Request outside GI records.
+Follow up in 3 months.
+
+Electronically signed by Theo Brannigan, PA-C on 06/13/2026

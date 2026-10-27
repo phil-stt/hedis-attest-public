@@ -1,0 +1,17 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Priya Vantongeren, MD
+Patient: Jerome Yarborough    DOB: 07/14/1979    Member ID: SYN-100228
+Date of service: 04/09/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Walking about 20 minutes most days with a neighbor.
+
+OBJECTIVE
+Vitals: BP 148/98, HR 64, Temp 98.4 F, Wt 60 kg, SpO2 95%
+
+ASSESSMENT AND PLAN
+Elevated blood pressure: increase amlodipine to 10 mg daily; recheck in 6-8 weeks.
+
+Electronically signed by Priya Vantongeren, MD on 04/09/2026

@@ -1,0 +1,7 @@
+code: PDC-STA
+name: "Medication Adherence for Cholesterol (Statins)"
+star_weight: 1
+collection: "pharmacy claims (PQA)"
+chart_lever: none
+status: registry_only
+closes: "Pharmacy claims; no chart lever."

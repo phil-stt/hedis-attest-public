@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Thea Delacroix    DOB: 04/28/1967    Member ID: SYN-100459
+Date of service: 03/19/2026
+Visit type: Telehealth (video)
+
+SUBJECTIVE
+Here for routine follow-up of chronic conditions.
+Denies chest pain, shortness of breath, or palpitations.
+She uploaded readings from her digital upper-arm BP monitor to the patient portal; the most recent reading from 03/14/2026 was 118/72.
+
+OBJECTIVE
+Vitals: not obtained (remote visit)
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 03/19/2026

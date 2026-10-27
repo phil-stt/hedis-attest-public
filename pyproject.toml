@@ -1,0 +1,17 @@
+[project]
+name = "attest"
+version = "0.1.0"
+description = "Audit-grade evidence for HEDIS gap closure (prototype, synthetic data only)"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B905", "UP006", "UP007", "UP035", "UP045", "B023"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

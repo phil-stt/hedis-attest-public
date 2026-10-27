@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Samuel Achterberg, NP
+Patient: Nestor Pemberton    DOB: 06/28/1964    Member ID: SYN-100480
+Date of service: 06/30/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Walking about 20 minutes most days with a neighbor.
+Requests refills of maintenance medications.
+
+OBJECTIVE
+Vitals: HR 71, Temp 97.9 F, Wt 96 kg, SpO2 97%
+
+ASSESSMENT AND PLAN
+Colorectal cancer screening: discussed colonoscopy and stool-based options; patient declines at this time.
+Follow up in 3 months.
+
+Electronically signed by Samuel Achterberg, NP on 06/30/2026

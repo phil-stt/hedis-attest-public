@@ -1,0 +1,7 @@
+code: COA-FSA
+name: "Care for Older Adults: Functional Status Assessment"
+star_weight: 1
+collection: "admin + hybrid (ECDS MY2029)"
+chart_lever: strong
+status: planned
+closes: "ADL or IADL functional status assessment documented in the measurement year (SNP only)."

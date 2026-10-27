@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}Eval · Attest{% endblock %}
+{% macro pct(p) -%}
+  {%- if p.value is none %}<span class="muted">-</span>
+  {%- else %}{{ '%.2f' | format(p.value) }} <span class="muted">({{ p.k }}/{{ p.n }})</span>{% endif -%}
+{%- endmacro %}
+{% macro lb(p) -%}
+  {%- if p.lb is none or p.value is none %}<span class="muted">-</span>{% else %}{{ '%.2f' | format(p.lb) }}{% endif -%}
+{%- endmacro %}
+{% block content %}
+<div class="page-head">
+  <h1>Eval</h1>
+  <span class="sub">Held-out set, labeled once by hand, never tuned against. Read-only.</span>
+</div>
+
+{% if not view %}
+<div class="card card-pad muted">No held-out run yet.</div>
+{% else %}
+{% set m = view.run.metrics %}
+<div class="eval-head card card-pad">
+  <div>
+    <h2>Latest held-out run</h2>
+    <div class="mono">{{ view.run.run_id }}</div>
+  </div>
+  <div class="meta">
+    <span>Model {{ view.run.model }} · effort {{ view.run.effort }}</span>
+    <span>Prompts {% for k, v in view.run.prompt_versions.items() %}{{ v }}{{ ', ' if not loop.last }}{% endfor %}</span>
+    <span>Run {{ view.run.timestamp }}</span>
+    <span>{{ m.gaps }} gaps</span>
+  </div>
+  <div class="gate {{ 'pass' if view.gate_pass else 'fail' }}">
+    Gate {{ 'passed' if view.gate_pass else 'failed' }}
+    <span>CI thresholds: numerator precision ≥ {{ gate.precision }}, wrong values ≤ {{ gate.wrong }}</span>
+  </div>
+</div>
+
+<div class="tiles">
+  <div class="card tile wrong">
+    <div class="label">Wrong values</div>
+    <div class="value">{{ m.wrong_value_count }}</div>
+    <div class="note">Findings a nurse could accept that are wrong. The bar is zero.</div>
+  </div>
+  <div class="card tile">
+    <div class="label">Finding type correct</div>
+    <div class="value">{{ view.overall.k }}/{{ view.overall.n }}</div>
+    <div class="note">95% lower bound {{ lb(view.overall) }}</div>
+  </div>
+  <div class="card tile">
+    <div class="label">Field accuracy</div>
+    <div class="value">{{ view.fields.k }}/{{ view.fields.n }}</div>
+    <div class="note">Exact value and date. 95% lower bound {{ lb(view.fields) }}</div>
+  </div>
+  <div class="card tile abstain">
+    <div class="label">Abstain rate</div>
+    <div class="value">{{ '%.0f' | format(m.abstain_rate * 100) }}%</div>
+    <div class="note">{{ view.abstains.k }}/{{ view.abstains.n }} abstains were correct; {{ view.traps.k }}/{{ view.traps.n }} traps refused</div>
+  </div>
+</div>
+
+<div class="eval-grid">
+  <div class="card">
+    <table class="queue">
+      <thead><tr><th>Finding type</th><th>Precision</th><th>95% LB</th><th>Recall</th><th>95% LB</th></tr></thead>
+      <tbody>
+        {% for r in view.per_type %}
+        <tr>
+          <td>{{ finding_labels[r.type] }}</td>
+          <td>{{ pct(r.precision) }}</td><td>{{ lb(r.precision) }}</td>
+          <td>{{ pct(r.recall) }}</td><td>{{ lb(r.recall) }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <table class="queue">
+      <thead><tr><th>Measure</th><th>n</th><th>Correct</th><th>Abstains</th><th>Wrong values</th></tr></thead>
+      <tbody>
+        {% for r in view.measures %}
+        <tr>
+          <td>{{ r.code }}</td><td>{{ r.n }}</td><td>{{ r.correct }}/{{ r.n }}</td><td>{{ r.abstains }}</td>
+          <td class="wrong-cell">{{ r.wrong }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<p class="footnote">
+  95% LB is the exact (Clopper-Pearson) lower bound on the true rate, given the sample size.
+  {%- set np = view.per_type[0].precision %}
+  {% if np.value == 1.0 %}A perfect {{ np.k }} of {{ np.n }} on numerator precision is consistent with a true rate as low as {{ '%.0f' | format(np.lb * 100) }}%.{% endif %}
+  Synthetic, templated charts. The claim this run supports is "zero wrong values, every trap refused with a reason," not "100% accurate."
+</p>
+
+<h2 id="strata">By stratum</h2>
+<p class="footnote" style="margin-top:0">The same run cut by tranche, line of business, evidence source, fragmentation, and the document types in the chart. A stratum with fewer than {{ min_n }} gaps shows its lower bound and no claim. Drift is the change in accuracy against the previous held-out run on this tranche. Wrong values are gated per tranche (≤ {{ gate.wrong_per_stratum }}), not only in total.</p>
+<div class="eval-grid strata">
+  {% for s in view.strata %}
+  <div class="card">
+    <table class="queue">
+      <thead><tr><th>{{ s.label }}</th><th class="num">n</th><th class="num">Correct</th><th class="num">Wrong values</th><th class="num">Abstain</th><th>Num. precision (LB)</th><th>Actionable recall (LB)</th>{% if s.key == 'tranche' %}<th class="num">Drift</th>{% if view.is_router %}<th class="num">Router skipped / lost</th>{% endif %}{% endif %}</tr></thead>
+      <tbody>
+        {% for r in s.rows %}
+        <tr class="{{ 'thin' if r.below_min_n }}">
+          <td>{{ r.key }}{% if r.below_min_n %} <span class="muted" title="fewer than {{ min_n }} gaps: a bound, not a claim">n&lt;{{ min_n }}</span>{% endif %}</td>
+          <td class="num">{{ r.n }}</td>
+          <td class="num">{{ r.correct }}/{{ r.n }}{% if not r.below_min_n and r.accuracy.lb is not none %} <span class="muted">LB {{ '%.2f' | format(r.accuracy.lb) }}</span>{% elif r.accuracy.lb is not none %} <span class="muted">≥ {{ '%.2f' | format(r.accuracy.lb) }}</span>{% endif %}</td>
+          <td class="num wrong-cell">{{ r.wrong_values }}</td>
+          <td class="num">{{ r.abstains }}</td>
+          <td>{% if r.numerator_precision.n %}{{ r.numerator_precision.k }}/{{ r.numerator_precision.n }} <span class="muted">({{ '%.2f' | format(r.numerator_precision.lb) }})</span>{% else %}<span class="muted">-</span>{% endif %}</td>
+          <td>{% if r.actionable_recall.n %}{{ r.actionable_recall.k }}/{{ r.actionable_recall.n }} <span class="muted">({{ '%.2f' | format(r.actionable_recall.lb) }})</span>{% else %}<span class="muted">-</span>{% endif %}</td>
+          {% if s.key == 'tranche' %}<td class="num">{% if r.drift is none %}<span class="muted">-</span>{% elif r.drift < 0 %}<span class="wrong-text">{{ '%+.2f' | format(r.drift) }}</span>{% else %}{{ '%+.2f' | format(r.drift) }}{% endif %}</td>
+          {% if view.is_router %}<td class="num">{{ r.router_skipped }} / {{ r.router_lost }}</td>{% endif %}{% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endfor %}
+</div>
+
+{% if view.misses %}
+<div class="card card-pad" style="margin-bottom:16px">
+  <h2>Misses in this run</h2>
+  <ul class="misses">
+    {% for r in view.misses %}
+    <li><span class="mono">{{ r.gap_id }}</span> {{ r.measure }}: expected {{ r.expected }}, got {{ r.predicted }}{% if r.wrong_value %} <strong class="wrong-text">wrong value</strong>{% endif %}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endif %}
+
+<h2 style="margin-top:8px">Run history</h2>
+<div class="card">
+  <table class="queue">
+    <thead><tr><th>Run</th><th>Split</th><th>Prompts</th><th>Gaps</th><th>Correct</th><th>Num. precision</th><th>Abstain rate</th><th>Wrong values</th><th>Gate</th><th>Cost</th></tr></thead>
+    <tbody>
+      {% for h in history %}
+      {% set hm = h.metrics %}
+      <tr>
+        <td class="mono">{{ h.run_id }}</td>
+        <td>{% if h.is_heldout %}held-out{% else %}<span class="muted">dev</span>{% endif %}{% if h.source == 'ci' %} <span class="badge b-gray">CI</span>{% endif %}</td>
+        <td class="muted">{% for k, v in h.prompt_versions.items() %}{{ v }}{{ ', ' if not loop.last }}{% endfor %}</td>
+        <td>{{ hm.gaps }}</td>
+        <td>{{ '%.2f' | format(hm.accuracy) }}</td>
+        <td>{{ '%.2f' | format(hm.per_type.numerator.precision) if hm.per_type.numerator.precision is not none else '-' }}</td>
+        <td>{{ '%.0f' | format(hm.abstain_rate * 100) }}%</td>
+        <td class="wrong-cell">{{ hm.wrong_value_count }}</td>
+        <td>{% if h.is_heldout %}{{ 'pass' if h.gate_pass else 'fail' }}{% if h.metrics.max_wrong_values_in_a_tranche %} <span class="wrong-text">tranche</span>{% endif %}{% else %}<span class="muted">n/a</span>{% endif %}</td>
+        <td class="muted">${{ '%.2f' | format(h.usage.estimated_cost_usd) if h.usage.estimated_cost_usd is not none else '-' }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">Dev runs are where prompts are tuned; the gate applies to held-out runs only. A regression shows up here as a non-zero wrong-value count or a precision drop.</p>
+{% endblock %}

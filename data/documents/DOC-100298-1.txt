@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Samuel Achterberg, NP
+Patient: Silas Yarborough    DOB: 03/05/1960    Member ID: SYN-100298
+Date of service: 03/24/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Reports intermittent right knee pain with stairs, worse in the morning.
+Requests refills of maintenance medications.
+
+OBJECTIVE
+Vitals: HR 86, Temp 98.4 F, Wt 108 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Health maintenance: influenza vaccine administered today.
+Follow up in 3 months.
+
+Electronically signed by Samuel Achterberg, NP on 03/24/2026

@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Thea Brightwater    DOB: 10/06/1973    Member ID: SYN-100515
+Date of service: 03/07/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Here for routine follow-up of chronic conditions.
+Reports intermittent right knee pain with stairs, worse in the morning.
+
+OBJECTIVE
+Vitals: HR 73, Temp 98.2 F, Wt 108 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Reviewed outside lab report.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 03/07/2026

@@ -1,0 +1,429 @@
+[
+  {
+    "doc_id": "DOC-100200-1",
+    "member_id": "SYN-100200",
+    "doc_type": "progress_note",
+    "doc_date": "2026-04-17",
+    "path": "data/documents/DOC-100200-1.txt"
+  },
+  {
+    "doc_id": "DOC-100200-2",
+    "member_id": "SYN-100200",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-02",
+    "path": "data/documents/DOC-100200-2.txt"
+  },
+  {
+    "doc_id": "DOC-100207-1",
+    "member_id": "SYN-100207",
+    "doc_type": "progress_note",
+    "doc_date": "2026-05-15",
+    "path": "data/documents/DOC-100207-1.txt"
+  },
+  {
+    "doc_id": "DOC-100214-1",
+    "member_id": "SYN-100214",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-22",
+    "path": "data/documents/DOC-100214-1.txt"
+  },
+  {
+    "doc_id": "DOC-100221-1",
+    "member_id": "SYN-100221",
+    "doc_type": "progress_note",
+    "doc_date": "2026-09-07",
+    "path": "data/documents/DOC-100221-1.txt"
+  },
+  {
+    "doc_id": "DOC-100228-1",
+    "member_id": "SYN-100228",
+    "doc_type": "progress_note",
+    "doc_date": "2026-04-09",
+    "path": "data/documents/DOC-100228-1.txt"
+  },
+  {
+    "doc_id": "DOC-100228-2",
+    "member_id": "SYN-100228",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-21",
+    "path": "data/documents/DOC-100228-2.txt"
+  },
+  {
+    "doc_id": "DOC-100235-1",
+    "member_id": "SYN-100235",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-13",
+    "path": "data/documents/DOC-100235-1.txt"
+  },
+  {
+    "doc_id": "DOC-100242-1",
+    "member_id": "SYN-100242",
+    "doc_type": "ed_note",
+    "doc_date": "2026-02-05",
+    "path": "data/documents/DOC-100242-1.txt"
+  },
+  {
+    "doc_id": "DOC-100242-2",
+    "member_id": "SYN-100242",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-18",
+    "path": "data/documents/DOC-100242-2.txt"
+  },
+  {
+    "doc_id": "DOC-100249-1",
+    "member_id": "SYN-100249",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-02",
+    "path": "data/documents/DOC-100249-1.txt"
+  },
+  {
+    "doc_id": "DOC-100256-1",
+    "member_id": "SYN-100256",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-19",
+    "path": "data/documents/DOC-100256-1.txt"
+  },
+  {
+    "doc_id": "DOC-100263-1",
+    "member_id": "SYN-100263",
+    "doc_type": "progress_note",
+    "doc_date": "2026-09-07",
+    "path": "data/documents/DOC-100263-1.txt"
+  },
+  {
+    "doc_id": "DOC-100270-1",
+    "member_id": "SYN-100270",
+    "doc_type": "progress_note",
+    "doc_date": "2026-08-13",
+    "path": "data/documents/DOC-100270-1.txt"
+  },
+  {
+    "doc_id": "DOC-100277-1",
+    "member_id": "SYN-100277",
+    "doc_type": "progress_note",
+    "doc_date": "2026-05-24",
+    "path": "data/documents/DOC-100277-1.txt"
+  },
+  {
+    "doc_id": "DOC-100284-1",
+    "member_id": "SYN-100284",
+    "doc_type": "progress_note",
+    "doc_date": "2026-08-17",
+    "path": "data/documents/DOC-100284-1.txt"
+  },
+  {
+    "doc_id": "DOC-100291-1",
+    "member_id": "SYN-100291",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-18",
+    "path": "data/documents/DOC-100291-1.txt"
+  },
+  {
+    "doc_id": "DOC-100298-1",
+    "member_id": "SYN-100298",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-24",
+    "path": "data/documents/DOC-100298-1.txt"
+  },
+  {
+    "doc_id": "DOC-100305-1",
+    "member_id": "SYN-100305",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-10",
+    "path": "data/documents/DOC-100305-1.txt"
+  },
+  {
+    "doc_id": "DOC-100312-1",
+    "member_id": "SYN-100312",
+    "doc_type": "progress_note",
+    "doc_date": "2026-05-03",
+    "path": "data/documents/DOC-100312-1.txt"
+  },
+  {
+    "doc_id": "DOC-100319-1",
+    "member_id": "SYN-100319",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-08",
+    "path": "data/documents/DOC-100319-1.txt"
+  },
+  {
+    "doc_id": "DOC-100326-1",
+    "member_id": "SYN-100326",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-11",
+    "path": "data/documents/DOC-100326-1.txt"
+  },
+  {
+    "doc_id": "DOC-100333-1",
+    "member_id": "SYN-100333",
+    "doc_type": "progress_note",
+    "doc_date": "2026-09-22",
+    "path": "data/documents/DOC-100333-1.txt"
+  },
+  {
+    "doc_id": "DOC-100340-1",
+    "member_id": "SYN-100340",
+    "doc_type": "lab_report",
+    "doc_date": "2026-05-18",
+    "path": "data/documents/DOC-100340-1.txt"
+  },
+  {
+    "doc_id": "DOC-100340-2",
+    "member_id": "SYN-100340",
+    "doc_type": "progress_note",
+    "doc_date": "2026-09-01",
+    "path": "data/documents/DOC-100340-2.txt"
+  },
+  {
+    "doc_id": "DOC-100347-1",
+    "member_id": "SYN-100347",
+    "doc_type": "progress_note",
+    "doc_date": "2026-05-23",
+    "path": "data/documents/DOC-100347-1.txt"
+  },
+  {
+    "doc_id": "DOC-100354-1",
+    "member_id": "SYN-100354",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-15",
+    "path": "data/documents/DOC-100354-1.txt"
+  },
+  {
+    "doc_id": "DOC-100361-1",
+    "member_id": "SYN-100361",
+    "doc_type": "progress_note",
+    "doc_date": "2026-08-13",
+    "path": "data/documents/DOC-100361-1.txt"
+  },
+  {
+    "doc_id": "DOC-100368-1",
+    "member_id": "SYN-100368",
+    "doc_type": "lab_report",
+    "doc_date": "2026-05-08",
+    "path": "data/documents/DOC-100368-1.txt"
+  },
+  {
+    "doc_id": "DOC-100368-2",
+    "member_id": "SYN-100368",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-07",
+    "path": "data/documents/DOC-100368-2.txt"
+  },
+  {
+    "doc_id": "DOC-100375-1",
+    "member_id": "SYN-100375",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-09",
+    "path": "data/documents/DOC-100375-1.txt"
+  },
+  {
+    "doc_id": "DOC-100382-1",
+    "member_id": "SYN-100382",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-10",
+    "path": "data/documents/DOC-100382-1.txt"
+  },
+  {
+    "doc_id": "DOC-100382-2",
+    "member_id": "SYN-100382",
+    "doc_type": "lab_report",
+    "doc_date": "2026-08-13",
+    "path": "data/documents/DOC-100382-2.txt"
+  },
+  {
+    "doc_id": "DOC-100382-3",
+    "member_id": "SYN-100382",
+    "doc_type": "progress_note",
+    "doc_date": "2026-09-12",
+    "path": "data/documents/DOC-100382-3.txt"
+  },
+  {
+    "doc_id": "DOC-100389-1",
+    "member_id": "SYN-100389",
+    "doc_type": "procedure_note",
+    "doc_date": "2026-06-18",
+    "path": "data/documents/DOC-100389-1.txt"
+  },
+  {
+    "doc_id": "DOC-100389-2",
+    "member_id": "SYN-100389",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-23",
+    "path": "data/documents/DOC-100389-2.txt"
+  },
+  {
+    "doc_id": "DOC-100396-1",
+    "member_id": "SYN-100396",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-13",
+    "path": "data/documents/DOC-100396-1.txt"
+  },
+  {
+    "doc_id": "DOC-100403-1",
+    "member_id": "SYN-100403",
+    "doc_type": "progress_note",
+    "doc_date": "2026-08-18",
+    "path": "data/documents/DOC-100403-1.txt"
+  },
+  {
+    "doc_id": "DOC-100410-1",
+    "member_id": "SYN-100410",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-21",
+    "path": "data/documents/DOC-100410-1.txt"
+  },
+  {
+    "doc_id": "DOC-100417-1",
+    "member_id": "SYN-100417",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-03",
+    "path": "data/documents/DOC-100417-1.txt"
+  },
+  {
+    "doc_id": "DOC-100424-1",
+    "member_id": "SYN-100424",
+    "doc_type": "lab_report",
+    "doc_date": "2026-07-20",
+    "path": "data/documents/DOC-100424-1.txt"
+  },
+  {
+    "doc_id": "DOC-100424-2",
+    "member_id": "SYN-100424",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-29",
+    "path": "data/documents/DOC-100424-2.txt"
+  },
+  {
+    "doc_id": "DOC-100431-1",
+    "member_id": "SYN-100431",
+    "doc_type": "lab_report",
+    "doc_date": "2026-01-26",
+    "path": "data/documents/DOC-100431-1.txt"
+  },
+  {
+    "doc_id": "DOC-100431-2",
+    "member_id": "SYN-100431",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-04",
+    "path": "data/documents/DOC-100431-2.txt"
+  },
+  {
+    "doc_id": "DOC-100438-1",
+    "member_id": "SYN-100438",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-17",
+    "path": "data/documents/DOC-100438-1.txt"
+  },
+  {
+    "doc_id": "DOC-100445-1",
+    "member_id": "SYN-100445",
+    "doc_type": "progress_note",
+    "doc_date": "2026-05-29",
+    "path": "data/documents/DOC-100445-1.txt"
+  },
+  {
+    "doc_id": "DOC-100452-1",
+    "member_id": "SYN-100452",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-12",
+    "path": "data/documents/DOC-100452-1.txt"
+  },
+  {
+    "doc_id": "DOC-100459-1",
+    "member_id": "SYN-100459",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-19",
+    "path": "data/documents/DOC-100459-1.txt"
+  },
+  {
+    "doc_id": "DOC-100466-1",
+    "member_id": "SYN-100466",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-07",
+    "path": "data/documents/DOC-100466-1.txt"
+  },
+  {
+    "doc_id": "DOC-100473-1",
+    "member_id": "SYN-100473",
+    "doc_type": "progress_note",
+    "doc_date": "2026-09-04",
+    "path": "data/documents/DOC-100473-1.txt"
+  },
+  {
+    "doc_id": "DOC-100480-1",
+    "member_id": "SYN-100480",
+    "doc_type": "progress_note",
+    "doc_date": "2026-06-30",
+    "path": "data/documents/DOC-100480-1.txt"
+  },
+  {
+    "doc_id": "DOC-100487-1",
+    "member_id": "SYN-100487",
+    "doc_type": "procedure_note",
+    "doc_date": "2026-02-18",
+    "path": "data/documents/DOC-100487-1.txt"
+  },
+  {
+    "doc_id": "DOC-100487-2",
+    "member_id": "SYN-100487",
+    "doc_type": "progress_note",
+    "doc_date": "2026-04-19",
+    "path": "data/documents/DOC-100487-2.txt"
+  },
+  {
+    "doc_id": "DOC-100494-1",
+    "member_id": "SYN-100494",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-10",
+    "path": "data/documents/DOC-100494-1.txt"
+  },
+  {
+    "doc_id": "DOC-100501-1",
+    "member_id": "SYN-100501",
+    "doc_type": "progress_note",
+    "doc_date": "2026-04-30",
+    "path": "data/documents/DOC-100501-1.txt"
+  },
+  {
+    "doc_id": "DOC-100508-1",
+    "member_id": "SYN-100508",
+    "doc_type": "progress_note",
+    "doc_date": "2026-07-24",
+    "path": "data/documents/DOC-100508-1.txt"
+  },
+  {
+    "doc_id": "DOC-100515-1",
+    "member_id": "SYN-100515",
+    "doc_type": "lab_report",
+    "doc_date": "2026-02-14",
+    "path": "data/documents/DOC-100515-1.txt"
+  },
+  {
+    "doc_id": "DOC-100515-2",
+    "member_id": "SYN-100515",
+    "doc_type": "discharge_summary",
+    "doc_date": "2026-02-16",
+    "path": "data/documents/DOC-100515-2.txt"
+  },
+  {
+    "doc_id": "DOC-100515-3",
+    "member_id": "SYN-100515",
+    "doc_type": "progress_note",
+    "doc_date": "2026-03-07",
+    "path": "data/documents/DOC-100515-3.txt"
+  },
+  {
+    "doc_id": "DOC-100522-1",
+    "member_id": "SYN-100522",
+    "doc_type": "progress_note",
+    "doc_date": "2026-05-02",
+    "path": "data/documents/DOC-100522-1.txt"
+  },
+  {
+    "doc_id": "DOC-100529-1",
+    "member_id": "SYN-100529",
+    "doc_type": "progress_note",
+    "doc_date": "2026-04-23",
+    "path": "data/documents/DOC-100529-1.txt"
+  }
+]

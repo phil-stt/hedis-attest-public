@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Vera Lindqvist    DOB: 05/17/1955    Member ID: SYN-100494
+Date of service: 03/10/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Mild low back stiffness after gardening, improving with heat.
+Requests refills of maintenance medications.
+
+OBJECTIVE
+Vitals: HR 68, Temp 97.9 F, Wt 79 kg, SpO2 97%
+
+ASSESSMENT AND PLAN
+Health maintenance: influenza vaccine administered today.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 03/10/2026

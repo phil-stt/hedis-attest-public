@@ -1,0 +1,2092 @@
+[
+  {
+    "run_id": "20261005T022710Z-dev",
+    "timestamp": "2026-10-05T02:27:10+00:00",
+    "split": "dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v1"
+    },
+    "metrics": {
+      "gaps": 42,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 16,
+          "expected": 16,
+          "correct": 16
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 4,
+          "expected": 4,
+          "correct": 4
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 13,
+          "expected": 13,
+          "correct": 13
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 9,
+          "expected": 9,
+          "correct": 9
+        }
+      },
+      "wrong_value_count": 1,
+      "field_accuracy": 0.95,
+      "field_checked": 20,
+      "abstain_rate": 0.31,
+      "abstains": 13,
+      "correct_abstains": 13,
+      "abstain_reason_match": 13,
+      "traps": 13,
+      "traps_not_accepted": 13,
+      "evidence_span_match": 1.0,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 139055,
+        "output_tokens": 17361,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 42
+      },
+      "estimated_cost_usd": 0.9
+    }
+  },
+  {
+    "run_id": "20261005T022755Z-dev",
+    "timestamp": "2026-10-05T02:27:55+00:00",
+    "split": "dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 42,
+      "accuracy": 0.976,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 0.938,
+          "predicted": 15,
+          "expected": 16,
+          "correct": 15
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 4,
+          "expected": 4,
+          "correct": 4
+        },
+        "abstain": {
+          "precision": 0.929,
+          "recall": 1.0,
+          "predicted": 14,
+          "expected": 13,
+          "correct": 13
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 9,
+          "expected": 9,
+          "correct": 9
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 19,
+      "abstain_rate": 0.333,
+      "abstains": 14,
+      "correct_abstains": 13,
+      "abstain_reason_match": 13,
+      "traps": 13,
+      "traps_not_accepted": 13,
+      "evidence_span_match": 1.0,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 140231,
+        "output_tokens": 16775,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 42
+      },
+      "estimated_cost_usd": 0.9
+    }
+  },
+  {
+    "run_id": "20261005T022902Z-dev",
+    "timestamp": "2026-10-05T02:29:02+00:00",
+    "split": "dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 42,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 16,
+          "expected": 16,
+          "correct": 16
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 4,
+          "expected": 4,
+          "correct": 4
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 13,
+          "expected": 13,
+          "correct": 13
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 9,
+          "expected": 9,
+          "correct": 9
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 20,
+      "abstain_rate": 0.31,
+      "abstains": 13,
+      "correct_abstains": 13,
+      "abstain_reason_match": 13,
+      "traps": 13,
+      "traps_not_accepted": 13,
+      "evidence_span_match": 1.0,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 140231,
+        "output_tokens": 16434,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 42
+      },
+      "estimated_cost_usd": 0.89
+    }
+  },
+  {
+    "run_id": "20261005T032227Z-heldout",
+    "timestamp": "2026-10-05T03:22:27+00:00",
+    "split": "heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 18,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 7,
+          "expected": 7,
+          "correct": 7
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 5,
+          "expected": 5,
+          "correct": 5
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 10,
+      "abstain_rate": 0.278,
+      "abstains": 5,
+      "correct_abstains": 5,
+      "abstain_reason_match": 5,
+      "traps": 6,
+      "traps_not_accepted": 6,
+      "evidence_span_match": 0.8,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 64616,
+        "output_tokens": 8246,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 18
+      },
+      "estimated_cost_usd": 0.42
+    }
+  },
+  {
+    "run_id": "20261005T184054Z-heldout",
+    "timestamp": "2026-10-05T18:40:54+00:00",
+    "split": "heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 18,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 7,
+          "expected": 7,
+          "correct": 7
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 5,
+          "expected": 5,
+          "correct": 5
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 10,
+      "abstain_rate": 0.278,
+      "abstains": 5,
+      "correct_abstains": 5,
+      "abstain_reason_match": 5,
+      "traps": 6,
+      "traps_not_accepted": 6,
+      "evidence_span_match": 0.8,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 61412,
+        "output_tokens": 8076,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 18
+      },
+      "estimated_cost_usd": 0.41
+    },
+    "source": "ci"
+  },
+  {
+    "run_id": "20261005T184408Z-heldout",
+    "timestamp": "2026-10-05T18:44:08+00:00",
+    "split": "heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 18,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 7,
+          "expected": 7,
+          "correct": 7
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 5,
+          "expected": 5,
+          "correct": 5
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 10,
+      "abstain_rate": 0.278,
+      "abstains": 5,
+      "correct_abstains": 5,
+      "abstain_reason_match": 5,
+      "traps": 6,
+      "traps_not_accepted": 6,
+      "evidence_span_match": 0.8,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 61412,
+        "output_tokens": 7781,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 18
+      },
+      "estimated_cost_usd": 0.4
+    },
+    "source": "ci"
+  },
+  {
+    "run_id": "20261005T223250Z-heldout",
+    "timestamp": "2026-10-05T22:32:50+00:00",
+    "split": "heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 18,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 7,
+          "expected": 7,
+          "correct": 7
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 5,
+          "expected": 5,
+          "correct": 5
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 3,
+          "expected": 3,
+          "correct": 3
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 10,
+      "abstain_rate": 0.278,
+      "abstains": 5,
+      "correct_abstains": 5,
+      "abstain_reason_match": 5,
+      "traps": 6,
+      "traps_not_accepted": 6,
+      "evidence_span_match": 0.8,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 61412,
+        "output_tokens": 7715,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 18
+      },
+      "estimated_cost_usd": 0.4
+    },
+    "source": "ci"
+  },
+  {
+    "run_id": "20261011T062519Z-v2-heldout",
+    "timestamp": "2026-10-11T06:25:19+00:00",
+    "split": "v2-heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 96,
+      "accuracy": 0.979,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 24,
+          "expected": 24,
+          "correct": 24
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 0.917,
+          "predicted": 22,
+          "expected": 24,
+          "correct": 22
+        },
+        "abstain": {
+          "precision": 0.923,
+          "recall": 1.0,
+          "predicted": 26,
+          "expected": 24,
+          "correct": 24
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 24,
+          "expected": 24,
+          "correct": 24
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 46,
+      "abstain_rate": 0.271,
+      "abstains": 26,
+      "correct_abstains": 24,
+      "abstain_reason_match": 24,
+      "traps": 24,
+      "traps_not_accepted": 24,
+      "evidence_span_match": 0.848,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 327853,
+        "output_tokens": 39490,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 96
+      },
+      "estimated_cost_usd": 2.1
+    }
+  },
+  {
+    "run_id": "20261011T070021Z-v2-heldout",
+    "timestamp": "2026-10-11T07:00:21+00:00",
+    "split": "v2-heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v1",
+      "GSD": "gsd.v1",
+      "COL-E": "cole.v2"
+    },
+    "metrics": {
+      "gaps": 96,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 24,
+          "expected": 24,
+          "correct": 24
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 24,
+          "expected": 24,
+          "correct": 24
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 24,
+          "expected": 24,
+          "correct": 24
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 24,
+          "expected": 24,
+          "correct": 24
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 48,
+      "abstain_rate": 0.25,
+      "abstains": 24,
+      "correct_abstains": 24,
+      "abstain_reason_match": 24,
+      "traps": 24,
+      "traps_not_accepted": 24,
+      "evidence_span_match": 0.854,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 324646,
+        "output_tokens": 38012,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 96
+      },
+      "estimated_cost_usd": 2.06
+    }
+  },
+  {
+    "run_id": "20261011T071945Z-dev",
+    "timestamp": "2026-10-11T07:19:45+00:00",
+    "split": "dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v2",
+      "COL-E": "cole.v3",
+      "GSD": "gsd.v2"
+    },
+    "metrics": {
+      "gaps": 42,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 16,
+          "expected": 16,
+          "correct": 16
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 4,
+          "expected": 4,
+          "correct": 4
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 13,
+          "expected": 13,
+          "correct": 13
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 9,
+          "expected": 9,
+          "correct": 9
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 20,
+      "abstain_rate": 0.31,
+      "abstains": 13,
+      "correct_abstains": 13,
+      "abstain_reason_match": 13,
+      "traps": 13,
+      "traps_not_accepted": 13,
+      "evidence_span_match": 1.0,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 141389,
+        "output_tokens": 16037,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 42
+      },
+      "estimated_cost_usd": 0.89
+    }
+  },
+  {
+    "run_id": "20261011T185814Z-v2-dev-TRC+KED",
+    "timestamp": "2026-10-11T18:58:14+00:00",
+    "split": "v2-dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v2",
+      "COL-E": "cole.v3",
+      "GSD": "gsd.v2",
+      "KED": "ked.v1",
+      "TRC": "trc.v1"
+    },
+    "metrics": {
+      "gaps": 80,
+      "accuracy": 0.887,
+      "per_type": {
+        "numerator": {
+          "precision": 0.944,
+          "recall": 0.85,
+          "predicted": 18,
+          "expected": 20,
+          "correct": 17
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "predicted": 16,
+          "expected": 20,
+          "correct": 16
+        },
+        "abstain": {
+          "precision": 0.704,
+          "recall": 0.95,
+          "predicted": 27,
+          "expected": 20,
+          "correct": 19
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 0.95,
+          "predicted": 19,
+          "expected": 20,
+          "correct": 19
+        }
+      },
+      "wrong_value_count": 1,
+      "field_accuracy": 1.0,
+      "field_checked": 33,
+      "abstain_rate": 0.338,
+      "abstains": 27,
+      "correct_abstains": 19,
+      "abstain_reason_match": 11,
+      "traps": 20,
+      "traps_not_accepted": 19,
+      "evidence_span_match": 0.939,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 403432,
+        "output_tokens": 71438,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 80
+      },
+      "estimated_cost_usd": 3.04
+    }
+  },
+  {
+    "run_id": "20261011T190213Z-v2-dev-TRC+KED",
+    "timestamp": "2026-10-11T19:02:13+00:00",
+    "split": "v2-dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v2",
+      "COL-E": "cole.v3",
+      "GSD": "gsd.v2",
+      "KED": "ked.v1",
+      "TRC": "trc.v2"
+    },
+    "metrics": {
+      "gaps": 80,
+      "accuracy": 0.887,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "predicted": 18,
+          "expected": 20,
+          "correct": 18
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 0.9,
+          "predicted": 18,
+          "expected": 20,
+          "correct": 18
+        },
+        "abstain": {
+          "precision": 0.69,
+          "recall": 1.0,
+          "predicted": 29,
+          "expected": 20,
+          "correct": 20
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "predicted": 15,
+          "expected": 20,
+          "correct": 15
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 36,
+      "abstain_rate": 0.362,
+      "abstains": 29,
+      "correct_abstains": 20,
+      "abstain_reason_match": 17,
+      "traps": 20,
+      "traps_not_accepted": 20,
+      "evidence_span_match": 0.972,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 377100,
+        "output_tokens": 51820,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 80
+      },
+      "estimated_cost_usd": 2.54
+    }
+  },
+  {
+    "run_id": "20261011T190516Z-v2-dev-TRC+KED",
+    "timestamp": "2026-10-11T19:05:16+00:00",
+    "split": "v2-dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v2",
+      "COL-E": "cole.v3",
+      "GSD": "gsd.v2",
+      "KED": "ked.v1",
+      "TRC": "trc.v3"
+    },
+    "metrics": {
+      "gaps": 80,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 20,
+          "expected": 20,
+          "correct": 20
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 20,
+          "expected": 20,
+          "correct": 20
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 20,
+          "expected": 20,
+          "correct": 20
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 20,
+          "expected": 20,
+          "correct": 20
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 40,
+      "abstain_rate": 0.25,
+      "abstains": 20,
+      "correct_abstains": 20,
+      "abstain_reason_match": 20,
+      "traps": 20,
+      "traps_not_accepted": 20,
+      "evidence_span_match": 1.0,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 316759,
+        "output_tokens": 50923,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 80
+      },
+      "estimated_cost_usd": 2.29
+    }
+  },
+  {
+    "run_id": "20261011T190713Z-v2-heldout",
+    "timestamp": "2026-10-11T19:07:13+00:00",
+    "split": "v2-heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v2",
+      "COL-E": "cole.v3",
+      "GSD": "gsd.v2",
+      "KED": "ked.v1",
+      "TRC": "trc.v3"
+    },
+    "metrics": {
+      "gaps": 136,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 68,
+      "abstain_rate": 0.25,
+      "abstains": 34,
+      "correct_abstains": 34,
+      "abstain_reason_match": 34,
+      "traps": 34,
+      "traps_not_accepted": 34,
+      "evidence_span_match": 0.985,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 484884,
+        "output_tokens": 62897,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0
+      },
+      "models_served": {
+        "claude-opus-5-5": 134,
+        "claude-opus-4-8": 2
+      },
+      "estimated_cost_usd": 3.2
+    }
+  },
+  {
+    "run_id": "20261012T043746Z-v2-dev-router",
+    "timestamp": "2026-10-12T04:37:46+00:00",
+    "split": "v2-dev",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v2",
+      "COL-E": "cole.v3",
+      "GSD": "gsd.v2",
+      "KED": "ked.v1",
+      "TRC": "trc.v3"
+    },
+    "metrics": {
+      "gaps": 272,
+      "accuracy": 0.956,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 68,
+          "expected": 68,
+          "correct": 68
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 68,
+          "expected": 68,
+          "correct": 68
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 0.821,
+          "predicted": 55,
+          "expected": 67,
+          "correct": 55
+        },
+        "none": {
+          "precision": 0.852,
+          "recall": 1.0,
+          "predicted": 81,
+          "expected": 69,
+          "correct": 69
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 136,
+      "abstain_rate": 0.202,
+      "abstains": 55,
+      "correct_abstains": 55,
+      "abstain_reason_match": 55,
+      "traps": 68,
+      "traps_not_accepted": 68,
+      "evidence_span_match": 0.978,
+      "downgraded_by_rules": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 202355,
+        "output_tokens": 115897,
+        "cache_read_input_tokens": 619837,
+        "cache_creation_input_tokens": 28552
+      },
+      "models_served": {
+        "claude-opus-5-5": 218,
+        "claude-haiku-4-5-20251001": 53,
+        "claude-opus-4-8": 1
+      },
+      "estimated_cost_usd": 3.39
+    }
+  },
+  {
+    "run_id": "20261012T172436Z-v2-heldout",
+    "timestamp": "2026-10-12T17:24:36+00:00",
+    "split": "v2-heldout",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "prompt_versions": {
+      "CBP": "cbp.v2",
+      "COL-E": "cole.v3",
+      "GSD": "gsd.v2",
+      "KED": "ked.v1",
+      "TRC": "trc.v3"
+    },
+    "metrics": {
+      "gaps": 136,
+      "accuracy": 1.0,
+      "per_type": {
+        "numerator": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        },
+        "exclusion": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        },
+        "abstain": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        },
+        "none": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "predicted": 34,
+          "expected": 34,
+          "correct": 34
+        }
+      },
+      "wrong_value_count": 0,
+      "field_accuracy": 1.0,
+      "field_checked": 68,
+      "abstain_rate": 0.25,
+      "abstains": 34,
+      "correct_abstains": 34,
+      "abstain_reason_match": 34,
+      "traps": 34,
+      "traps_not_accepted": 34,
+      "evidence_span_match": 0.971,
+      "downgraded_by_rules": 0,
+      "strata": {
+        "tranche": [
+          {
+            "key": "D-SNP \u00b7 independent practices",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 8,
+            "abstain_rate": {
+              "k": 8,
+              "n": 17,
+              "value": 0.471,
+              "lb": 0.23
+            },
+            "numerator_precision": {
+              "k": 3,
+              "n": 3,
+              "value": 1.0,
+              "lb": 0.292
+            },
+            "actionable_recall": {
+              "k": 6,
+              "n": 6,
+              "value": 1.0,
+              "lb": 0.541
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Group MA \u00b7 out-of-network",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 8,
+            "abstain_rate": {
+              "k": 8,
+              "n": 17,
+              "value": 0.471,
+              "lb": 0.23
+            },
+            "numerator_precision": {
+              "k": 3,
+              "n": 3,
+              "value": 1.0,
+              "lb": 0.292
+            },
+            "actionable_recall": {
+              "k": 6,
+              "n": 6,
+              "value": 1.0,
+              "lb": 0.541
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Group MA \u00b7 owned primary care",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 3,
+            "abstain_rate": {
+              "k": 3,
+              "n": 17,
+              "value": 0.176,
+              "lb": 0.038
+            },
+            "numerator_precision": {
+              "k": 3,
+              "n": 3,
+              "value": 1.0,
+              "lb": 0.292
+            },
+            "actionable_recall": {
+              "k": 6,
+              "n": 6,
+              "value": 1.0,
+              "lb": 0.541
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Individual MA \u00b7 independent practices",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 3,
+            "abstain_rate": {
+              "k": 3,
+              "n": 17,
+              "value": 0.176,
+              "lb": 0.038
+            },
+            "numerator_precision": {
+              "k": 3,
+              "n": 3,
+              "value": 1.0,
+              "lb": 0.292
+            },
+            "actionable_recall": {
+              "k": 6,
+              "n": 6,
+              "value": 1.0,
+              "lb": 0.541
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Individual MA \u00b7 large IPA",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 3,
+            "abstain_rate": {
+              "k": 3,
+              "n": 17,
+              "value": 0.176,
+              "lb": 0.038
+            },
+            "numerator_precision": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "actionable_recall": {
+              "k": 11,
+              "n": 11,
+              "value": 1.0,
+              "lb": 0.715
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Individual MA \u00b7 owned primary care",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 3,
+            "abstain_rate": {
+              "k": 3,
+              "n": 17,
+              "value": 0.176,
+              "lb": 0.038
+            },
+            "numerator_precision": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "actionable_recall": {
+              "k": 11,
+              "n": 11,
+              "value": 1.0,
+              "lb": 0.715
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Medicaid \u00b7 independent practices",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 3,
+            "abstain_rate": {
+              "k": 3,
+              "n": 17,
+              "value": 0.176,
+              "lb": 0.038
+            },
+            "numerator_precision": {
+              "k": 3,
+              "n": 3,
+              "value": 1.0,
+              "lb": 0.292
+            },
+            "actionable_recall": {
+              "k": 11,
+              "n": 11,
+              "value": 1.0,
+              "lb": 0.715
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Medicaid \u00b7 out-of-network",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 3,
+            "abstain_rate": {
+              "k": 3,
+              "n": 17,
+              "value": 0.176,
+              "lb": 0.038
+            },
+            "numerator_precision": {
+              "k": 3,
+              "n": 3,
+              "value": 1.0,
+              "lb": 0.292
+            },
+            "actionable_recall": {
+              "k": 11,
+              "n": 11,
+              "value": 1.0,
+              "lb": 0.715
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          }
+        ],
+        "lob": [
+          {
+            "key": "D-SNP",
+            "n": 17,
+            "below_min_n": false,
+            "correct": 17,
+            "accuracy": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "wrong_values": 0,
+            "abstains": 8,
+            "abstain_rate": {
+              "k": 8,
+              "n": 17,
+              "value": 0.471,
+              "lb": 0.23
+            },
+            "numerator_precision": {
+              "k": 3,
+              "n": 3,
+              "value": 1.0,
+              "lb": 0.292
+            },
+            "actionable_recall": {
+              "k": 6,
+              "n": 6,
+              "value": 1.0,
+              "lb": 0.541
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Group MA",
+            "n": 34,
+            "below_min_n": false,
+            "correct": 34,
+            "accuracy": {
+              "k": 34,
+              "n": 34,
+              "value": 1.0,
+              "lb": 0.897
+            },
+            "wrong_values": 0,
+            "abstains": 11,
+            "abstain_rate": {
+              "k": 11,
+              "n": 34,
+              "value": 0.324,
+              "lb": 0.174
+            },
+            "numerator_precision": {
+              "k": 6,
+              "n": 6,
+              "value": 1.0,
+              "lb": 0.541
+            },
+            "actionable_recall": {
+              "k": 12,
+              "n": 12,
+              "value": 1.0,
+              "lb": 0.735
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Individual MA",
+            "n": 51,
+            "below_min_n": false,
+            "correct": 51,
+            "accuracy": {
+              "k": 51,
+              "n": 51,
+              "value": 1.0,
+              "lb": 0.93
+            },
+            "wrong_values": 0,
+            "abstains": 9,
+            "abstain_rate": {
+              "k": 9,
+              "n": 51,
+              "value": 0.176,
+              "lb": 0.084
+            },
+            "numerator_precision": {
+              "k": 19,
+              "n": 19,
+              "value": 1.0,
+              "lb": 0.824
+            },
+            "actionable_recall": {
+              "k": 28,
+              "n": 28,
+              "value": 1.0,
+              "lb": 0.877
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "Medicaid",
+            "n": 34,
+            "below_min_n": false,
+            "correct": 34,
+            "accuracy": {
+              "k": 34,
+              "n": 34,
+              "value": 1.0,
+              "lb": 0.897
+            },
+            "wrong_values": 0,
+            "abstains": 6,
+            "abstain_rate": {
+              "k": 6,
+              "n": 34,
+              "value": 0.176,
+              "lb": 0.068
+            },
+            "numerator_precision": {
+              "k": 6,
+              "n": 6,
+              "value": 1.0,
+              "lb": 0.541
+            },
+            "actionable_recall": {
+              "k": 22,
+              "n": 22,
+              "value": 1.0,
+              "lb": 0.846
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          }
+        ],
+        "measure": [
+          {
+            "key": "CBP",
+            "n": 32,
+            "below_min_n": false,
+            "correct": 32,
+            "accuracy": {
+              "k": 32,
+              "n": 32,
+              "value": 1.0,
+              "lb": 0.891
+            },
+            "wrong_values": 0,
+            "abstains": 8,
+            "abstain_rate": {
+              "k": 8,
+              "n": 32,
+              "value": 0.25,
+              "lb": 0.115
+            },
+            "numerator_precision": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "actionable_recall": {
+              "k": 16,
+              "n": 16,
+              "value": 1.0,
+              "lb": 0.794
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "COL-E",
+            "n": 32,
+            "below_min_n": false,
+            "correct": 32,
+            "accuracy": {
+              "k": 32,
+              "n": 32,
+              "value": 1.0,
+              "lb": 0.891
+            },
+            "wrong_values": 0,
+            "abstains": 8,
+            "abstain_rate": {
+              "k": 8,
+              "n": 32,
+              "value": 0.25,
+              "lb": 0.115
+            },
+            "numerator_precision": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "actionable_recall": {
+              "k": 16,
+              "n": 16,
+              "value": 1.0,
+              "lb": 0.794
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "GSD",
+            "n": 32,
+            "below_min_n": false,
+            "correct": 32,
+            "accuracy": {
+              "k": 32,
+              "n": 32,
+              "value": 1.0,
+              "lb": 0.891
+            },
+            "wrong_values": 0,
+            "abstains": 8,
+            "abstain_rate": {
+              "k": 8,
+              "n": 32,
+              "value": 0.25,
+              "lb": 0.115
+            },
+            "numerator_precision": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "actionable_recall": {
+              "k": 16,
+              "n": 16,
+              "value": 1.0,
+              "lb": 0.794
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "KED",
+            "n": 8,
+            "below_min_n": true,
+            "correct": 8,
+            "accuracy": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "wrong_values": 0,
+            "abstains": 2,
+            "abstain_rate": {
+              "k": 2,
+              "n": 8,
+              "value": 0.25,
+              "lb": 0.032
+            },
+            "numerator_precision": {
+              "k": 2,
+              "n": 2,
+              "value": 1.0,
+              "lb": 0.158
+            },
+            "actionable_recall": {
+              "k": 4,
+              "n": 4,
+              "value": 1.0,
+              "lb": 0.398
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "TRC",
+            "n": 32,
+            "below_min_n": false,
+            "correct": 32,
+            "accuracy": {
+              "k": 32,
+              "n": 32,
+              "value": 1.0,
+              "lb": 0.891
+            },
+            "wrong_values": 0,
+            "abstains": 8,
+            "abstain_rate": {
+              "k": 8,
+              "n": 32,
+              "value": 0.25,
+              "lb": 0.115
+            },
+            "numerator_precision": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "actionable_recall": {
+              "k": 16,
+              "n": 16,
+              "value": 1.0,
+              "lb": 0.794
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          }
+        ],
+        "evidence_source": [
+          {
+            "key": "none",
+            "n": 34,
+            "below_min_n": false,
+            "correct": 34,
+            "accuracy": {
+              "k": 34,
+              "n": 34,
+              "value": 1.0,
+              "lb": 0.897
+            },
+            "wrong_values": 0,
+            "abstains": 0,
+            "abstain_rate": {
+              "k": 0,
+              "n": 34,
+              "value": 0.0,
+              "lb": 0.0
+            },
+            "numerator_precision": {
+              "k": 0,
+              "n": 0,
+              "value": null,
+              "lb": null
+            },
+            "actionable_recall": {
+              "k": 0,
+              "n": 0,
+              "value": null,
+              "lb": null
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "primary",
+            "n": 58,
+            "below_min_n": false,
+            "correct": 58,
+            "accuracy": {
+              "k": 58,
+              "n": 58,
+              "value": 1.0,
+              "lb": 0.938
+            },
+            "wrong_values": 0,
+            "abstains": 18,
+            "abstain_rate": {
+              "k": 18,
+              "n": 58,
+              "value": 0.31,
+              "lb": 0.195
+            },
+            "numerator_precision": {
+              "k": 15,
+              "n": 15,
+              "value": 1.0,
+              "lb": 0.782
+            },
+            "actionable_recall": {
+              "k": 40,
+              "n": 40,
+              "value": 1.0,
+              "lb": 0.912
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "secondary",
+            "n": 44,
+            "below_min_n": false,
+            "correct": 44,
+            "accuracy": {
+              "k": 44,
+              "n": 44,
+              "value": 1.0,
+              "lb": 0.92
+            },
+            "wrong_values": 0,
+            "abstains": 16,
+            "abstain_rate": {
+              "k": 16,
+              "n": 44,
+              "value": 0.364,
+              "lb": 0.224
+            },
+            "numerator_precision": {
+              "k": 19,
+              "n": 19,
+              "value": 1.0,
+              "lb": 0.824
+            },
+            "actionable_recall": {
+              "k": 28,
+              "n": 28,
+              "value": 1.0,
+              "lb": 0.877
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          }
+        ],
+        "fragmentation": [
+          {
+            "key": "cross_provider",
+            "n": 60,
+            "below_min_n": false,
+            "correct": 60,
+            "accuracy": {
+              "k": 60,
+              "n": 60,
+              "value": 1.0,
+              "lb": 0.94
+            },
+            "wrong_values": 0,
+            "abstains": 27,
+            "abstain_rate": {
+              "k": 27,
+              "n": 60,
+              "value": 0.45,
+              "lb": 0.321
+            },
+            "numerator_precision": {
+              "k": 7,
+              "n": 7,
+              "value": 1.0,
+              "lb": 0.59
+            },
+            "actionable_recall": {
+              "k": 22,
+              "n": 22,
+              "value": 1.0,
+              "lb": 0.846
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "duplicate_document",
+            "n": 43,
+            "below_min_n": false,
+            "correct": 43,
+            "accuracy": {
+              "k": 43,
+              "n": 43,
+              "value": 1.0,
+              "lb": 0.918
+            },
+            "wrong_values": 0,
+            "abstains": 7,
+            "abstain_rate": {
+              "k": 7,
+              "n": 43,
+              "value": 0.163,
+              "lb": 0.068
+            },
+            "numerator_precision": {
+              "k": 10,
+              "n": 10,
+              "value": 1.0,
+              "lb": 0.692
+            },
+            "actionable_recall": {
+              "k": 17,
+              "n": 17,
+              "value": 1.0,
+              "lb": 0.805
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "evidence_in_secondary_source",
+            "n": 44,
+            "below_min_n": false,
+            "correct": 44,
+            "accuracy": {
+              "k": 44,
+              "n": 44,
+              "value": 1.0,
+              "lb": 0.92
+            },
+            "wrong_values": 0,
+            "abstains": 16,
+            "abstain_rate": {
+              "k": 16,
+              "n": 44,
+              "value": 0.364,
+              "lb": 0.224
+            },
+            "numerator_precision": {
+              "k": 19,
+              "n": 19,
+              "value": 1.0,
+              "lb": 0.824
+            },
+            "actionable_recall": {
+              "k": 28,
+              "n": 28,
+              "value": 1.0,
+              "lb": 0.877
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "none",
+            "n": 31,
+            "below_min_n": false,
+            "correct": 31,
+            "accuracy": {
+              "k": 31,
+              "n": 31,
+              "value": 1.0,
+              "lb": 0.888
+            },
+            "wrong_values": 0,
+            "abstains": 0,
+            "abstain_rate": {
+              "k": 0,
+              "n": 31,
+              "value": 0.0,
+              "lb": 0.0
+            },
+            "numerator_precision": {
+              "k": 9,
+              "n": 9,
+              "value": 1.0,
+              "lb": 0.664
+            },
+            "actionable_recall": {
+              "k": 21,
+              "n": 21,
+              "value": 1.0,
+              "lb": 0.839
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          }
+        ],
+        "doc_types": [
+          {
+            "key": "discharge_summary",
+            "n": 33,
+            "below_min_n": false,
+            "correct": 33,
+            "accuracy": {
+              "k": 33,
+              "n": 33,
+              "value": 1.0,
+              "lb": 0.894
+            },
+            "wrong_values": 0,
+            "abstains": 9,
+            "abstain_rate": {
+              "k": 9,
+              "n": 33,
+              "value": 0.273,
+              "lb": 0.133
+            },
+            "numerator_precision": {
+              "k": 8,
+              "n": 8,
+              "value": 1.0,
+              "lb": 0.631
+            },
+            "actionable_recall": {
+              "k": 16,
+              "n": 16,
+              "value": 1.0,
+              "lb": 0.794
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "lab_report",
+            "n": 7,
+            "below_min_n": true,
+            "correct": 7,
+            "accuracy": {
+              "k": 7,
+              "n": 7,
+              "value": 1.0,
+              "lb": 0.59
+            },
+            "wrong_values": 0,
+            "abstains": 0,
+            "abstain_rate": {
+              "k": 0,
+              "n": 7,
+              "value": 0.0,
+              "lb": 0.0
+            },
+            "numerator_precision": {
+              "k": 7,
+              "n": 7,
+              "value": 1.0,
+              "lb": 0.59
+            },
+            "actionable_recall": {
+              "k": 7,
+              "n": 7,
+              "value": 1.0,
+              "lb": 0.59
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "procedure_note",
+            "n": 1,
+            "below_min_n": true,
+            "correct": 1,
+            "accuracy": {
+              "k": 1,
+              "n": 1,
+              "value": 1.0,
+              "lb": 0.025
+            },
+            "wrong_values": 0,
+            "abstains": 0,
+            "abstain_rate": {
+              "k": 0,
+              "n": 1,
+              "value": 0.0,
+              "lb": 0.0
+            },
+            "numerator_precision": {
+              "k": 1,
+              "n": 1,
+              "value": 1.0,
+              "lb": 0.025
+            },
+            "actionable_recall": {
+              "k": 1,
+              "n": 1,
+              "value": 1.0,
+              "lb": 0.025
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          },
+          {
+            "key": "progress_note",
+            "n": 136,
+            "below_min_n": false,
+            "correct": 136,
+            "accuracy": {
+              "k": 136,
+              "n": 136,
+              "value": 1.0,
+              "lb": 0.973
+            },
+            "wrong_values": 0,
+            "abstains": 34,
+            "abstain_rate": {
+              "k": 34,
+              "n": 136,
+              "value": 0.25,
+              "lb": 0.18
+            },
+            "numerator_precision": {
+              "k": 34,
+              "n": 34,
+              "value": 1.0,
+              "lb": 0.897
+            },
+            "actionable_recall": {
+              "k": 68,
+              "n": 68,
+              "value": 1.0,
+              "lb": 0.947
+            },
+            "router_skipped": 0,
+            "router_lost": 0
+          }
+        ]
+      },
+      "max_wrong_values_in_a_tranche": 0
+    },
+    "usage": {
+      "tokens": {
+        "input_tokens": 87724,
+        "output_tokens": 62443,
+        "cache_read_input_tokens": 340848,
+        "cache_creation_input_tokens": 56308
+      },
+      "models_served": {
+        "claude-opus-5-5": 132,
+        "claude-opus-4-8": 4
+      },
+      "estimated_cost_usd": 1.95
+    }
+  }
+]

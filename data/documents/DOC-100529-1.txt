@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Tobias Fairbanks    DOB: 04/22/1941    Member ID: SYN-100529
+Date of service: 04/23/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Here for routine follow-up of chronic conditions.
+
+OBJECTIVE
+Vitals: BP 158/88, HR 79, Temp 98.6 F, Wt 71 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Hypertension, above goal today: add hydrochlorothiazide 12.5 mg daily; recheck in 4 weeks.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 04/23/2026

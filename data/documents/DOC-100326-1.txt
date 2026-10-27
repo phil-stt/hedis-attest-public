@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Priya Vantongeren, MD
+Patient: Floyd Fairbanks    DOB: 06/15/1968    Member ID: SYN-100326
+Date of service: 03/11/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+Walking about 20 minutes most days with a neighbor.
+
+OBJECTIVE
+Vitals: HR 68, Temp 97.9 F, Wt 84 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Type 2 diabetes: HbA1c ordered today, results pending; continue metformin.
+Follow up in 3 months.
+
+Electronically signed by Priya Vantongeren, MD on 03/11/2026

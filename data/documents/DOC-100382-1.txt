@@ -1,0 +1,17 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Edith Castellano    DOB: 07/01/1968    Member ID: SYN-100382
+Date of service: 06/10/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Mild low back stiffness after gardening, improving with heat.
+
+OBJECTIVE
+Vitals: BP 137/80, HR 87, Temp 98.4 F, Wt 59 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+
+Electronically signed by Dana Okonjo-Lind, MD on 06/10/2026

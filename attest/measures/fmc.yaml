@@ -1,0 +1,7 @@
+code: FMC
+name: "Follow-Up After ED Visit for Multiple High-Risk Chronic Conditions"
+star_weight: 1
+collection: "admin"
+chart_lever: small
+status: planned
+closes: "Follow-up visit within 7 days of the ED visit; mostly claims."

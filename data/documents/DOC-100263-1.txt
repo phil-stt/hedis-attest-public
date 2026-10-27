@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Nestor Ashdown    DOB: 07/24/1974    Member ID: SYN-100263
+Date of service: 09/07/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Walking about 20 minutes most days with a neighbor.
+Prior flexible sigmoidoscopy in February 2022, unremarkable.
+
+OBJECTIVE
+Vitals: HR 88, Temp 98.4 F, Wt 67 kg, SpO2 95%
+
+ASSESSMENT AND PLAN
+Knee pain: likely osteoarthritis; trial of topical diclofenac gel.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 09/07/2026

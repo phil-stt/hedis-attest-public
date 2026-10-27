@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Priya Vantongeren, MD
+Patient: Jerome Yarborough    DOB: 07/14/1979    Member ID: SYN-100228
+Date of service: 07/21/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Reports intermittent right knee pain with stairs, worse in the morning.
+Seasonal allergies flaring; using over-the-counter loratadine.
+He recalls his A1c was 7.0 a few months ago.
+
+OBJECTIVE
+Vitals: BP 112/65, HR 77, Temp 98.6 F, Wt 59 kg, SpO2 97%
+
+ASSESSMENT AND PLAN
+Hypertension: recheck after amlodipine increase; continue current dose.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Follow up in 3 months.
+
+Electronically signed by Priya Vantongeren, MD on 07/21/2026

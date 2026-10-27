@@ -1,0 +1,689 @@
+[
+  {
+    "gap_id": "GAP-0001",
+    "member_id": "SYN-100200",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-07",
+    "document_ids": [
+      "DOC-100200-1",
+      "DOC-100200-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0002",
+    "member_id": "SYN-100200",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-14",
+    "document_ids": [
+      "DOC-100200-1",
+      "DOC-100200-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0003",
+    "member_id": "SYN-100207",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-22",
+    "document_ids": [
+      "DOC-100207-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0004",
+    "member_id": "SYN-100214",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-25",
+    "document_ids": [
+      "DOC-100214-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0005",
+    "member_id": "SYN-100221",
+    "measure": "COL-E",
+    "provider_id": "PRV-04",
+    "due_date": "2026-12-22",
+    "document_ids": [
+      "DOC-100221-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0006",
+    "member_id": "SYN-100228",
+    "measure": "CBP",
+    "provider_id": "PRV-03",
+    "due_date": "2026-12-19",
+    "document_ids": [
+      "DOC-100228-1",
+      "DOC-100228-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0007",
+    "member_id": "SYN-100228",
+    "measure": "GSD",
+    "provider_id": "PRV-03",
+    "due_date": "2026-12-16",
+    "document_ids": [
+      "DOC-100228-1",
+      "DOC-100228-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0008",
+    "member_id": "SYN-100235",
+    "measure": "GSD",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-21",
+    "document_ids": [
+      "DOC-100235-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0009",
+    "member_id": "SYN-100242",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-13",
+    "document_ids": [
+      "DOC-100242-1",
+      "DOC-100242-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0010",
+    "member_id": "SYN-100242",
+    "measure": "GSD",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-12",
+    "document_ids": [
+      "DOC-100242-1",
+      "DOC-100242-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0011",
+    "member_id": "SYN-100249",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-06",
+    "document_ids": [
+      "DOC-100249-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0012",
+    "member_id": "SYN-100256",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-05",
+    "document_ids": [
+      "DOC-100256-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0013",
+    "member_id": "SYN-100263",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-21",
+    "document_ids": [
+      "DOC-100263-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0014",
+    "member_id": "SYN-100270",
+    "measure": "GSD",
+    "provider_id": "PRV-04",
+    "due_date": "2026-12-20",
+    "document_ids": [
+      "DOC-100270-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0015",
+    "member_id": "SYN-100277",
+    "measure": "COL-E",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-17",
+    "document_ids": [
+      "DOC-100277-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0016",
+    "member_id": "SYN-100284",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-31",
+    "document_ids": [
+      "DOC-100284-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0017",
+    "member_id": "SYN-100291",
+    "measure": "COL-E",
+    "provider_id": "PRV-03",
+    "due_date": "2026-12-17",
+    "document_ids": [
+      "DOC-100291-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0018",
+    "member_id": "SYN-100298",
+    "measure": "COL-E",
+    "provider_id": "PRV-04",
+    "due_date": "2026-12-01",
+    "document_ids": [
+      "DOC-100298-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0019",
+    "member_id": "SYN-100305",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-13",
+    "document_ids": [
+      "DOC-100305-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0020",
+    "member_id": "SYN-100312",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-23",
+    "document_ids": [
+      "DOC-100312-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0021",
+    "member_id": "SYN-100319",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-28",
+    "document_ids": [
+      "DOC-100319-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0022",
+    "member_id": "SYN-100326",
+    "measure": "GSD",
+    "provider_id": "PRV-03",
+    "due_date": "2026-12-19",
+    "document_ids": [
+      "DOC-100326-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0023",
+    "member_id": "SYN-100333",
+    "measure": "COL-E",
+    "provider_id": "PRV-05",
+    "due_date": "2026-12-19",
+    "document_ids": [
+      "DOC-100333-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0024",
+    "member_id": "SYN-100340",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-14",
+    "document_ids": [
+      "DOC-100340-1",
+      "DOC-100340-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0025",
+    "member_id": "SYN-100340",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-06",
+    "document_ids": [
+      "DOC-100340-1",
+      "DOC-100340-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0026",
+    "member_id": "SYN-100347",
+    "measure": "CBP",
+    "provider_id": "PRV-03",
+    "due_date": "2026-11-12",
+    "document_ids": [
+      "DOC-100347-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0027",
+    "member_id": "SYN-100354",
+    "measure": "COL-E",
+    "provider_id": "PRV-06",
+    "due_date": "2026-12-15",
+    "document_ids": [
+      "DOC-100354-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0028",
+    "member_id": "SYN-100361",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-04",
+    "document_ids": [
+      "DOC-100361-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0029",
+    "member_id": "SYN-100368",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-11",
+    "document_ids": [
+      "DOC-100368-1",
+      "DOC-100368-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0030",
+    "member_id": "SYN-100368",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-26",
+    "document_ids": [
+      "DOC-100368-1",
+      "DOC-100368-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0031",
+    "member_id": "SYN-100375",
+    "measure": "COL-E",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-31",
+    "document_ids": [
+      "DOC-100375-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0032",
+    "member_id": "SYN-100382",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-13",
+    "document_ids": [
+      "DOC-100382-1",
+      "DOC-100382-2",
+      "DOC-100382-3"
+    ]
+  },
+  {
+    "gap_id": "GAP-0033",
+    "member_id": "SYN-100382",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-15",
+    "document_ids": [
+      "DOC-100382-1",
+      "DOC-100382-2",
+      "DOC-100382-3"
+    ]
+  },
+  {
+    "gap_id": "GAP-0034",
+    "member_id": "SYN-100389",
+    "measure": "COL-E",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-29",
+    "document_ids": [
+      "DOC-100389-1",
+      "DOC-100389-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0035",
+    "member_id": "SYN-100396",
+    "measure": "COL-E",
+    "provider_id": "PRV-06",
+    "due_date": "2026-11-29",
+    "document_ids": [
+      "DOC-100396-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0036",
+    "member_id": "SYN-100403",
+    "measure": "COL-E",
+    "provider_id": "PRV-04",
+    "due_date": "2026-11-25",
+    "document_ids": [
+      "DOC-100403-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0037",
+    "member_id": "SYN-100410",
+    "measure": "GSD",
+    "provider_id": "PRV-06",
+    "due_date": "2026-11-13",
+    "document_ids": [
+      "DOC-100410-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0038",
+    "member_id": "SYN-100417",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-11",
+    "document_ids": [
+      "DOC-100417-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0039",
+    "member_id": "SYN-100424",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-15",
+    "document_ids": [
+      "DOC-100424-1",
+      "DOC-100424-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0040",
+    "member_id": "SYN-100424",
+    "measure": "GSD",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-17",
+    "document_ids": [
+      "DOC-100424-1",
+      "DOC-100424-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0041",
+    "member_id": "SYN-100431",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-29",
+    "document_ids": [
+      "DOC-100431-1",
+      "DOC-100431-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0042",
+    "member_id": "SYN-100438",
+    "measure": "COL-E",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-29",
+    "document_ids": [
+      "DOC-100438-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0043",
+    "member_id": "SYN-100445",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-01",
+    "document_ids": [
+      "DOC-100445-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0044",
+    "member_id": "SYN-100445",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-22",
+    "document_ids": [
+      "DOC-100445-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0045",
+    "member_id": "SYN-100452",
+    "measure": "CBP",
+    "provider_id": "PRV-05",
+    "due_date": "2026-11-23",
+    "document_ids": [
+      "DOC-100452-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0046",
+    "member_id": "SYN-100452",
+    "measure": "GSD",
+    "provider_id": "PRV-05",
+    "due_date": "2026-11-19",
+    "document_ids": [
+      "DOC-100452-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0047",
+    "member_id": "SYN-100459",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-30",
+    "document_ids": [
+      "DOC-100459-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0048",
+    "member_id": "SYN-100466",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-06",
+    "document_ids": [
+      "DOC-100466-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0049",
+    "member_id": "SYN-100473",
+    "measure": "COL-E",
+    "provider_id": "PRV-03",
+    "due_date": "2026-12-11",
+    "document_ids": [
+      "DOC-100473-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0050",
+    "member_id": "SYN-100480",
+    "measure": "COL-E",
+    "provider_id": "PRV-04",
+    "due_date": "2026-12-21",
+    "document_ids": [
+      "DOC-100480-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0051",
+    "member_id": "SYN-100487",
+    "measure": "CBP",
+    "provider_id": "PRV-05",
+    "due_date": "2026-12-06",
+    "document_ids": [
+      "DOC-100487-1",
+      "DOC-100487-2"
+    ]
+  },
+  {
+    "gap_id": "GAP-0052",
+    "member_id": "SYN-100494",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-19",
+    "document_ids": [
+      "DOC-100494-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0053",
+    "member_id": "SYN-100501",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-23",
+    "document_ids": [
+      "DOC-100501-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0054",
+    "member_id": "SYN-100501",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-25",
+    "document_ids": [
+      "DOC-100501-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0055",
+    "member_id": "SYN-100508",
+    "measure": "CBP",
+    "provider_id": "PRV-05",
+    "due_date": "2026-12-26",
+    "document_ids": [
+      "DOC-100508-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0056",
+    "member_id": "SYN-100515",
+    "measure": "CBP",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-17",
+    "document_ids": [
+      "DOC-100515-1",
+      "DOC-100515-2",
+      "DOC-100515-3"
+    ]
+  },
+  {
+    "gap_id": "GAP-0057",
+    "member_id": "SYN-100515",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-01",
+    "document_ids": [
+      "DOC-100515-1",
+      "DOC-100515-2",
+      "DOC-100515-3"
+    ]
+  },
+  {
+    "gap_id": "GAP-0058",
+    "member_id": "SYN-100522",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-27",
+    "document_ids": [
+      "DOC-100522-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0059",
+    "member_id": "SYN-100522",
+    "measure": "GSD",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-28",
+    "document_ids": [
+      "DOC-100522-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0060",
+    "member_id": "SYN-100529",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-31",
+    "document_ids": [
+      "DOC-100529-1"
+    ]
+  },
+  {
+    "gap_id": "GAP-0061",
+    "member_id": "SYN-100536",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-12-01",
+    "document_ids": []
+  },
+  {
+    "gap_id": "GAP-0062",
+    "member_id": "SYN-100543",
+    "measure": "GSD",
+    "provider_id": "PRV-05",
+    "due_date": "2026-12-10",
+    "document_ids": []
+  },
+  {
+    "gap_id": "GAP-0063",
+    "member_id": "SYN-100550",
+    "measure": "COL-E",
+    "provider_id": "PRV-01",
+    "due_date": "2026-11-18",
+    "document_ids": []
+  },
+  {
+    "gap_id": "GAP-0064",
+    "member_id": "SYN-100557",
+    "measure": "CBP",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-10",
+    "document_ids": []
+  },
+  {
+    "gap_id": "GAP-0065",
+    "member_id": "SYN-100564",
+    "measure": "GSD",
+    "provider_id": "PRV-03",
+    "due_date": "2026-11-29",
+    "document_ids": []
+  },
+  {
+    "gap_id": "GAP-0066",
+    "member_id": "SYN-100571",
+    "measure": "COL-E",
+    "provider_id": "PRV-02",
+    "due_date": "2026-11-01",
+    "document_ids": []
+  },
+  {
+    "gap_id": "GAP-0067",
+    "member_id": "SYN-100578",
+    "measure": "CBP",
+    "provider_id": "PRV-05",
+    "due_date": "2026-11-21",
+    "document_ids": []
+  },
+  {
+    "gap_id": "GAP-0068",
+    "member_id": "SYN-100585",
+    "measure": "GSD",
+    "provider_id": "PRV-01",
+    "due_date": "2026-12-29",
+    "document_ids": []
+  }
+]

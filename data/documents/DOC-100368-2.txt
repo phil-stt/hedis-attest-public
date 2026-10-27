@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Wendell Ingersoll    DOB: 11/05/1968    Member ID: SYN-100368
+Date of service: 06/07/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Sleeping poorly over the last month; discussed sleep hygiene.
+
+OBJECTIVE
+Vitals: BP 149/88 on arrival; repeat after 5 minutes seated 120/71, HR 76, Temp 98.4 F, Wt 97 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Reviewed outside lab report.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 06/07/2026

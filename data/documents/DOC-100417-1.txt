@@ -1,0 +1,22 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Marisol Pemberton    DOB: 04/14/1952    Member ID: SYN-100417
+Date of service: 03/03/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Reports intermittent right knee pain with stairs, worse in the morning.
+Here for routine follow-up of chronic conditions.
+Advanced illness: heart failure, NYHA class IV, on home oxygen.
+Frailty: uses a walker, two falls since spring.
+
+OBJECTIVE
+Vitals: HR 85, Temp 98.2 F, Wt 85 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Heart failure: continue furosemide; cardiology following.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 03/03/2026

@@ -1,0 +1,33 @@
+# Local run: `make dev`. Needs Docker; ANTHROPIC_API_KEY in .env only for live extraction.
+# Postgres is the store, as in production. State survives restarts in the pg-data volume.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: attest
+      POSTGRES_PASSWORD: attest
+      POSTGRES_DB: attest
+    ports:
+      - "5432:5432"   # so `make test-postgres` and local tools can reach it
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+      - ./infra/postgres-init.sql:/docker-entrypoint-initdb.d/10-test-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U attest -d attest"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+  attest:
+    build: .
+    ports:
+      - "8080:8080"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATABASE_URL: postgresql+psycopg://attest:attest@db:5432/attest
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  pg-data:

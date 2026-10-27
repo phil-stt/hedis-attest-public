@@ -1,0 +1,21 @@
+code: COL-E
+name: Colorectal Cancer Screening
+star_weight: 1
+collection: ECDS only
+chart_lever: supplemental
+status: active
+prompt: cole.v3
+submission_channel: supplemental data (ECDS)
+closes: "A completed screening test inside its lookback window. ECDS-only: lands as supplemental data."
+family: procedure_window
+fields: [procedure_type, procedure_date]
+field_schema:
+  procedure_type: {type: string, enum: [colonoscopy, fit, fit_dna, flexible_sigmoidoscopy, ct_colonography]}
+  procedure_date: {type: string}
+field_labels: {procedure_type: Procedure, procedure_date: Procedure date}
+params:
+  type_field: procedure_type
+  date_field: procedure_date
+  lookback_years: {colonoscopy: 9, fit: 0, fit_dna: 2, flexible_sigmoidoscopy: 4, ct_colonography: 4}
+exclusions: [hospice, palliative_care, advanced_illness_frailty, total_colectomy, colorectal_cancer]
+synthetic_age: [46, 75]

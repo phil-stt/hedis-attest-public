@@ -1,0 +1,81 @@
+name: CI
+
+# Pushes and pull requests: lint and the unit tests (no model calls, no spend).
+# Pushes to main additionally run the held-out eval gate against the live model when an
+# ANTHROPIC_API_KEY secret is configured: about $2 per run, and the build fails on any wrong value.
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Lint and unit tests
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: attest
+          POSTGRES_PASSWORD: attest
+          POSTGRES_DB: attest_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U attest" --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: ruff check .
+      - name: Tests on SQLite
+        run: python -m pytest -q
+      - name: Tests on Postgres
+        env:
+          DATABASE_URL: postgresql+psycopg://attest:attest@localhost:5432/attest_test
+        run: python -m pytest -q
+
+  eval-gate:
+    name: Eval gate (held-out set, live model)
+    needs: test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      HAS_KEY: ${{ secrets.ANTHROPIC_API_KEY != '' }}   # the secrets context is not allowed in a step's `if`
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run held-out eval and enforce the gate
+        if: env.HAS_KEY == 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ATTEST_DATASET: data/v2/eval-block.jsonl.gz
+        # Wrong values are the failure an auditor punishes, so the bar is zero, overall and in every tranche;
+        # numerator precision may not drop at all. Recall and abstain rate are reported but not gated:
+        # refusing is allowed, being wrong is not.
+        run: |
+          set -o pipefail
+          python -m attest.eval --split v2-heldout \
+            --gate-min-numerator-precision 1.0 \
+            --gate-max-wrong-values 0 \
+            --gate-max-wrong-values-per-stratum 0 | tee eval-report.txt
+      - name: Eval summary
+        if: always()
+        run: |
+          {
+            echo '## Held-out eval gate'
+            echo '```'
+            cat eval-report.txt 2>/dev/null || echo 'no ANTHROPIC_API_KEY secret: gate skipped'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,7 @@
+code: PCR
+name: "Plan All-Cause Readmissions"
+star_weight: 3
+collection: "admin"
+chart_lever: none
+status: registry_only
+closes: "Claims-based outcome; no chart lever."

@@ -1,0 +1,7 @@
+code: PDC-DM
+name: "Medication Adherence for Diabetes Medications"
+star_weight: 1
+collection: "pharmacy claims (PQA)"
+chart_lever: none
+status: registry_only
+closes: "Pharmacy claims; no chart lever."

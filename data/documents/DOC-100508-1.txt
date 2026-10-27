@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Lakeshore Internal Medicine
+Provider: Helena Quarshie, MD
+Patient: Irene Whitcombe    DOB: 12/06/1966    Member ID: SYN-100508
+Date of service: 07/24/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Here for routine follow-up of chronic conditions.
+Reports intermittent right knee pain with stairs, worse in the morning.
+
+OBJECTIVE
+Vitals: Blood pressure 122/86 mmHg (seated, left arm), HR 88, Temp 98.6 F, Wt 63 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Follow up in 3 months.
+
+Electronically signed by Helena Quarshie, MD on 07/24/2026

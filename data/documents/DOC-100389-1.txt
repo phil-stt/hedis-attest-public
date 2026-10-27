@@ -1,0 +1,10 @@
+PROCEDURE NOTE - COLONOSCOPY
+Facility: Lakeshore Endoscopy Center
+Patient: Tobias Bellweather    Member ID: SYN-100389
+Date of procedure: 06/18/2026
+
+Indication: average-risk colorectal cancer screening.
+Preparation: good (Boston Bowel Prep Score 8).
+Extent: cecum reached, appendiceal orifice and ileocecal valve identified.
+Findings: normal colon. No polyps.
+Recommendation: repeat colonoscopy in 10 years.

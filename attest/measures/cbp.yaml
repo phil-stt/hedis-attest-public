@@ -1,0 +1,24 @@
+code: CBP
+name: Controlling High Blood Pressure
+star_weight: 3
+collection: admin + hybrid (ECDS MY2028)
+chart_lever: strong
+status: active
+prompt: cbp.v2
+submission_channel: hybrid (medical record review)
+closes: Most recent outpatient BP in the measurement year below 140/90, with exact values, date, and setting.
+family: blood_pressure
+fields: [systolic, diastolic, reading_date, setting, source]
+field_schema:
+  systolic: {type: integer}
+  diastolic: {type: integer}
+  reading_date: {type: string}
+  setting: {type: string, enum: [outpatient, home]}
+  source: {type: string, enum: [office, digital_home_device]}
+field_labels: {systolic: Systolic, diastolic: Diastolic, reading_date: Reading date, setting: Setting, source: Source}
+params:
+  systolic_max: 140
+  diastolic_max: 90
+  eligible_setting_source: [[outpatient, office], [home, digital_home_device]]
+exclusions: [hospice, palliative_care, advanced_illness_frailty, esrd_dialysis]
+synthetic_age: [45, 85]

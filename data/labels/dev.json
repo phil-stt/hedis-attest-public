@@ -1,0 +1,749 @@
+[
+  {
+    "gap_id": "GAP-0001",
+    "member_id": "SYN-100200",
+    "measure": "CBP",
+    "scenario": "cbp_pos_multi",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 123,
+      "diastolic": 65,
+      "reading_date": "2026-06-02",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100200-2",
+      "start": 365,
+      "end": 374,
+      "text": "BP 123/65"
+    },
+    "note": "earlier reading 152/92 on 2026-04-17 is superseded by the most recent"
+  },
+  {
+    "gap_id": "GAP-0002",
+    "member_id": "SYN-100200",
+    "measure": "GSD",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0003",
+    "member_id": "SYN-100207",
+    "measure": "COL-E",
+    "scenario": "cole_excl_colectomy",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "total_colectomy",
+      "supporting_date": "2012"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100207-1",
+      "start": 356,
+      "end": 405,
+      "text": "s/p total colectomy (2012) for ulcerative colitis"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0004",
+    "member_id": "SYN-100214",
+    "measure": "COL-E",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0005",
+    "member_id": "SYN-100221",
+    "measure": "COL-E",
+    "scenario": "cole_trap_fitdna_old",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-100221-1",
+      "start": 354,
+      "end": 378,
+      "text": "Cologuard 2022, negative"
+    },
+    "note": "FIT-DNA window is 2024-2026"
+  },
+  {
+    "gap_id": "GAP-0008",
+    "member_id": "SYN-100235",
+    "measure": "GSD",
+    "scenario": "gsd_pos_relative",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 6.9,
+      "test_date": "2026-07-08"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100235-1",
+      "start": 354,
+      "end": 403,
+      "text": "A1c drawn at the lab last Wednesday returned 6.9%"
+    },
+    "note": "relative date resolved from the dated note"
+  },
+  {
+    "gap_id": "GAP-0009",
+    "member_id": "SYN-100242",
+    "measure": "CBP",
+    "scenario": "cbp_trap_ed",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "ineligible_setting",
+    "evidence": {
+      "doc_id": "DOC-100242-1",
+      "start": 242,
+      "end": 266,
+      "text": "Triage vitals: BP 119/83"
+    },
+    "note": "ED readings are not eligible for CBP"
+  },
+  {
+    "gap_id": "GAP-0010",
+    "member_id": "SYN-100242",
+    "measure": "GSD",
+    "scenario": "gsd_trap_number_nodate",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-100242-2",
+      "start": 339,
+      "end": 371,
+      "text": "Last A1c 6.7 per outside records"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0011",
+    "member_id": "SYN-100249",
+    "measure": "CBP",
+    "scenario": "cbp_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 132,
+      "diastolic": 81,
+      "reading_date": "2026-03-02",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100249-1",
+      "start": 353,
+      "end": 398,
+      "text": "Blood pressure 132/81 mmHg (seated, left arm)"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0012",
+    "member_id": "SYN-100256",
+    "measure": "CBP",
+    "scenario": "cbp_neg_uncontrolled",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": "most recent reading 154/82 does not meet <140/90; gap remains open"
+  },
+  {
+    "gap_id": "GAP-0013",
+    "member_id": "SYN-100263",
+    "measure": "COL-E",
+    "scenario": "cole_flexsig",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "flexible_sigmoidoscopy",
+      "procedure_date": "2022-02"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100263-1",
+      "start": 345,
+      "end": 398,
+      "text": "flexible sigmoidoscopy in February 2022, unremarkable"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0014",
+    "member_id": "SYN-100270",
+    "measure": "GSD",
+    "scenario": "gsd_excl_palliative",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "palliative_care",
+      "supporting_date": "2026-08-13"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100270-1",
+      "start": 454,
+      "end": 488,
+      "text": "comfort care discussed and elected"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0015",
+    "member_id": "SYN-100277",
+    "measure": "COL-E",
+    "scenario": "cole_excl_crc",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "colorectal_cancer",
+      "supporting_date": "2018"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100277-1",
+      "start": 342,
+      "end": 405,
+      "text": "History of colon cancer, stage II, s/p right hemicolectomy 2018"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0016",
+    "member_id": "SYN-100284",
+    "measure": "CBP",
+    "scenario": "cbp_pos_relative",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 124,
+      "diastolic": 79,
+      "reading_date": "2026-08-12",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100284-1",
+      "start": 378,
+      "end": 420,
+      "text": "nurse BP check here last Wednesday: 124/79"
+    },
+    "note": "relative date resolved from the dated note (Monday note, prior Wednesday)"
+  },
+  {
+    "gap_id": "GAP-0017",
+    "member_id": "SYN-100291",
+    "measure": "COL-E",
+    "scenario": "cole_hist_colonoscopy",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "colonoscopy",
+      "procedure_date": "2021"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100291-1",
+      "start": 385,
+      "end": 434,
+      "text": "colonoscopy in 2021 with two small polyps removed"
+    },
+    "note": "history with a stated year counts; lands as supplemental data"
+  },
+  {
+    "gap_id": "GAP-0020",
+    "member_id": "SYN-100312",
+    "measure": "GSD",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0021",
+    "member_id": "SYN-100319",
+    "measure": "CBP",
+    "scenario": "cbp_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-06"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100319-1",
+      "start": 365,
+      "end": 393,
+      "text": "enrolled with hospice 6/2026"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0022",
+    "member_id": "SYN-100326",
+    "measure": "GSD",
+    "scenario": "gsd_trap_pending",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "not_completed",
+    "evidence": {
+      "doc_id": "DOC-100326-1",
+      "start": 433,
+      "end": 469,
+      "text": "HbA1c ordered today, results pending"
+    },
+    "note": "ordered with no result is not evidence"
+  },
+  {
+    "gap_id": "GAP-0024",
+    "member_id": "SYN-100340",
+    "measure": "CBP",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0025",
+    "member_id": "SYN-100340",
+    "measure": "GSD",
+    "scenario": "gsd_pos_multi",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 7.5,
+      "test_date": "2026-09-01"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100340-2",
+      "start": 398,
+      "end": 419,
+      "text": "POC HbA1c today: 7.5%"
+    },
+    "note": "earlier result 9.5 on 2026-05-18 is superseded"
+  },
+  {
+    "gap_id": "GAP-0027",
+    "member_id": "SYN-100354",
+    "measure": "COL-E",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0031",
+    "member_id": "SYN-100375",
+    "measure": "COL-E",
+    "scenario": "cole_fit_dna",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "fit_dna",
+      "procedure_date": "2024-04"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100375-1",
+      "start": 351,
+      "end": 388,
+      "text": "Cologuard (FIT-DNA) 04/2024: negative"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0035",
+    "member_id": "SYN-100396",
+    "measure": "COL-E",
+    "scenario": "cole_trap_undated",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-100396-1",
+      "start": 351,
+      "end": 405,
+      "text": "had a colonoscopy years ago and does not remember when"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0041",
+    "member_id": "SYN-100431",
+    "measure": "COL-E",
+    "scenario": "cole_fit",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "fit",
+      "procedure_date": "2026-01-26"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100431-1",
+      "start": 347,
+      "end": 384,
+      "text": "FECAL IMMUNOCHEM TEST        NEGATIVE"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0042",
+    "member_id": "SYN-100438",
+    "measure": "COL-E",
+    "scenario": "cole_trap_old_colonoscopy",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-100438-1",
+      "start": 352,
+      "end": 376,
+      "text": "colonoscopy 2015, normal"
+    },
+    "note": "2015 is outside the 10-year window (2017-2026)"
+  },
+  {
+    "gap_id": "GAP-0043",
+    "member_id": "SYN-100445",
+    "measure": "CBP",
+    "scenario": "cbp_trap_vague_date",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-100445-1",
+      "start": 339,
+      "end": 397,
+      "text": "BP was 125/84 when checked at urgent care a few months ago"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0044",
+    "member_id": "SYN-100445",
+    "measure": "GSD",
+    "scenario": "gsd_trap_normal_nodate",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_value",
+    "evidence": {
+      "doc_id": "DOC-100445-1",
+      "start": 407,
+      "end": 439,
+      "text": "A1c was normal at her last check"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0045",
+    "member_id": "SYN-100452",
+    "measure": "CBP",
+    "scenario": "cbp_trap_home_nondigital",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "home_reading_not_digital",
+    "evidence": {
+      "doc_id": "DOC-100452-1",
+      "start": 365,
+      "end": 393,
+      "text": "home BP last week was 124/69"
+    },
+    "note": "member-reported home reading with no digital device documented"
+  },
+  {
+    "gap_id": "GAP-0046",
+    "member_id": "SYN-100452",
+    "measure": "GSD",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0047",
+    "member_id": "SYN-100459",
+    "measure": "CBP",
+    "scenario": "cbp_pos_home_digital",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 118,
+      "diastolic": 72,
+      "reading_date": "2026-03-14",
+      "setting": "home",
+      "source": "digital_home_device"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100459-1",
+      "start": 424,
+      "end": 458,
+      "text": "reading from 03/14/2026 was 118/72"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0048",
+    "member_id": "SYN-100466",
+    "measure": "COL-E",
+    "scenario": "cole_fit",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "fit",
+      "procedure_date": "2026-03-29"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100466-1",
+      "start": 405,
+      "end": 457,
+      "text": "FIT (fecal immunochemical test) 03/29/2026: negative"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0049",
+    "member_id": "SYN-100473",
+    "measure": "COL-E",
+    "scenario": "cole_ct",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "ct_colonography",
+      "procedure_date": "2023-10"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100473-1",
+      "start": 364,
+      "end": 411,
+      "text": "CT colonography (10/2023): no polyps identified"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0050",
+    "member_id": "SYN-100480",
+    "measure": "COL-E",
+    "scenario": "cole_neg_declined",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0051",
+    "member_id": "SYN-100487",
+    "measure": "CBP",
+    "scenario": "cbp_trap_procedure_day",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "ineligible_setting",
+    "evidence": {
+      "doc_id": "DOC-100487-1",
+      "start": 189,
+      "end": 220,
+      "text": "Pre-procedure vitals: BP 137/68"
+    },
+    "note": "readings taken on the day of a procedure are not eligible"
+  },
+  {
+    "gap_id": "GAP-0052",
+    "member_id": "SYN-100494",
+    "measure": "CBP",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0053",
+    "member_id": "SYN-100501",
+    "measure": "CBP",
+    "scenario": "cbp_trap_range",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "bp_range_or_threshold",
+    "evidence": {
+      "doc_id": "DOC-100501-1",
+      "start": 353,
+      "end": 412,
+      "text": "BPs have been running in the 130s over 80s at recent checks"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0054",
+    "member_id": "SYN-100501",
+    "measure": "GSD",
+    "scenario": "gsd_trap_prior_year",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-100501-1",
+      "start": 490,
+      "end": 513,
+      "text": "HbA1c 7.3% (11/06/2025)"
+    },
+    "note": "result is from the prior year, outside MY2026"
+  },
+  {
+    "gap_id": "GAP-0055",
+    "member_id": "SYN-100508",
+    "measure": "CBP",
+    "scenario": "cbp_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 122,
+      "diastolic": 86,
+      "reading_date": "2026-07-24",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100508-1",
+      "start": 367,
+      "end": 412,
+      "text": "Blood pressure 122/86 mmHg (seated, left arm)"
+    },
+    "note": ""
+  },
+  {
+    "gap_id": "GAP-0056",
+    "member_id": "SYN-100515",
+    "measure": "CBP",
+    "scenario": "cbp_trap_inpatient",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "ineligible_setting",
+    "evidence": {
+      "doc_id": "DOC-100515-2",
+      "start": 322,
+      "end": 357,
+      "text": "Vital signs at discharge: BP 123/64"
+    },
+    "note": "inpatient readings are not eligible for CBP"
+  },
+  {
+    "gap_id": "GAP-0057",
+    "member_id": "SYN-100515",
+    "measure": "GSD",
+    "scenario": "gsd_pos_mid",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 8.1,
+      "test_date": "2026-02-14"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100515-1",
+      "start": 349,
+      "end": 381,
+      "text": "HEMOGLOBIN A1C               8.1"
+    },
+    "note": "between tiers (8.0-9.0)"
+  },
+  {
+    "gap_id": "GAP-0058",
+    "member_id": "SYN-100522",
+    "measure": "CBP",
+    "scenario": "cbp_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 112,
+      "diastolic": 66,
+      "reading_date": "2026-05-02",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100522-1",
+      "start": 377,
+      "end": 413,
+      "text": "repeat after 5 minutes seated 112/66"
+    },
+    "note": "same-day repeat: lowest systolic and lowest diastolic govern"
+  },
+  {
+    "gap_id": "GAP-0059",
+    "member_id": "SYN-100522",
+    "measure": "GSD",
+    "scenario": "gsd_pos_poor",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 11.3,
+      "test_date": "2026-05-02"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-100522-1",
+      "start": 455,
+      "end": 477,
+      "text": "POC HbA1c today: 11.3%"
+    },
+    "note": "poor control tier (>9.0)"
+  }
+]

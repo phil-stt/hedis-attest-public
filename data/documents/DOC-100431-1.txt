@@ -1,0 +1,12 @@
+*** FAX ***   FROM: Cardinal Point Reference Laboratory   TO: PCP OFFICE   01/27/2026 07:21   PAGE 1 OF 1
+
+        LABORATORY REPORT - FINAL
+PATIENT: FERN UNDERHILL        DOB: 03/01/1952
+MEMBER ID: SYN-100431
+COLLECTED: 01/26/2026    RECEIVED: 01/26/2026    REPORTED: 01/27/2026
+
+TEST                         RESULT     UNITS    REF RANGE   FLAG
+FECAL IMMUNOCHEM TEST        NEGATIVE            NEGATIVE    
+
+Results verified by: M. Ostrowski, MLS(ASCP)
+CONFIDENTIAL - intended only for the addressee

@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Jerome Zielinski    DOB: 01/01/1976    Member ID: SYN-100200
+Date of service: 06/02/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Denies chest pain, shortness of breath, or palpitations.
+Seasonal allergies flaring; using over-the-counter loratadine.
+
+OBJECTIVE
+Vitals: BP 123/65, HR 83, Temp 98.4 F, Wt 65 kg, SpO2 99%
+
+ASSESSMENT AND PLAN
+Hypertension: recheck after amlodipine increase; continue current dose.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Allergic rhinitis: continue loratadine, add saline rinses.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 06/02/2026

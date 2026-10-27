@@ -1,0 +1,7 @@
+code: BCS-E
+name: "Breast Cancer Screening"
+star_weight: 1
+collection: "ECDS only"
+chart_lever: supplemental
+status: planned
+closes: "Mammogram within the 27-month window, from history notes or outside reports."

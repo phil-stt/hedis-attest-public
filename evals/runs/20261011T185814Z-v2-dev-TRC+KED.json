@@ -1,0 +1,5234 @@
+{
+  "run_id": "20261011T185814Z-v2-dev-TRC+KED",
+  "timestamp": "2026-10-11T18:58:14+00:00",
+  "split": "v2-dev",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "prompt_versions": {
+    "CBP": "cbp.v2",
+    "COL-E": "cole.v3",
+    "GSD": "gsd.v2",
+    "KED": "ked.v1",
+    "TRC": "trc.v1"
+  },
+  "metrics": {
+    "gaps": 80,
+    "accuracy": 0.887,
+    "per_type": {
+      "numerator": {
+        "precision": 0.944,
+        "recall": 0.85,
+        "predicted": 18,
+        "expected": 20,
+        "correct": 17
+      },
+      "exclusion": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "predicted": 16,
+        "expected": 20,
+        "correct": 16
+      },
+      "abstain": {
+        "precision": 0.704,
+        "recall": 0.95,
+        "predicted": 27,
+        "expected": 20,
+        "correct": 19
+      },
+      "none": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "predicted": 19,
+        "expected": 20,
+        "correct": 19
+      }
+    },
+    "wrong_value_count": 1,
+    "field_accuracy": 1.0,
+    "field_checked": 33,
+    "abstain_rate": 0.338,
+    "abstains": 27,
+    "correct_abstains": 19,
+    "abstain_reason_match": 11,
+    "traps": 20,
+    "traps_not_accepted": 19,
+    "evidence_span_match": 0.939,
+    "downgraded_by_rules": 0
+  },
+  "usage": {
+    "tokens": {
+      "input_tokens": 403432,
+      "output_tokens": 71438,
+      "cache_read_input_tokens": 0,
+      "cache_creation_input_tokens": 0
+    },
+    "models_served": {
+      "claude-opus-5-5": 80
+    },
+    "estimated_cost_usd": 3.04
+  },
+  "rows": [
+    {
+      "gap_id": "G2-000329",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "admission_date": "2026-07-19",
+        "notification_date": "2026-07-19"
+      },
+      "predicted_fields": {
+        "admission_date": "2026-07-19",
+        "notification_date": "2026-07-19"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The PCP progress note dated 2026-08-09 records that the practice received the admission notification on 07/19/2026, the same day as the 07/19/2026 admission. This is within the NIA window, and the chart shows no hospice or palliative care.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000329-1",
+          "quote": "Admitted: 07/19/2026    Discharged: 07/25/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000329-2",
+          "quote": "Admission notification received from Mercy Vale Regional Medical Center on 07/19/2026 for admission on 07/19/2026"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000329",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000329-1",
+          "DOC-2000329-2"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxdrtcM6F3Bga5QF9mM",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxdrtcM6F3Bga5QF9mM",
+        "stop_reason": "end_turn",
+        "latency_ms": 12088,
+        "usage": {
+          "input_tokens": 3763,
+          "output_tokens": 954,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000330",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {
+        "admission_date": "2026-08-18",
+        "notification_date": "2026-08-19"
+      },
+      "predicted_fields": {
+        "admission_date": null,
+        "notification_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000330",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000330-1",
+          "DOC-2000330-2",
+          "DOC-2000330-3"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxdrv6cPBpenXV3qrn5",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxeHqY1dH8YcByLumJP",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxeHqY1dH8YcByLumJP",
+        "stop_reason": "refusal",
+        "latency_ms": 11134,
+        "usage": {
+          "input_tokens": 8482,
+          "output_tokens": 568,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000331",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "admission_date": "2026-06-16",
+        "notification_date": "2026-06-16"
+      },
+      "predicted_fields": {
+        "admission_date": "2026-06-16",
+        "notification_date": "2026-06-16"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The PCP progress note documents that the practice received admission notification from Mercy Vale on 06/16/2026, the same day as the 06/16/2026 admission, which falls inside the NIA window. No hospice or palliative care evidence was found.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000331-1",
+          "quote": "Admitted: 06/16/2026    Discharged: 06/19/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000331-2",
+          "quote": "Admission notification received from Mercy Vale Regional Medical Center on 06/16/2026 for admission on 06/16/2026"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000331",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000331-1",
+          "DOC-2000331-2"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxdrxKVUQsoBYT6covG",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxeQmk8wN6cEtXTakGp",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxeQmk8wN6cEtXTakGp",
+        "stop_reason": "end_turn",
+        "latency_ms": 19019,
+        "usage": {
+          "input_tokens": 7586,
+          "output_tokens": 1433,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000332",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {
+        "admission_date": "2026-05-30",
+        "notification_date": "2026-05-30"
+      },
+      "predicted_fields": {
+        "admission_date": null,
+        "notification_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000332",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000332-1",
+          "DOC-2000332-2"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxdrzJJikkvXDf2Uyo4",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxeUk8BKJnU7GUVujAz",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxeUk8BKJnU7GUVujAz",
+        "stop_reason": "refusal",
+        "latency_ms": 15967,
+        "usage": {
+          "input_tokens": 7510,
+          "output_tokens": 1073,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000333",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "admission_date": "2026-03-17",
+        "notification_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.8,
+      "rationale": "The only outpatient note (04/09/2026) explicitly states that no hospital notification is on file. The patient's report of the stay at that visit was 23 days after the 03/17/2026 admission, so nothing documents receipt of notification on the day of admission or the next day.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000333",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000333-1",
+          "DOC-2000333-2"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxdry4ynG1g4owUtrkc",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxdry4ynG1g4owUtrkc",
+        "stop_reason": "end_turn",
+        "latency_ms": 13243,
+        "usage": {
+          "input_tokens": 3799,
+          "output_tokens": 1045,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000334",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "admission_date": "2026-08-07",
+        "notification_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.6,
+      "rationale": "The PCP note explicitly states that no hospital notification of the 08/07/2026 admission is on file. The practice learned of the stay only from the patient at the 08/16/2026 visit, well past the day-of or next-day window, and no hospice or palliative care is documented.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000334",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000334-1",
+          "DOC-2000334-2",
+          "DOC-2000334-3"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxdrvqNWQFQvEFrdJGX",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxdrvqNWQFQvEFrdJGX",
+        "stop_reason": "end_turn",
+        "latency_ms": 15620,
+        "usage": {
+          "input_tokens": 4148,
+          "output_tokens": 1213,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000335",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "admission_date": "2026-03-22",
+        "notification_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.8,
+      "rationale": "The PCP note states that no hospital notification of the 03/22/2026 admission is on file; the practice learned of the stay only from the patient at the 04/17/2026 visit, well after the NIA window. No outpatient documentation of notification on the admission day or the day after exists, and no hospice or palliative care is documented.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000335",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000335-1",
+          "DOC-2000335-2"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxdrzojnkM1qF4k38em",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxdrzojnkM1qF4k38em",
+        "stop_reason": "end_turn",
+        "latency_ms": 13732,
+        "usage": {
+          "input_tokens": 3750,
+          "output_tokens": 1180,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000336",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "admission_date": null,
+        "notification_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.72,
+      "rationale": "The only outpatient note (06/25/2026) states that no notification from the hospital is on file, and nothing documents the practice receiving notice of the 05/23/2026 admission on that day or the next. The patient mentioning the stay at a post-discharge visit a month later does not meet NIA; if counted as a member notification it would be far outside the window.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000336",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000336-1",
+          "DOC-2000336-2"
+        ],
+        "timestamp": "2026-10-11T18:56:29+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxdrwLQPJHzWekg6w47",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxdrwLQPJHzWekg6w47",
+        "stop_reason": "end_turn",
+        "latency_ms": 14090,
+        "usage": {
+          "input_tokens": 3794,
+          "output_tokens": 1183,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000337",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000337",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000337-1",
+          "DOC-2000337-2"
+        ],
+        "timestamp": "2026-10-11T18:56:40+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxedCNUn1xM1sdUbgqx",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011Cfvxf32q3mMNDe9ircWCs",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxf32q3mMNDe9ircWCs",
+        "stop_reason": "refusal",
+        "latency_ms": 9900,
+        "usage": {
+          "input_tokens": 7534,
+          "output_tokens": 682,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000338",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000338",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000338-1",
+          "DOC-2000338-2",
+          "DOC-2000338-3"
+        ],
+        "timestamp": "2026-10-11T18:56:41+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxehXJyoYfpcCdKJVYX",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxfAM7akRfVRvEvC59B",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxfAM7akRfVRvEvC59B",
+        "stop_reason": "refusal",
+        "latency_ms": 13736,
+        "usage": {
+          "input_tokens": 8362,
+          "output_tokens": 971,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000339",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000339",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000339-1",
+          "DOC-2000339-2"
+        ],
+        "timestamp": "2026-10-11T18:56:42+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxenGa57azhHAht798v",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxfD74RppCXGHfcD8QZ",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxfD74RppCXGHfcD8QZ",
+        "stop_reason": "refusal",
+        "latency_ms": 11164,
+        "usage": {
+          "input_tokens": 7540,
+          "output_tokens": 874,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000340",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_nia_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "outside_lookback_window",
+      "expected_fields": {},
+      "predicted_fields": {
+        "admission_date": "2026-09-13",
+        "notification_date": "2026-09-19",
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The PCP note documents that the admission notification was received on 2026-09-19 for an admission on 2026-09-13. That is six days after admission, outside the NIA window of the admission day or the next day. There is no hospice or palliative care evidence.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000340-1",
+          "quote": "Admitted: 09/13/2026    Discharged: 09/18/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000340-2",
+          "quote": "Hospital follow-up. Admission notification received on 09/19/2026 for admission on 09/13/2026; discharged 09/18/2026 after COPD exacerbation."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000340",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000340-1",
+          "DOC-2000340-2"
+        ],
+        "timestamp": "2026-10-11T18:56:42+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxepYzZ7mJyX4heRgLP",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxepYzZ7mJyX4heRgLP",
+        "stop_reason": "end_turn",
+        "latency_ms": 6540,
+        "usage": {
+          "input_tokens": 3754,
+          "output_tokens": 664,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000341",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-05-22"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-05-22"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.8,
+      "rationale": "The PCP progress note dated 2026-06-11 documents hospice enrollment on 2026-05-22, within the measurement year, which excludes the member from TRC. The note's otherwise routine content (gardening, 3-month follow-up) is somewhat unusual for a hospice patient, so the nurse may wish to confirm enrollment.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000341-2",
+          "quote": "Hospital follow-up for urinary tract infection with sepsis, resolved, discharged 05/21/2026; patient enrolled with hospice on 05/22/2026."
+        },
+        {
+          "doc_id": "DOC-2000341-2",
+          "quote": "Goals of care per hospice plan."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000341",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000341-1",
+          "DOC-2000341-2"
+        ],
+        "timestamp": "2026-10-11T18:56:43+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxesJSWvJonE3bM5bh1",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxesJSWvJonE3bM5bh1",
+        "stop_reason": "end_turn",
+        "latency_ms": 10152,
+        "usage": {
+          "input_tokens": 3774,
+          "output_tokens": 984,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000342",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-07-19"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-07-19"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP note dated 07/27/2026 documents that the member enrolled with hospice on 07/19/2026, within measurement year 2026, so a hospice exclusion applies. Separately, the outpatient record contains no documentation of admission notification.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000342-2",
+          "quote": "Hospital follow-up for COPD exacerbation, discharged 07/16/2026; patient enrolled with hospice on 07/19/2026."
+        },
+        {
+          "doc_id": "DOC-2000342-2",
+          "quote": "Goals of care per hospice plan."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000342",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000342-1",
+          "DOC-2000342-2",
+          "DOC-2000342-3"
+        ],
+        "timestamp": "2026-10-11T18:56:44+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxexetoH2GjsxMQL5Ku",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxexetoH2GjsxMQL5Ku",
+        "stop_reason": "end_turn",
+        "latency_ms": 6632,
+        "usage": {
+          "input_tokens": 4143,
+          "output_tokens": 702,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000343",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-04-01"
+      },
+      "predicted_fields": {
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000343",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000343-1",
+          "DOC-2000343-2"
+        ],
+        "timestamp": "2026-10-11T18:56:45+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxeyxmzRPEJJuthL11a",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxfJP4PDMoUeEC8xVQ2",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxfJP4PDMoUeEC8xVQ2",
+        "stop_reason": "refusal",
+        "latency_ms": 10971,
+        "usage": {
+          "input_tokens": 7448,
+          "output_tokens": 802,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000344",
+      "measure": "TRC",
+      "indicator": "NIA",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-25"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-25"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.82,
+      "rationale": "The 09/13/2026 outpatient note by a PA-C documents hospice enrollment on 08/25/2026, within the measurement year, which excludes the member from TRC. Separately, no outpatient note documents NIA notification.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000344-2",
+          "quote": "Hospital follow-up for community-acquired pneumonia, discharged 08/24/2026; patient enrolled with hospice on 08/25/2026."
+        },
+        {
+          "doc_id": "DOC-2000344-2",
+          "quote": "Goals of care per hospice plan."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000344",
+        "measure": "TRC",
+        "indicator": "NIA",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000344-1",
+          "DOC-2000344-2"
+        ],
+        "timestamp": "2026-10-11T18:56:48+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxfD1MCthrTe3VpP6Za",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxfD1MCthrTe3VpP6Za",
+        "stop_reason": "end_turn",
+        "latency_ms": 10651,
+        "usage": {
+          "input_tokens": 3801,
+          "output_tokens": 1215,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000345",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-04-24",
+        "receipt_date": "2026-04-24"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-04-24",
+        "receipt_date": "2026-04-24"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The PCP progress note documents receipt of the discharge summary on 04/24/2026, which is the discharge date (04/24/2026) and inside the RDI window. No hospice or palliative care is documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000345-1",
+          "quote": "Admitted: 04/19/2026    Discharged: 04/24/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000345-2",
+          "quote": "Discharge summary received 04/24/2026 (discharged 04/24/2026); reviewed with the patient."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000345",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000345-1",
+          "DOC-2000345-2"
+        ],
+        "timestamp": "2026-10-11T18:56:49+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxfJRYQJcPZkkJAgeeF",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxfJRYQJcPZkkJAgeeF",
+        "stop_reason": "end_turn",
+        "latency_ms": 12043,
+        "usage": {
+          "input_tokens": 3754,
+          "output_tokens": 916,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000346",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-06-01",
+        "receipt_date": "2026-06-01"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-06-01",
+        "receipt_date": "2026-06-01"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP office note dated 06/11/2026 documents that the discharge summary was received on 06/01/2026, which is the discharge date and inside the RDI window. DOC-3 is a resent duplicate of the same note, and the HIE received dates do not bear on receipt by the practice.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000346-1",
+          "quote": "Admitted: 05/26/2026    Discharged: 06/01/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000346-2",
+          "quote": "Hospital follow-up for community-acquired pneumonia. Discharge summary received 06/01/2026 (discharged 06/01/2026); reviewed with the patient."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000346",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000346-1",
+          "DOC-2000346-2",
+          "DOC-2000346-3"
+        ],
+        "timestamp": "2026-10-11T18:56:50+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxfMXooAo6jyUHrTBC6",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxfMXooAo6jyUHrTBC6",
+        "stop_reason": "end_turn",
+        "latency_ms": 11312,
+        "usage": {
+          "input_tokens": 4208,
+          "output_tokens": 1079,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000347",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-06-25",
+        "receipt_date": "2026-06-26"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-06-25",
+        "receipt_date": "2026-06-26"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP progress note (Dr. Gutierrez, DOS 2026-07-21) documents that the discharge summary was received on 2026-06-26, the day after the 2026-06-25 discharge, which meets the RDI window. The hospital's fax statement was not used as evidence, and DOC-3 is a duplicate resend of the same note.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000347-1",
+          "quote": "Admitted: 06/23/2026    Discharged: 06/25/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000347-2",
+          "quote": "Hospital follow-up for acute decompensated heart failure. Discharge summary received 06/26/2026 (discharged 06/25/2026); reviewed with the patient."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000347",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000347-1",
+          "DOC-2000347-2",
+          "DOC-2000347-3"
+        ],
+        "timestamp": "2026-10-11T18:56:51+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxfStX5NKvaXThcspFo",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxftyB1YBTCzB3EdAph",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxftyB1YBTCzB3EdAph",
+        "stop_reason": "end_turn",
+        "latency_ms": 16869,
+        "usage": {
+          "input_tokens": 8420,
+          "output_tokens": 1464,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000348",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_pos",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-02-23",
+        "receipt_date": "2026-02-24"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-02-23",
+        "receipt_date": "2026-02-24"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.92,
+      "rationale": "The outpatient progress note from Dr. Esposito documents receipt of the discharge summary on 2026-02-24, the day after the 2026-02-23 discharge, which falls within the RDI window. No hospice or palliative care evidence is present.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000348-1",
+          "quote": "Admitted: 02/21/2026    Discharged: 02/23/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000348-2",
+          "quote": "Discharge summary received 02/24/2026 (discharged 02/23/2026); reviewed with the patient."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000348",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000348-1",
+          "DOC-2000348-2"
+        ],
+        "timestamp": "2026-10-11T18:56:53+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxfbP1K5d7xSXaGsv1c",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxgLd2Gxy5ChmQyv9wd",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgLd2Gxy5ChmQyv9wd",
+        "stop_reason": "end_turn",
+        "latency_ms": 18290,
+        "usage": {
+          "input_tokens": 7478,
+          "output_tokens": 1659,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000349",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-08-14",
+        "receipt_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP note on 2026-08-28 states discharge records were requested but not yet received. The hospital's 'faxed to PCP' line is not outpatient documentation of receipt, so no RDI evidence exists.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000349",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000349-1",
+          "DOC-2000349-2"
+        ],
+        "timestamp": "2026-10-11T18:56:53+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxfc1DDXTjVRMZfqHmR",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxfc1DDXTjVRMZfqHmR",
+        "stop_reason": "end_turn",
+        "latency_ms": 7130,
+        "usage": {
+          "input_tokens": 3805,
+          "output_tokens": 669,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000350",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": null,
+        "receipt_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The only outpatient note (06/16/2026, plus a resent duplicate) states discharge records were requested but not yet received. The hospital's statement that it faxed the summary is not outpatient documentation of receipt.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000350",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000350-1",
+          "DOC-2000350-2",
+          "DOC-2000350-3"
+        ],
+        "timestamp": "2026-10-11T18:56:55+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxfiE1bEQirYE3QmNG4",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxfiE1bEQirYE3QmNG4",
+        "stop_reason": "end_turn",
+        "latency_ms": 6555,
+        "usage": {
+          "input_tokens": 4136,
+          "output_tokens": 590,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000351",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-08-18",
+        "receipt_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The hospital says it faxed the summary on 08/18/2026, but the PCP's 08/31/2026 note states the records were requested and not yet received. No receipt is documented in the outpatient record, and there is no hospice or palliative care evidence.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000351",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000351-1",
+          "DOC-2000351-2"
+        ],
+        "timestamp": "2026-10-11T18:56:56+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxfns4NJ6kXu2ePzWaa",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxfns4NJ6kXu2ePzWaa",
+        "stop_reason": "end_turn",
+        "latency_ms": 6742,
+        "usage": {
+          "input_tokens": 3755,
+          "output_tokens": 670,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000352",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-03-16",
+        "receipt_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP note from 2026-03-31 states that hospital records were requested but not yet received, and no outpatient documentation shows receipt on 03/16 or 03/17. The hospital's 'faxed to PCP' statement is not outpatient evidence of receipt.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000352",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000352-1",
+          "DOC-2000352-2"
+        ],
+        "timestamp": "2026-10-11T18:56:58+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxfzb1iJGAGxdK7b4zz",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxfzb1iJGAGxdK7b4zz",
+        "stop_reason": "end_turn",
+        "latency_ms": 7216,
+        "usage": {
+          "input_tokens": 3797,
+          "output_tokens": 733,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000353",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000353",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000353-1",
+          "DOC-2000353-2"
+        ],
+        "timestamp": "2026-10-11T18:57:00+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxg8VGSPCGxVHYFcF1x",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxgNhHrAYmz7yobtv3r",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgNhHrAYmz7yobtv3r",
+        "stop_reason": "refusal",
+        "latency_ms": 8401,
+        "usage": {
+          "input_tokens": 7526,
+          "output_tokens": 569,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000354",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "outside_lookback_window",
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-09-09",
+        "receipt_date": "2026-09-20",
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The PCP note documents receipt of the discharge summary on 09/20/2026, well after the 09/09/2026 discharge, so it falls outside the RDI window. The hospital's fax notation is not outpatient-record evidence of receipt. Note also that the receipt date is later than the note's own 09/19/2026 date of service.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000354-2",
+          "quote": "Discharge summary received 09/20/2026 (discharged 09/09/2026)."
+        },
+        {
+          "doc_id": "DOC-2000354-1",
+          "quote": "Follow-up: PCP within 7 days. Summary faxed to PCP office 09/09/2026."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000354",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000354-1",
+          "DOC-2000354-2",
+          "DOC-2000354-3"
+        ],
+        "timestamp": "2026-10-11T18:57:01+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgBtAk8J8oQYYRfuEr",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxgiQwtM7Vic828rC5H",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgiQwtM7Vic828rC5H",
+        "stop_reason": "end_turn",
+        "latency_ms": 16999,
+        "usage": {
+          "input_tokens": 8370,
+          "output_tokens": 1763,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000355",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "outside_lookback_window",
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-04-13",
+        "receipt_date": "2026-04-24",
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The practice note documents receipt of the discharge summary on 2026-04-24, 11 days after the 2026-04-13 discharge, which is outside the RDI window. The hospital's statement that it faxed the summary on 04/13 is not outpatient documentation of receipt.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000355-1",
+          "quote": "Admitted: 04/11/2026    Discharged: 04/13/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000355-2",
+          "quote": "Hospital follow-up for acute decompensated heart failure. Discharge summary received 04/24/2026 (discharged 04/13/2026)."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000355",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000355-1",
+          "DOC-2000355-2"
+        ],
+        "timestamp": "2026-10-11T18:57:01+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgBtAhGynhQp6EyZKV",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgBtAhGynhQp6EyZKV",
+        "stop_reason": "end_turn",
+        "latency_ms": 5831,
+        "usage": {
+          "input_tokens": 3747,
+          "output_tokens": 637,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000356",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_rdi_trap_undated",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "missing_or_ambiguous_date",
+      "predicted_reason": "missing_or_ambiguous_date",
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-05-02",
+        "receipt_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The PCP note says the patient brought in the discharge paperwork but documents no receipt date. The hospital's 'faxed to PCP 05/02/2026' statement is not outpatient-record evidence of receipt, so the nurse should verify whether the practice logged the fax.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000356-1",
+          "quote": "Admitted: 04/30/2026    Discharged: 05/02/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000356-2",
+          "quote": "Discharge paperwork brought in by the patient; no transmission date documented."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000356",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000356-1",
+          "DOC-2000356-2"
+        ],
+        "timestamp": "2026-10-11T18:57:01+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgCDFtS5QHPkKGjKNS",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxgQPz4Ba2ToHq3iMVp",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgQPz4Ba2ToHq3iMVp",
+        "stop_reason": "end_turn",
+        "latency_ms": 9937,
+        "usage": {
+          "input_tokens": 7534,
+          "output_tokens": 809,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000357",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-06-09"
+      },
+      "predicted_fields": {
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000357",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000357-1",
+          "DOC-2000357-2"
+        ],
+        "timestamp": "2026-10-11T18:57:02+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgHkNp62taJ9yjkx2o",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxguvFm2Ha7En2KoHXY",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxguvFm2Ha7En2KoHXY",
+        "stop_reason": "refusal",
+        "latency_ms": 15740,
+        "usage": {
+          "input_tokens": 7544,
+          "output_tokens": 1441,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000358",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-23"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-23"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP office note dated 09/12/2026 documents hospice enrollment on 08/23/2026, during the 2026 measurement year, which excludes the member from TRC. Separately, the hospital's statement that it faxed the summary would not have satisfied RDI, because receipt is not documented in the outpatient record.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000358-2",
+          "quote": "Hospital follow-up for urinary tract infection with sepsis, resolved, discharged 08/20/2026; patient enrolled with hospice on 08/23/2026."
+        },
+        {
+          "doc_id": "DOC-2000358-2",
+          "quote": "Goals of care per hospice plan."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000358",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000358-1",
+          "DOC-2000358-2",
+          "DOC-2000358-3"
+        ],
+        "timestamp": "2026-10-11T18:57:06+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgXQQfTkCNc5FbHcrS",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgXQQfTkCNc5FbHcrS",
+        "stop_reason": "end_turn",
+        "latency_ms": 9807,
+        "usage": {
+          "input_tokens": 4199,
+          "output_tokens": 1108,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000359",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-03-15"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-03-15"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP progress note dated 2026-04-01 documents that the member enrolled in hospice on 2026-03-15, during the measurement year, so this is a hospice exclusion. RDI receipt was not documented in the outpatient record anyway; the only evidence is the hospital's own note that it faxed the summary.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000359-2",
+          "quote": "Hospital follow-up for community-acquired pneumonia, discharged 03/14/2026; patient enrolled with hospice on 03/15/2026."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000359",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000359-1",
+          "DOC-2000359-2"
+        ],
+        "timestamp": "2026-10-11T18:57:07+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgcqLzfMgktTQeZUtc",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgcqLzfMgktTQeZUtc",
+        "stop_reason": "end_turn",
+        "latency_ms": 8866,
+        "usage": {
+          "input_tokens": 3728,
+          "output_tokens": 919,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000360",
+      "measure": "TRC",
+      "indicator": "RDI",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-09"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-09"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.8,
+      "rationale": "The PA-C progress note dated 08/24/2026 documents hospice enrollment on 08/09/2026, within the 2026 measurement year, so the member qualifies for the hospice exclusion. RDI receipt evidence in the chart is weak in any case: the fax notation comes from the hospital, and the HIE stamp is dated 08/11/2026.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000360-2",
+          "quote": "Hospital follow-up for COPD exacerbation, discharged 08/09/2026; patient enrolled with hospice on 08/09/2026."
+        },
+        {
+          "doc_id": "DOC-2000360-1",
+          "quote": "Admitted: 08/05/2026    Discharged: 08/09/2026    Disposition: home"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000360",
+        "measure": "TRC",
+        "indicator": "RDI",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000360-1",
+          "DOC-2000360-2"
+        ],
+        "timestamp": "2026-10-11T18:57:08+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxgh1csUCZCd1HJ7S3K",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxgh1csUCZCd1HJ7S3K",
+        "stop_reason": "end_turn",
+        "latency_ms": 11042,
+        "usage": {
+          "input_tokens": 3798,
+          "output_tokens": 1150,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000361",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_pos_office",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-04-06",
+        "engagement_date": "2026-04-27",
+        "encounter_type": "office_visit"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-04-06",
+        "engagement_date": "2026-04-27",
+        "encounter_type": "office_visit"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.95,
+      "rationale": "The member was discharged 2026-04-06 and had a completed in-person office visit with Dr. Kaplan on 2026-04-27, day 21 after discharge, which is within the PED window. No hospice or palliative care is documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000361-1",
+          "quote": "Admitted: 04/03/2026    Discharged: 04/06/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000361-2",
+          "quote": "Post-discharge office visit today, 21 days after discharge on 04/06/2026, for syncope, workup negative."
+        },
+        {
+          "doc_id": "DOC-2000361-2",
+          "quote": "Visit type: Office visit (in person)"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000361",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000361-1",
+          "DOC-2000361-2"
+        ],
+        "timestamp": "2026-10-11T18:57:09+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgkN2CmS4tZSX3Ayub",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgkN2CmS4tZSX3Ayub",
+        "stop_reason": "end_turn",
+        "latency_ms": 9500,
+        "usage": {
+          "input_tokens": 3849,
+          "output_tokens": 879,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000362",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_pos_telephone",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-08-11",
+        "engagement_date": "2026-08-29",
+        "encounter_type": "telephone_visit"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-08-11",
+        "engagement_date": "2026-08-29",
+        "encounter_type": "telephone_visit"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The member was discharged 2026-08-11. The PCP practice (Yuki Brannigan, DO) completed a telephone visit with the patient on 2026-08-29, 18 days after discharge and within the 30-day window. DOC-2000362-3 is a duplicate HIE copy of the same note.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000362-1",
+          "quote": "Admitted: 08/09/2026    Discharged: 08/11/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000362-2",
+          "quote": "Date of service: 08/29/2026"
+        },
+        {
+          "doc_id": "DOC-2000362-2",
+          "quote": "Telephone visit with the patient today, 18 days after discharge on 08/11/2026; symptoms of community-acquired pneumonia improving, questions answered."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000362",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000362-1",
+          "DOC-2000362-2",
+          "DOC-2000362-3"
+        ],
+        "timestamp": "2026-10-11T18:57:11+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgvhPd2ZgFtrMoJ9fv",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxgvhPd2ZgFtrMoJ9fv",
+        "stop_reason": "end_turn",
+        "latency_ms": 10287,
+        "usage": {
+          "input_tokens": 4255,
+          "output_tokens": 1088,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000363",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_pos_office",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {
+        "discharge_date": "2026-02-28",
+        "engagement_date": "2026-03-11",
+        "encounter_type": "office_visit"
+      },
+      "predicted_fields": {
+        "discharge_date": null,
+        "engagement_date": null,
+        "encounter_type": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000363",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000363-1",
+          "DOC-2000363-2"
+        ],
+        "timestamp": "2026-10-11T18:57:11+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxgwYjDcx3YGgmQRATR",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxhTb1B6ZU6vJ1Z8cc6",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxhTb1B6ZU6vJ1Z8cc6",
+        "stop_reason": "refusal",
+        "latency_ms": 14407,
+        "usage": {
+          "input_tokens": 7758,
+          "output_tokens": 1158,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000364",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_pos_office",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-02-10",
+        "engagement_date": "2026-03-06",
+        "encounter_type": "office_visit"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-02-10",
+        "engagement_date": "2026-03-06",
+        "encounter_type": "office_visit"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The member was discharged 2026-02-10 and had a completed in-person office visit with an NP at the PCP practice on 2026-03-06, which is 24 days after discharge and within the 30-day PED window. No hospice or palliative care is documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000364-1",
+          "quote": "Admitted: 02/08/2026    Discharged: 02/10/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000364-2",
+          "quote": "Post-discharge office visit today, 24 days after discharge on 02/10/2026, for urinary tract infection with sepsis, resolved."
+        },
+        {
+          "doc_id": "DOC-2000364-2",
+          "quote": "Visit type: Office visit (in person)"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000364",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000364-1",
+          "DOC-2000364-2"
+        ],
+        "timestamp": "2026-10-11T18:57:15+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhFLoe5912b2Py384e",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxhFLoe5912b2Py384e",
+        "stop_reason": "end_turn",
+        "latency_ms": 7240,
+        "usage": {
+          "input_tokens": 3854,
+          "output_tokens": 796,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000365",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": null,
+        "engagement_date": null,
+        "encounter_type": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.8,
+      "rationale": "The only outpatient contact after the 2026-04-04 discharge is a 2026-04-17 asynchronous portal message processing refills. The note states the patient has not been seen and declined an appointment, so there is no qualifying engagement. The template line 'Here for routine follow-up' and the listed vitals conflict with this and may merit a quick nurse check.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000365",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000365-1",
+          "DOC-2000365-2"
+        ],
+        "timestamp": "2026-10-11T18:57:16+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhGk8qKg38g25AXPU8",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxhGk8qKg38g25AXPU8",
+        "stop_reason": "end_turn",
+        "latency_ms": 11000,
+        "usage": {
+          "input_tokens": 3912,
+          "output_tokens": 1158,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000366",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000366",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000366-1",
+          "DOC-2000366-2",
+          "DOC-2000366-3"
+        ],
+        "timestamp": "2026-10-11T18:57:18+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhSXzqWt3h9qKkSr19",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxhmG8pETSgLxG1FqiR",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxhmG8pETSgLxG1FqiR",
+        "stop_reason": "refusal",
+        "latency_ms": 8467,
+        "usage": {
+          "input_tokens": 8536,
+          "output_tokens": 616,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000367",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-06-19",
+        "engagement_date": null,
+        "encounter_type": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.8,
+      "rationale": "The only outpatient contact after the 2026-06-19 discharge is a 06/22/2026 portal message that processed a refill. The note says the patient has not been seen since discharge and declined an offered appointment, so there is no qualifying engagement.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000367",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000367-1",
+          "DOC-2000367-2"
+        ],
+        "timestamp": "2026-10-11T18:57:18+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhT1XUjDhCjgNAaofM",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxhT1XUjDhCjgNAaofM",
+        "stop_reason": "end_turn",
+        "latency_ms": 9460,
+        "usage": {
+          "input_tokens": 3879,
+          "output_tokens": 905,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000368",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-08-15",
+        "engagement_date": null,
+        "encounter_type": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The only outpatient contact after the 2026-08-15 discharge is a 2026-09-01 portal message handling a medication refill, which does not count as patient engagement. The note states the patient has not been seen since discharge and declined an offered appointment.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000368",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000368-1",
+          "DOC-2000368-2"
+        ],
+        "timestamp": "2026-10-11T18:57:18+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhSznjysGqHz7CphVA",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxhSznjysGqHz7CphVA",
+        "stop_reason": "end_turn",
+        "latency_ms": 8602,
+        "usage": {
+          "input_tokens": 3915,
+          "output_tokens": 918,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000369",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_trap_late",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "outside_lookback_window",
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-04-28",
+        "engagement_date": "2026-06-06",
+        "encounter_type": "office_visit",
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The member was discharged 2026-04-28, and the first outpatient contact was an office visit on 2026-06-06, 39 days later. That is outside the 30-day PED window, and no earlier contact is documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000369-1",
+          "quote": "Admitted: 04/23/2026    Discharged: 04/28/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000369-2",
+          "quote": "First visit since discharge on 04/28/2026 (39 days), for syncope, workup negative."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000369",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000369-1",
+          "DOC-2000369-2"
+        ],
+        "timestamp": "2026-10-11T18:57:19+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhWD1UUSMJqukrEPag",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxhWD1UUSMJqukrEPag",
+        "stop_reason": "end_turn",
+        "latency_ms": 9478,
+        "usage": {
+          "input_tokens": 3829,
+          "output_tokens": 836,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000370",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_trap_same_day",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "outside_lookback_window",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000370",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000370-1",
+          "DOC-2000370-2",
+          "DOC-2000370-3"
+        ],
+        "timestamp": "2026-10-11T18:57:21+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhgfomYkAFidTszco3",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011Cfvxi1ZrSZZrdi9A3xWfQ",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxi1ZrSZZrdi9A3xWfQ",
+        "stop_reason": "refusal",
+        "latency_ms": 9005,
+        "usage": {
+          "input_tokens": 8502,
+          "output_tokens": 652,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000371",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_trap_outreach_only",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "not_completed",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000371",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000371-1",
+          "DOC-2000371-2",
+          "DOC-2000371-3"
+        ],
+        "timestamp": "2026-10-11T18:57:23+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxhnJeD5Npi4yzUELhS",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011Cfvxi4UibL9pJ62ToEmCs",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxi4UibL9pJ62ToEmCs",
+        "stop_reason": "refusal",
+        "latency_ms": 11290,
+        "usage": {
+          "input_tokens": 8562,
+          "output_tokens": 1007,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000372",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_ped_trap_outreach_only",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "numerator",
+      "expected_reason": "not_completed",
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-07-28",
+        "engagement_date": "2026-08-11",
+        "encounter_type": "office_visit",
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": true,
+      "span_overlaps_label": false,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.72,
+      "rationale": "The member had an in-person office visit with Sofia Moreau, NP on 2026-08-11, 14 days after the 2026-07-28 discharge, with vitals and patient-reported history documented. The earlier 07/31 outreach call was unanswered and was not counted; the leftover 'second outreach scheduled' line is worth a glance.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000372-1",
+          "quote": "Admitted: 07/25/2026    Discharged: 07/28/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000372-2",
+          "quote": "Date of service: 08/11/2026"
+        },
+        {
+          "doc_id": "DOC-2000372-2",
+          "quote": "Visit type: Office visit (in person)"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000372",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000372-1",
+          "DOC-2000372-2"
+        ],
+        "timestamp": "2026-10-11T18:57:26+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxi1BnoVTEqvE9wsKQk",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011Cfvxim5FLKdZ3XY7HjQrj",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxim5FLKdZ3XY7HjQrj",
+        "stop_reason": "end_turn",
+        "latency_ms": 21210,
+        "usage": {
+          "input_tokens": 7748,
+          "output_tokens": 2122,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000373",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-04-14"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-04-14"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.8,
+      "rationale": "The PCP progress note dated 2026-04-26 documents hospice enrollment on 2026-04-14, during the measurement year, so the member meets the hospice exclusion. The 04/26 office visit would otherwise have met PED; the nurse may want to confirm the hospice status, since the note also describes gardening activity.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000373-2",
+          "quote": "Hospital follow-up for syncope, workup negative, discharged 04/11/2026; patient enrolled with hospice on 04/14/2026."
+        },
+        {
+          "doc_id": "DOC-2000373-2",
+          "quote": "Goals of care per hospice plan."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000373",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000373-1",
+          "DOC-2000373-2"
+        ],
+        "timestamp": "2026-10-11T18:57:26+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxi4n5h1MLvqMHiQwz9",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxi4n5h1MLvqMHiQwz9",
+        "stop_reason": "end_turn",
+        "latency_ms": 9095,
+        "usage": {
+          "input_tokens": 3900,
+          "output_tokens": 988,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000374",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-01"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-08-01"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The outpatient NP note dated 2026-08-01 states the patient enrolled with hospice on 2026-08-01, within the measurement year, so the hospice exclusion applies. That same note also records a qualifying office visit 2 days after the 2026-07-30 discharge, which would otherwise have met PED; DOC-3 is a resent duplicate of the same note.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000374-1",
+          "quote": "Admitted: 07/28/2026    Discharged: 07/30/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000374-2",
+          "quote": "Hospital follow-up for COPD exacerbation, discharged 07/30/2026; patient enrolled with hospice on 08/01/2026."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000374",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000374-1",
+          "DOC-2000374-2",
+          "DOC-2000374-3"
+        ],
+        "timestamp": "2026-10-11T18:57:27+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxi5nr5p5hwqKpV8JhG",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxi5nr5p5hwqKpV8JhG",
+        "stop_reason": "end_turn",
+        "latency_ms": 10894,
+        "usage": {
+          "input_tokens": 4314,
+          "output_tokens": 1205,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000375",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-07-29"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-07-29"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The PCP progress note documents hospice enrollment on 2026-07-29, during the measurement year, so the member qualifies for the hospice exclusion. The 2026-08-24 office visit would otherwise satisfy PED (day 28 after the 2026-07-27 discharge).",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000375-2",
+          "quote": "Hospital follow-up for urinary tract infection with sepsis, resolved, discharged 07/27/2026; patient enrolled with hospice on 07/29/2026."
+        },
+        {
+          "doc_id": "DOC-2000375-2",
+          "quote": "Goals of care per hospice plan."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000375",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000375-1",
+          "DOC-2000375-2"
+        ],
+        "timestamp": "2026-10-11T18:57:27+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxi5o6ckE5DSVcuSYqv",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxi5o6ckE5DSVcuSYqv",
+        "stop_reason": "end_turn",
+        "latency_ms": 9195,
+        "usage": {
+          "input_tokens": 3880,
+          "output_tokens": 945,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000376",
+      "measure": "TRC",
+      "indicator": "PED",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-07-11"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-07-11"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The outpatient NP note dated 07/28/2026 documents hospice enrollment on 07/11/2026, during the 2026 measurement year, so this is a hospice exclusion. Without the exclusion, the 07/28/2026 office visit would otherwise have met PED.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000376-2",
+          "quote": "Hospital follow-up for urinary tract infection with sepsis, resolved, discharged 07/09/2026; patient enrolled with hospice on 07/11/2026."
+        },
+        {
+          "doc_id": "DOC-2000376-2",
+          "quote": "Goals of care per hospice plan."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000376",
+        "measure": "TRC",
+        "indicator": "PED",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000376-1",
+          "DOC-2000376-2",
+          "DOC-2000376-3"
+        ],
+        "timestamp": "2026-10-11T18:57:28+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxi9TMx1iuXbJze5KbE",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxi9TMx1iuXbJze5KbE",
+        "stop_reason": "end_turn",
+        "latency_ms": 11138,
+        "usage": {
+          "input_tokens": 4325,
+          "output_tokens": 1048,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000377",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_pos_rn",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-05-22",
+        "reconciliation_date": "2026-06-03",
+        "author_role": "registered_nurse"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-05-22",
+        "reconciliation_date": "2026-06-03",
+        "author_role": "registered_nurse"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The PCP office note documents that a registered nurse reconciled the discharge medication list against current medications on 2026-06-03, 12 days after the 2026-05-22 discharge. This is within the 30-day MRP window, and no hospice or palliative care is documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000377-2",
+          "quote": "Hospital follow-up for urinary tract infection with sepsis, resolved, discharged 05/22/2026."
+        },
+        {
+          "doc_id": "DOC-2000377-2",
+          "quote": "Discharge medication list reconciled against current medications on 06/03/2026 by J. Thistlewood, RN"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000377",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000377-1",
+          "DOC-2000377-2"
+        ],
+        "timestamp": "2026-10-11T18:57:28+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxiCn3nCLAefwFHEQW2",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxiCn3nCLAefwFHEQW2",
+        "stop_reason": "end_turn",
+        "latency_ms": 10744,
+        "usage": {
+          "input_tokens": 3921,
+          "output_tokens": 1009,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000378",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_pos_rn",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-07-10",
+        "reconciliation_date": "2026-07-30",
+        "author_role": "registered_nurse"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-07-10",
+        "reconciliation_date": "2026-07-30",
+        "author_role": "registered_nurse"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": false,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.92,
+      "rationale": "The PCP office note documents that a registered nurse reconciled the discharge medication list against current medications on 2026-07-30. That is 20 days after the 2026-07-10 discharge, within the MRP window. DOC-3 is an HIE duplicate of the same note, and no hospice or palliative care is documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000378-1",
+          "quote": "Admitted: 07/08/2026    Discharged: 07/10/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000378-2",
+          "quote": "Discharge medication list reconciled against current medications on 07/30/2026 by J. Thistlewood, RN"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000378",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000378-1",
+          "DOC-2000378-2",
+          "DOC-2000378-3"
+        ],
+        "timestamp": "2026-10-11T18:57:30+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxiMCJa5xjsSp3UhgSC",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxiMCJa5xjsSp3UhgSC",
+        "stop_reason": "end_turn",
+        "latency_ms": 9974,
+        "usage": {
+          "input_tokens": 4363,
+          "output_tokens": 1110,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000379",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_pos_md",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-02-19",
+        "reconciliation_date": "2026-03-09",
+        "author_role": "prescribing_practitioner"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-02-19",
+        "reconciliation_date": "2026-03-09",
+        "author_role": "prescribing_practitioner"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": false,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The outpatient progress note documents that an NP (prescribing practitioner) reconciled the discharge medication list against current medications on 2026-03-09. That is 18 days after the 2026-02-19 discharge, within the 30-day window.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000379-1",
+          "quote": "Admitted: 02/15/2026    Discharged: 02/19/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000379-2",
+          "quote": "Discharge medication list reconciled against current medications on 03/09/2026 by Elias Okonjo-Lind, NP: lisinopril dose increased per discharge list, furosemide added, omeprazole stopped."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000379",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000379-1",
+          "DOC-2000379-2"
+        ],
+        "timestamp": "2026-10-11T18:57:34+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxicdkVh7AKvfiYh99z",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxicdkVh7AKvfiYh99z",
+        "stop_reason": "end_turn",
+        "latency_ms": 11742,
+        "usage": {
+          "input_tokens": 3897,
+          "output_tokens": 878,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000380",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_pos_pharmacist",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "discharge_date": "2026-04-21",
+        "reconciliation_date": "2026-04-29",
+        "author_role": "clinical_pharmacist"
+      },
+      "predicted_fields": {
+        "discharge_date": "2026-04-21",
+        "reconciliation_date": "2026-04-29",
+        "author_role": "clinical_pharmacist"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The outpatient progress note documents that the discharge medication list was reconciled against current medications on 04/29/2026 by a PharmD. That is 8 days after the 04/21/2026 discharge, and no hospice or palliative care is documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000380-2",
+          "quote": "Hospital follow-up for acute decompensated heart failure, discharged 04/21/2026."
+        },
+        {
+          "doc_id": "DOC-2000380-2",
+          "quote": "Discharge medication list reconciled against current medications on 04/29/2026 by M. Oyelaran, PharmD"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000380",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000380-1",
+          "DOC-2000380-2"
+        ],
+        "timestamp": "2026-10-11T18:57:36+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxijeg719t2isYkGj72",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxijeg719t2isYkGj72",
+        "stop_reason": "end_turn",
+        "latency_ms": 11271,
+        "usage": {
+          "input_tokens": 3904,
+          "output_tokens": 1003,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000381",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": null,
+        "reconciliation_date": null,
+        "author_role": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The only outpatient note (NP visit 2026-05-27) states the discharge list was not available and that medications will be reconciled when it arrives, so no post-discharge reconciliation is documented. No hospice or palliative care evidence is present.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000381",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000381-1",
+          "DOC-2000381-2"
+        ],
+        "timestamp": "2026-10-11T18:57:36+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxim9xVMkj5gJN54RAi",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxim9xVMkj5gJN54RAi",
+        "stop_reason": "end_turn",
+        "latency_ms": 5819,
+        "usage": {
+          "input_tokens": 3912,
+          "output_tokens": 545,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000382",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-06-23",
+        "reconciliation_date": null,
+        "author_role": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The only outpatient note (07/13/2026, Kofi Moreau, NP, with a duplicate HIE copy) states the discharge list was not available and that medications will be reconciled when it arrives. No completed post-discharge medication reconciliation is documented.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000382",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000382-1",
+          "DOC-2000382-2",
+          "DOC-2000382-3"
+        ],
+        "timestamp": "2026-10-11T18:57:38+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxitUFHDEqLkoxr78t6",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxitUFHDEqLkoxr78t6",
+        "stop_reason": "end_turn",
+        "latency_ms": 8371,
+        "usage": {
+          "input_tokens": 4276,
+          "output_tokens": 567,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000383",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-05-27",
+        "reconciliation_date": null,
+        "author_role": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "At the 06/23/2026 office visit, the PCP noted the discharge list was not available and wrote that medications will be reconciled when it arrives, so no post-discharge reconciliation is documented. No hospice or palliative care evidence was found.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000383",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000383-1",
+          "DOC-2000383-2"
+        ],
+        "timestamp": "2026-10-11T18:57:39+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxiy54WFv8nEVFUhY6o",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxiy54WFv8nEVFUhY6o",
+        "stop_reason": "end_turn",
+        "latency_ms": 5875,
+        "usage": {
+          "input_tokens": 3851,
+          "output_tokens": 458,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000384",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_neg",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-04-11",
+        "reconciliation_date": null,
+        "author_role": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The only outpatient visit (NP, 2026-04-29) explicitly defers medication reconciliation until the discharge list arrives. No later reconciliation is documented, and there is no hospice or palliative care evidence.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000384",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000384-1",
+          "DOC-2000384-2",
+          "DOC-2000384-3"
+        ],
+        "timestamp": "2026-10-11T18:57:39+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxize4wYv4FMhPz8pkZ",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxize4wYv4FMhPz8pkZ",
+        "stop_reason": "end_turn",
+        "latency_ms": 7541,
+        "usage": {
+          "input_tokens": 4334,
+          "output_tokens": 798,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000385",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_trap_reviewed_only",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "incomplete_evidence",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000385",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000385-1",
+          "DOC-2000385-2"
+        ],
+        "timestamp": "2026-10-11T18:57:40+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxj5rMQz376zjNEsBT8",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxjZwYcPhTmCfV7L5AG",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxjZwYcPhTmCfV7L5AG",
+        "stop_reason": "refusal",
+        "latency_ms": 13063,
+        "usage": {
+          "input_tokens": 7732,
+          "output_tokens": 1018,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000386",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_trap_ma",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "ineligible_author",
+      "predicted_reason": "ineligible_author",
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-04-23",
+        "reconciliation_date": "2026-05-19",
+        "author_role": "other",
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": false,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The outpatient note documents reconciliation of the discharge medications on 2026-05-19, within 30 days of the 2026-04-23 discharge. The reconciliation is attributed to a CMA, which is not an eligible role; the MD only signed the note, so the nurse should confirm whether a qualifying clinician performed or co-documented the reconciliation.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000386-1",
+          "quote": "Admitted: 04/17/2026    Discharged: 04/23/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000386-2",
+          "quote": "Discharge medication list reconciled against current medications on 05/19/2026 by S. Ashdown, CMA: lisinopril dose increased per discharge list, furosemide added, omeprazole stopped."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000386",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000386-1",
+          "DOC-2000386-2",
+          "DOC-2000386-3"
+        ],
+        "timestamp": "2026-10-11T18:57:42+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjBzCp47jX3Yx7mz77",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxjBzCp47jX3Yx7mz77",
+        "stop_reason": "end_turn",
+        "latency_ms": 9090,
+        "usage": {
+          "input_tokens": 4342,
+          "output_tokens": 1009,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000387",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_trap_reviewed_only",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "incomplete_evidence",
+      "predicted_reason": "model_refused",
+      "expected_fields": {},
+      "predicted_fields": {},
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000387",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000387-1",
+          "DOC-2000387-2"
+        ],
+        "timestamp": "2026-10-11T18:57:45+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjQF95CpWiEZH3xyfc",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxjyWdgaj8ShEqSj6G8",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxjyWdgaj8ShEqSj6G8",
+        "stop_reason": "refusal",
+        "latency_ms": 12589,
+        "usage": {
+          "input_tokens": 7714,
+          "output_tokens": 939,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000388",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_mrp_trap_reviewed_only",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "incomplete_evidence",
+      "predicted_reason": "incomplete_evidence",
+      "expected_fields": {},
+      "predicted_fields": {
+        "discharge_date": "2026-07-11",
+        "reconciliation_date": null,
+        "author_role": "prescribing_practitioner",
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The 07/25/2026 PCP hospital follow-up by an MD falls within 30 days of the 07/11/2026 discharge. It documents only 'Medications reviewed' with no reference to reconciling the discharge medication list, so it does not meet MRP and needs nurse review.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000388-1",
+          "quote": "Admitted: 07/06/2026    Discharged: 07/11/2026    Disposition: home"
+        },
+        {
+          "doc_id": "DOC-2000388-2",
+          "quote": "Medications reviewed with patient; continue current regimen."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000388",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000388-1",
+          "DOC-2000388-2"
+        ],
+        "timestamp": "2026-10-11T18:57:46+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjUoEF8teYYVASk74h",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxjUoEF8teYYVASk74h",
+        "stop_reason": "end_turn",
+        "latency_ms": 6600,
+        "usage": {
+          "input_tokens": 3851,
+          "output_tokens": 707,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000389",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-05-11"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-05-11"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.88,
+      "rationale": "The 05/17/2026 outpatient note by Mira Ibarra, PA-C states the member enrolled in hospice on 05/11/2026, during the measurement year, which excludes the member from TRC. No medication reconciliation is documented in the outpatient record in any case.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000389-2",
+          "quote": "Hospital follow-up for acute decompensated heart failure, discharged 05/10/2026; patient enrolled with hospice on 05/11/2026."
+        },
+        {
+          "doc_id": "DOC-2000389-1",
+          "quote": "Admitted: 05/05/2026    Discharged: 05/10/2026    Disposition: home"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000389",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000389-1",
+          "DOC-2000389-2"
+        ],
+        "timestamp": "2026-10-11T18:57:46+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjWBqCbkTSALLx9wUP",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxkH4KJ8TBynkTHQyYc",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkH4KJ8TBynkTHQyYc",
+        "stop_reason": "end_turn",
+        "latency_ms": 19744,
+        "usage": {
+          "input_tokens": 7756,
+          "output_tokens": 2081,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000390",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-06-20"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-06-20"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The PCP office note (NP, DOS 2026-06-28) documents hospice enrollment on 2026-06-20, within the 2026 measurement year, which qualifies the member for the hospice exclusion. The note also contains no medication reconciliation documentation.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000390-2",
+          "quote": "Hospital follow-up for COPD exacerbation, discharged 06/18/2026; patient enrolled with hospice on 06/20/2026."
+        },
+        {
+          "doc_id": "DOC-2000390-1",
+          "quote": "Admitted: 06/12/2026    Discharged: 06/18/2026    Disposition: home"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000390",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000390-1",
+          "DOC-2000390-2",
+          "DOC-2000390-3"
+        ],
+        "timestamp": "2026-10-11T18:57:47+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjYt45eeGmZfbmzFUm",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxjYt45eeGmZfbmzFUm",
+        "stop_reason": "end_turn",
+        "latency_ms": 10706,
+        "usage": {
+          "input_tokens": 4310,
+          "output_tokens": 1188,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000391",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-06-27"
+      },
+      "predicted_fields": {
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000391",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000391-1",
+          "DOC-2000391-2"
+        ],
+        "timestamp": "2026-10-11T18:57:47+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjZpN47RBrjjJi9Mqz",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011Cfvxk1XRd47vc3hzxMVQS",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxk1XRd47vc3hzxMVQS",
+        "stop_reason": "refusal",
+        "latency_ms": 11536,
+        "usage": {
+          "input_tokens": 7694,
+          "output_tokens": 808,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000392",
+      "measure": "TRC",
+      "indicator": "MRP",
+      "scenario": "trc_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "abstain",
+      "expected_reason": null,
+      "predicted_reason": "model_refused",
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-02-27"
+      },
+      "predicted_fields": {
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.0,
+      "rationale": "The model declined this request; route to manual review.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000392",
+        "measure": "TRC",
+        "indicator": "MRP",
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "trc.v1",
+        "document_ids": [
+          "DOC-2000392-1",
+          "DOC-2000392-2",
+          "DOC-2000392-3"
+        ],
+        "timestamp": "2026-10-11T18:57:47+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjZpr59V41LDuu6PrA",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011Cfvxk2kMDvPVmDiNdXFeQ",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxk2kMDvPVmDiNdXFeQ",
+        "stop_reason": "refusal",
+        "latency_ms": 12141,
+        "usage": {
+          "input_tokens": 8586,
+          "output_tokens": 1008,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000393",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_pos_fax",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "egfr_value": 49,
+        "egfr_date": "2026-08-07",
+        "uacr_value": 18,
+        "uacr_date": "2026-08-07"
+      },
+      "predicted_fields": {
+        "egfr_value": 49,
+        "egfr_date": "2026-08-07",
+        "uacr_value": 18,
+        "uacr_date": "2026-08-07"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "A final lab report collected 08/07/2026 shows an eGFR (CKD-EPI 2021) of 49 and a urine albumin/creatinine ratio of 18 mg/g, both in 2026. No exclusion criteria are documented.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000393-1",
+          "quote": "EGFR (CKD-EPI 2021)          49         mL/min   >60         L"
+        },
+        {
+          "doc_id": "DOC-2000393-1",
+          "quote": "UALB/CREAT RATIO             18         mg/g     <30         "
+        },
+        {
+          "doc_id": "DOC-2000393-1",
+          "quote": "COLLECTED: 08/07/2026    RECEIVED: 08/07/2026    REPORTED: 08/09/2026"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000393",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000393-1",
+          "DOC-2000393-2"
+        ],
+        "timestamp": "2026-10-11T18:57:51+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxjrrnFGbQdV6qUcd5C",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxjrrnFGbQdV6qUcd5C",
+        "stop_reason": "end_turn",
+        "latency_ms": 9692,
+        "usage": {
+          "input_tokens": 3588,
+          "output_tokens": 782,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000394",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_pos_note",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "egfr_value": 75,
+        "egfr_date": "2026-09-18",
+        "uacr_value": 12,
+        "uacr_date": "2026-09-18"
+      },
+      "predicted_fields": {
+        "egfr_value": 75,
+        "egfr_date": "2026-09-18",
+        "uacr_value": 12,
+        "uacr_date": "2026-09-18"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The 09/23/2026 progress note records labs dated 09/18/2026: eGFR 75 and urine albumin/creatinine ratio 12 mg/g, both quantitative and in the measurement year. The second document is a duplicate HIE copy of the same note, and no exclusion evidence was found.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000394-1",
+          "quote": "Labs 09/18/2026: eGFR 75, urine albumin/creatinine ratio 12 mg/g; LDL 92."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000394",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000394-1",
+          "DOC-2000394-2"
+        ],
+        "timestamp": "2026-10-11T18:57:52+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxjy1NQ5bkDRZnQXLKz",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxjy1NQ5bkDRZnQXLKz",
+        "stop_reason": "end_turn",
+        "latency_ms": 7581,
+        "usage": {
+          "input_tokens": 3692,
+          "output_tokens": 618,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000395",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_pos_split",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "egfr_value": 60,
+        "egfr_date": "2026-01-05",
+        "uacr_value": 320,
+        "uacr_date": "2026-04-02"
+      },
+      "predicted_fields": {
+        "egfr_value": 60,
+        "egfr_date": "2026-01-05",
+        "uacr_value": 320,
+        "uacr_date": "2026-04-02"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The lab report shows an eGFR of 60 collected 2026-01-05, and the progress note documents a uACR of 320 mg/g dated 2026-04-02, so both fall in 2026. No ESRD, dialysis, hospice, palliative care, or frailty documentation was found.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000395-1",
+          "quote": "EGFR (CKD-EPI 2021)          60         mL/min   >60"
+        },
+        {
+          "doc_id": "DOC-2000395-2",
+          "quote": "uACR 04/02/2026: 320 mg/g."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000395",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000395-1",
+          "DOC-2000395-2"
+        ],
+        "timestamp": "2026-10-11T18:57:53+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxk3mNYs6YiYGiFL8Yn",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxk3mNYs6YiYGiFL8Yn",
+        "stop_reason": "end_turn",
+        "latency_ms": 8304,
+        "usage": {
+          "input_tokens": 3541,
+          "output_tokens": 885,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000396",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_pos_fax",
+      "category": "positive",
+      "expected": "numerator",
+      "predicted": "numerator",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "egfr_value": 52,
+        "egfr_date": "2026-05-08",
+        "uacr_value": 61,
+        "uacr_date": "2026-05-08"
+      },
+      "predicted_fields": {
+        "egfr_value": 52,
+        "egfr_date": "2026-05-08",
+        "uacr_value": 61,
+        "uacr_date": "2026-05-08"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "A final lab report collected 05/08/2026 shows a quantitative eGFR of 52 and a urine albumin/creatinine ratio of 61 mg/g, both in 2026, and the chart shows no exclusions. Please note that the eGFR seems low for the reported creatinine of 0.9 and the units read mL/min; verify against the source if needed.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000396-1",
+          "quote": "EGFR (CKD-EPI 2021)          52         mL/min   >60         L"
+        },
+        {
+          "doc_id": "DOC-2000396-1",
+          "quote": "UALB/CREAT RATIO             61         mg/g     <30         H"
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000396",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000396-1",
+          "DOC-2000396-2"
+        ],
+        "timestamp": "2026-10-11T18:57:57+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkKyhHNhGD8q4giSiG",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkKyhHNhGD8q4giSiG",
+        "stop_reason": "end_turn",
+        "latency_ms": 11787,
+        "usage": {
+          "input_tokens": 3603,
+          "output_tokens": 1205,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000397",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_neg_none",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": null,
+        "egfr_date": null,
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The only document is a 04/26/2026 progress note covering diabetes, knee pain and insomnia. It has no eGFR, no uACR, no other kidney-related result or order, and no exclusion criteria (ESRD, hospice, palliative care, or advanced illness with frailty).",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000397",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000397-1"
+        ],
+        "timestamp": "2026-10-11T18:57:57+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkLg7gdPBLt3uYaKSP",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkLg7gdPBLt3uYaKSP",
+        "stop_reason": "end_turn",
+        "latency_ms": 2858,
+        "usage": {
+          "input_tokens": 3258,
+          "output_tokens": 207,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000398",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_neg_none",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": null,
+        "egfr_date": null,
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "Both documents are copies of the same 09/02/2026 diabetes follow-up note and contain no eGFR, uACR, or other kidney-evaluation content. They also show no ESRD, dialysis, hospice, or palliative care exclusion.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000398",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000398-1",
+          "DOC-2000398-2"
+        ],
+        "timestamp": "2026-10-11T18:57:58+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkRAj7inFQtgdgRtu1",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkRAj7inFQtgdgRtu1",
+        "stop_reason": "end_turn",
+        "latency_ms": 2819,
+        "usage": {
+          "input_tokens": 3655,
+          "output_tokens": 194,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000399",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_neg_none",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": null,
+        "egfr_date": null,
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The only document is a 09/10/2026 progress note that mentions diabetes managed with metformin. It contains no eGFR, no uACR, no other kidney testing, and no exclusion evidence such as ESRD, dialysis, hospice, or palliative care.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000399",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000399-1"
+        ],
+        "timestamp": "2026-10-11T18:57:59+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkTnjWEJmWmQaYaqtJ",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkTnjWEJmWmQaYaqtJ",
+        "stop_reason": "end_turn",
+        "latency_ms": 3828,
+        "usage": {
+          "input_tokens": 3234,
+          "output_tokens": 198,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000400",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_neg_none",
+      "category": "negative",
+      "expected": "none",
+      "predicted": "none",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": null,
+        "egfr_date": null,
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": null,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The only document is a 09/11/2026 progress note covering diabetes, back stiffness, allergies, and insomnia; it has no eGFR, uACR, or other kidney-evaluation content. It also shows no ESRD, dialysis, hospice, or palliative care exclusion.",
+      "evidence": [],
+      "call": {
+        "gap_id": "G2-000400",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000400-1"
+        ],
+        "timestamp": "2026-10-11T18:58:00+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkXWjUCtKU9XjraDrB",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkXWjUCtKU9XjraDrB",
+        "stop_reason": "end_turn",
+        "latency_ms": 2925,
+        "usage": {
+          "input_tokens": 3273,
+          "output_tokens": 206,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000401",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_trap_undated",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "missing_or_ambiguous_date",
+      "predicted_reason": "missing_or_ambiguous_date",
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": null,
+        "egfr_date": null,
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.85,
+      "rationale": "The only kidney results are 'per outside records' with no test date, and the uACR has no numeric value; the outside lab reports have been requested but not received. Please review once the source labs arrive.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000401-1",
+          "quote": "eGFR 92 and uACR normal per outside records; records not yet received."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000401",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000401-1"
+        ],
+        "timestamp": "2026-10-11T18:58:00+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkZNLh11UxC7NbAsuG",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkZNLh11UxC7NbAsuG",
+        "stop_reason": "end_turn",
+        "latency_ms": 9446,
+        "usage": {
+          "input_tokens": 3230,
+          "output_tokens": 623,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000402",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_trap_ordered",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "not_completed",
+      "predicted_reason": "not_completed",
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": null,
+        "egfr_date": null,
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The eGFR and uACR were ordered on 04/22/2026, but no results appear in the chart; the second document is a duplicate HIE copy of the same note. No exclusion evidence was found, so the 2026 lab results should be obtained.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000402-1",
+          "quote": "Diabetes: eGFR and urine albumin/creatinine ratio ordered today; results pending."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000402",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000402-1",
+          "DOC-2000402-2"
+        ],
+        "timestamp": "2026-10-11T18:58:01+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkaGg7XiYZ5r5eRQub",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkaGg7XiYZ5r5eRQub",
+        "stop_reason": "end_turn",
+        "latency_ms": 5080,
+        "usage": {
+          "input_tokens": 3636,
+          "output_tokens": 466,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000403",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_trap_ordered",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "not_completed",
+      "predicted_reason": "not_completed",
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": null,
+        "egfr_date": null,
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.93,
+      "rationale": "The eGFR and uACR were ordered on 07/23/2026 but the results were still pending, and the chart has no numeric values. No exclusion evidence (ESRD/dialysis, hospice, palliative care, or advanced illness with frailty) appears in the chart.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000403-1",
+          "quote": "Diabetes: eGFR and urine albumin/creatinine ratio ordered today; results pending."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000403",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000403-1"
+        ],
+        "timestamp": "2026-10-11T18:58:01+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkdEmfBDPxfNdcLcb8",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkdEmfBDPxfNdcLcb8",
+        "stop_reason": "end_turn",
+        "latency_ms": 4190,
+        "usage": {
+          "input_tokens": 3217,
+          "output_tokens": 363,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000404",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_trap_egfr_only",
+      "category": "trap",
+      "expected": "abstain",
+      "predicted": "abstain",
+      "expected_reason": "incomplete_evidence",
+      "predicted_reason": "incomplete_evidence",
+      "expected_fields": {},
+      "predicted_fields": {
+        "egfr_value": 91,
+        "egfr_date": "2026-03-10",
+        "uacr_value": null,
+        "uacr_date": null,
+        "exclusion_type": null,
+        "supporting_date": null
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "An eGFR of 91 is documented on 2026-03-10, but the urine albumin test was only ordered on 2026-03-18 and no uACR result is in the chart. No exclusion evidence was found.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000404-1",
+          "quote": "EGFR (CKD-EPI 2021)          91         mL/min   >60         "
+        },
+        {
+          "doc_id": "DOC-2000404-2",
+          "quote": "Diabetes: urine albumin not yet done this year; ordered."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000404",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000404-1",
+          "DOC-2000404-2"
+        ],
+        "timestamp": "2026-10-11T18:58:02+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkfAMnyJjra9j2iEvs",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkfAMnyJjra9j2iEvs",
+        "stop_reason": "end_turn",
+        "latency_ms": 5406,
+        "usage": {
+          "input_tokens": 3557,
+          "output_tokens": 551,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000405",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_excl_esrd",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "esrd_dialysis",
+        "supporting_date": "2023-05"
+      },
+      "predicted_fields": {
+        "exclusion_type": "esrd_dialysis",
+        "supporting_date": "2023-05"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The 03/13/2026 progress note documents ESRD on hemodialysis three times weekly since 05/2023. This meets the ESRD/dialysis exclusion for KED.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000405-1",
+          "quote": "ESRD on hemodialysis three times weekly since 05/2023; nephrology manages labs."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000405",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000405-1"
+        ],
+        "timestamp": "2026-10-11T18:58:03+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxkjt86EkJt9EnLs842",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxkjt86EkJt9EnLs842",
+        "stop_reason": "end_turn",
+        "latency_ms": 4222,
+        "usage": {
+          "input_tokens": 3223,
+          "output_tokens": 371,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000406",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_excl_esrd",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "esrd_dialysis",
+        "supporting_date": "2023-02"
+      },
+      "predicted_fields": {
+        "exclusion_type": "esrd_dialysis",
+        "supporting_date": "2023-02"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The 05/12/2026 progress note documents ESRD on hemodialysis since 02/2023, which qualifies as an ESRD/dialysis exclusion for KED. The chart contains no eGFR or uACR results.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000406-1",
+          "quote": "ESRD on hemodialysis three times weekly since 02/2023; nephrology manages labs."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000406",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000406-1",
+          "DOC-2000406-2"
+        ],
+        "timestamp": "2026-10-11T18:58:03+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011Cfvxkk7FshBeUGwAbjq3N",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011Cfvxkk7FshBeUGwAbjq3N",
+        "stop_reason": "end_turn",
+        "latency_ms": 4804,
+        "usage": {
+          "input_tokens": 3660,
+          "output_tokens": 475,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000407",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_excl_hospice",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-02-21"
+      },
+      "predicted_fields": {
+        "exclusion_type": "hospice",
+        "supporting_date": "2026-02-21"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The 05/12/2026 progress note states the member has been on hospice since 02/21/2026 for metastatic disease, which falls in the 2026 measurement year and supports a hospice exclusion. The second document is a resent duplicate of the same note.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000407-1",
+          "quote": "Patient on hospice since 02/21/2026 for metastatic disease."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000407",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000407-1",
+          "DOC-2000407-2"
+        ],
+        "timestamp": "2026-10-11T18:58:05+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkwCWKrUg2diDEru2u",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "refusal",
+            "refusal_category": "reasoning_extraction"
+          },
+          {
+            "request_id": "req_011CfvxmA9P1UPfuK9jb4Xg7",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxmA9P1UPfuK9jb4Xg7",
+        "stop_reason": "end_turn",
+        "latency_ms": 8390,
+        "usage": {
+          "input_tokens": 7362,
+          "output_tokens": 700,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    },
+    {
+      "gap_id": "G2-000408",
+      "measure": "KED",
+      "indicator": null,
+      "scenario": "ked_excl_esrd",
+      "category": "exclusion",
+      "expected": "exclusion",
+      "predicted": "exclusion",
+      "expected_reason": null,
+      "predicted_reason": null,
+      "expected_fields": {
+        "exclusion_type": "esrd_dialysis",
+        "supporting_date": "2025-04"
+      },
+      "predicted_fields": {
+        "exclusion_type": "esrd_dialysis",
+        "supporting_date": "2025-04"
+      },
+      "field_mismatches": [],
+      "wrong_value": false,
+      "span_overlaps_label": true,
+      "downgraded_by_rules": null,
+      "failed_checks": [],
+      "confidence": 0.9,
+      "rationale": "The 09/22/2026 progress note documents ESRD on hemodialysis since 04/2025, which is before the end of the 2026 measurement year. This qualifies for the esrd_dialysis exclusion.",
+      "evidence": [
+        {
+          "doc_id": "DOC-2000408-1",
+          "quote": "ESRD on hemodialysis three times weekly since 04/2025; nephrology manages labs."
+        }
+      ],
+      "call": {
+        "gap_id": "G2-000408",
+        "measure": "KED",
+        "indicator": null,
+        "model_requested": "claude-opus-5-5",
+        "effort": "high",
+        "prompt_version": "ked.v1",
+        "document_ids": [
+          "DOC-2000408-1"
+        ],
+        "timestamp": "2026-10-11T18:58:06+00:00",
+        "attempts": [
+          {
+            "request_id": "req_011CfvxkwyPdUco7kqvAaLSP",
+            "model_served": "claude-opus-5-5",
+            "stop_reason": "end_turn",
+            "refusal_category": null
+          }
+        ],
+        "model_served": "claude-opus-5-5",
+        "request_id": "req_011CfvxkwyPdUco7kqvAaLSP",
+        "stop_reason": "end_turn",
+        "latency_ms": 4528,
+        "usage": {
+          "input_tokens": 3255,
+          "output_tokens": 428,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Lakeshore Internal Medicine
+Provider: Theo Brannigan, PA-C
+Patient: Wendell Lindqvist    DOB: 04/03/1968    Member ID: SYN-100410
+Date of service: 03/21/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Mild low back stiffness after gardening, improving with heat.
+Denies chest pain, shortness of breath, or palpitations.
+
+OBJECTIVE
+Vitals: HR 64, Temp 98.2 F, Wt 91 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Type 2 diabetes: recent A1c was good per patient; continue metformin.
+Follow up in 3 months.
+
+Electronically signed by Theo Brannigan, PA-C on 03/21/2026

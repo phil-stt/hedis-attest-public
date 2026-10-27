@@ -1,0 +1,22 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Zora Quintero    DOB: 10/21/1979    Member ID: SYN-100501
+Date of service: 04/30/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Here for routine follow-up of chronic conditions.
+Reports intermittent right knee pain with stairs, worse in the morning.
+Reports BPs have been running in the 130s over 80s at recent checks.
+
+OBJECTIVE
+Vitals: HR 74, Temp 97.9 F, Wt 64 kg, SpO2 97%
+Most recent labs: HbA1c 7.3% (11/06/2025).
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal. Repeat A1c ordered.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 04/30/2026

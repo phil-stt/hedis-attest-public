@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% from "_macros.html" import status_badge, confidence %}
+{% block title %}Review queue · Attest{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Review queue</h1>
+  <span class="sub">Attest proposes; you decide. Nothing closes a gap without your Accept.</span>
+</div>
+
+<div class="counters">
+  <div class="card counter"><div class="label">Gaps in queue</div><div class="value">{{ counters.in_queue }}</div></div>
+  <div class="card counter ai"><div class="label">Findings awaiting review</div><div class="value">{{ counters.awaiting }}</div></div>
+  <div class="card counter human"><div class="label">Accepted today</div><div class="value">{{ counters.accepted_today }}</div></div>
+  <div class="card counter abstain"><div class="label">Abstained</div><div class="value">{{ counters.abstained }}</div></div>
+</div>
+
+{% set q = {'sort': sort, 'measure': measure, 'show': show} %}
+<div class="filters">
+  <span class="lbl">Measure</span>
+  <div class="group">
+    {% for m in [''] + (measures.keys() | list) %}
+    <a class="{{ 'on' if measure == m }}" href="?sort={{ sort }}&measure={{ m }}&show={{ show }}&tranche={{ tranche }}">{{ m or 'All' }}</a>
+    {% endfor %}
+  </div>
+  {% if tranches | length > 1 %}
+  <span class="lbl">Tranche</span>
+  <div class="group">
+    <a class="{{ 'on' if not tranche }}" href="?sort={{ sort }}&measure={{ measure }}&show={{ show }}">All</a>
+    {% for t in tranches.values() %}
+    <a class="{{ 'on' if tranche == t.tranche_id }}" href="?sort={{ sort }}&measure={{ measure }}&show={{ show }}&tranche={{ t.tranche_id }}" title="{{ t.kind | replace('_', ' ') }}">{{ t.name }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <span class="lbl">Sort</span>
+  <div class="group">
+    {% for key, label in [('priority', 'Attest priority'), ('confidence', 'Confidence'), ('measure', 'Measure'), ('due', 'Due')] %}
+    <a class="{{ 'on' if sort == key }}" href="?sort={{ key }}&measure={{ measure }}&show={{ show }}&tranche={{ tranche }}">{{ label }}</a>
+    {% endfor %}
+  </div>
+  <span class="lbl">Show</span>
+  <div class="group">
+    <a class="{{ 'on' if show == 'open' }}" href="?sort={{ sort }}&measure={{ measure }}&show=open&tranche={{ tranche }}">Open</a>
+    <a class="{{ 'on' if show == 'all' }}" href="?sort={{ sort }}&measure={{ measure }}&show=all&tranche={{ tranche }}">All</a>
+  </div>
+</div>
+
+<div class="card">
+  <table class="queue">
+    <thead>
+      <tr><th>Gap</th><th>Member</th><th>Measure</th><th>Due</th><th>Attest status</th><th>Confidence</th></tr>
+    </thead>
+    <tbody>
+      {% for r in rows %}
+      <tr class="row" onclick="location.href='/gap/{{ r.gap.gap_id }}'">
+        <td><a class="rowlink mono" href="/gap/{{ r.gap.gap_id }}">{{ r.gap.gap_id }}</a></td>
+        <td>{{ r.member.name }} <span class="mono">{{ r.member.member_id }}</span></td>
+        <td>{{ r.gap.measure }}</td>
+        <td>{% if r.days_left < 0 %}<span class="muted">past due</span>{% else %}{{ r.days_left }} days{% endif %}</td>
+        <td>{{ status_badge(r.status, r.status_label) }}{% if r.lease and r.lease.reviewer != reviewer %} <span class="muted" title="lease until {{ r.lease.lease_expires_at }}">· {{ r.lease.reviewer }}</span>{% endif %}</td>
+        <td>{{ confidence(r.confidence) }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="6" class="muted">Nothing here.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% if pages > 1 %}
+<div class="pager">
+  <span class="muted">{{ (page_no - 1) * page_size + 1 }}–{{ [page_no * page_size, total] | min }} of {{ total }}</span>
+  {% set base = '?sort=' ~ sort ~ '&measure=' ~ measure ~ '&show=' ~ show ~ '&tranche=' ~ tranche ~ '&page_no=' %}
+  {% if page_no > 1 %}<a class="btn" href="{{ base }}{{ page_no - 1 }}">← Previous</a>{% endif %}
+  <span class="muted">page {{ page_no }} of {{ pages }}</span>
+  {% if page_no < pages %}<a class="btn" href="{{ base }}{{ page_no + 1 }}">Next →</a>{% endif %}
+</div>
+{% else %}
+<div class="pager"><span class="muted">{{ total }} gap{{ '' if total == 1 else 's' }}</span></div>
+{% endif %}
+<form method="post" action="/admin/reset" class="reset-form"
+      onsubmit="return confirm('Reset reviews? This deletes every decision, record, lease, dealt set, QA audit, and exposure, for every reviewer. Attest\'s findings, the dataset, variants, and pipeline jobs stay.');">
+  <span class="muted">Demo:</span> <button type="submit" class="link-button">Reset reviews (clears decisions, records, leases, sets, QA audits, exposures; keeps findings)</button>
+  <span class="muted">({{ counters.decided }} decision{{ '' if counters.decided == 1 else 's' }} recorded)</span>
+</form>
+{% endblock %}

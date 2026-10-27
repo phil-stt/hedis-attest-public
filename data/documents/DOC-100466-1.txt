@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Rufus Thistlewood    DOB: 04/08/1966    Member ID: SYN-100466
+Date of service: 06/07/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Denies chest pain, shortness of breath, or palpitations.
+
+OBJECTIVE
+Vitals: HR 62, Temp 98.4 F, Wt 98 kg, SpO2 95%
+FIT (fecal immunochemical test) 03/29/2026: negative
+
+ASSESSMENT AND PLAN
+Colorectal cancer screening: FIT negative, repeat in one year.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 06/07/2026

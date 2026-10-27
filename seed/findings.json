@@ -1,0 +1,4572 @@
+{
+ "GAP-0001": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100200-1",
+    "quote": "Vitals: BP 152/92, HR 85, Temp 98.6 F, Wt 67 kg, SpO2 96%",
+    "assessment": "In-person office visit on 2026-04-17. The reading is eligible but uncontrolled, and it is superseded by the later 06/02/2026 reading."
+   },
+   {
+    "doc_id": "DOC-100200-2",
+    "quote": "Vitals: BP 123/65, HR 83, Temp 98.4 F, Wt 65 kg, SpO2 99%",
+    "assessment": "In-person office visit on 2026-06-02. This is the most recent eligible reading in the measurement year, and it is controlled (123<140, 65<90)."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 123,
+   "diastolic": 65,
+   "reading_date": "2026-06-02",
+   "setting": "outpatient",
+   "source": "office",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100200-2",
+   "quote": "Vitals: BP 123/65, HR 83, Temp 98.4 F, Wt 65 kg, SpO2 99%"
+  },
+  "confidence": 0.95,
+  "rationale": "The most recent eligible reading is BP 123/65 from an in-person office visit on 06/02/2026, and it is controlled. The earlier uncontrolled 152/92 from 04/17/2026 is superseded, and the chart shows no exclusion evidence.",
+  "evidence_span": {
+   "doc_id": "DOC-100200-2",
+   "start": 357,
+   "end": 414
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=123, diastolic=65"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "123 and 65 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "123/65 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-06-02"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-06-02 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-06-02"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=outpatient, source=office"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0001",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100200-1",
+    "DOC-100200-2"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWE32zKsgUtF28A8d",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWE32zKsgUtF28A8d",
+   "stop_reason": "end_turn",
+   "latency_ms": 6478,
+   "usage": {
+    "input_tokens": 3912,
+    "output_tokens": 513,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0002": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.93,
+  "rationale": "Neither progress note contains any HbA1c result, order, or mention; diabetes is addressed only with metformin continuation and a foot exam. No hospice, palliative care, or frailty exclusion is documented (the member is 50).",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0002",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100200-1",
+    "DOC-100200-2"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWEmqpgPMmVbNuEEk",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWEmqpgPMmVbNuEEk",
+   "stop_reason": "end_turn",
+   "latency_ms": 4440,
+   "usage": {
+    "input_tokens": 3279,
+    "output_tokens": 181,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0003": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100207-1",
+    "quote": "Past surgical history: s/p total colectomy (2012) for ulcerative colitis.",
+    "assessment": "Total colectomy documented with year 2012; qualifies as total_colectomy exclusion (any time). Explicitly 'total', not partial."
+   }
+  ],
+  "finding_type": "exclusion",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": "total_colectomy",
+   "supporting_date": "2012"
+  },
+  "evidence": {
+   "doc_id": "DOC-100207-1",
+   "quote": "Past surgical history: s/p total colectomy (2012) for ulcerative colitis."
+  },
+  "confidence": 0.9,
+  "rationale": "The progress note documents a total colectomy in 2012 for ulcerative colitis. This meets the total_colectomy exclusion, which applies regardless of when the surgery occurred.",
+  "evidence_span": {
+   "doc_id": "DOC-100207-1",
+   "start": 333,
+   "end": 406
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "exclusion_applies_to_measure",
+    "passed": true,
+    "detail": "total_colectomy for COL-E"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "supporting_date=2012"
+   },
+   {
+    "rule": "on_or_before_measurement_year",
+    "passed": true,
+    "detail": "2012 <= 2026"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0003",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100207-1"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWEXaxNUD8Bxwc6ob",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWEXaxNUD8Bxwc6ob",
+   "stop_reason": "end_turn",
+   "latency_ms": 6001,
+   "usage": {
+    "input_tokens": 3191,
+    "output_tokens": 317,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0004": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.95,
+  "rationale": "The only document is a 2026 office visit for allergic rhinitis. It has no colorectal screening content and no exclusion content (no colorectal cancer, colectomy, hospice, or palliative care).",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0004",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100214-1"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWFmopwUrmNWGb5KC",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWFmopwUrmNWGb5KC",
+   "stop_reason": "end_turn",
+   "latency_ms": 3578,
+   "usage": {
+    "input_tokens": 3165,
+    "output_tokens": 174,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0005": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100221-1",
+    "quote": "Screening history: Cologuard 2022, negative.",
+    "assessment": "Cologuard (FIT-DNA) completed in 2022. The FIT-DNA lookback window for MY 2026 is 2024-2026, so 2022 falls before the window and cannot close the gap."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "outside_lookback_window",
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100221-1",
+   "quote": "Screening history: Cologuard 2022, negative."
+  },
+  "confidence": 0.9,
+  "rationale": "The only screening evidence is a Cologuard (FIT-DNA) from 2022, which is before the 2024-2026 lookback window for measurement year 2026. No exclusions were found, so the member needs current screening.",
+  "evidence_span": {
+   "doc_id": "DOC-100221-1",
+   "start": 335,
+   "end": 379
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0005",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100221-1"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWG2TggTVGn1JXxbL",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWG2TggTVGn1JXxbL",
+   "stop_reason": "end_turn",
+   "latency_ms": 5641,
+   "usage": {
+    "input_tokens": 3166,
+    "output_tokens": 385,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0006": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100228-1",
+    "quote": "Vitals: BP 148/98, HR 64, Temp 98.4 F, Wt 60 kg, SpO2 95%",
+    "assessment": "Eligible office reading on 2026-04-09 but uncontrolled; superseded by later eligible reading."
+   },
+   {
+    "doc_id": "DOC-100228-2",
+    "quote": "Vitals: BP 112/65, HR 77, Temp 98.6 F, Wt 59 kg, SpO2 97%",
+    "assessment": "Most recent eligible in-person office reading on 2026-07-21; controlled (112<140, 65<90)."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 112,
+   "diastolic": 65,
+   "reading_date": "2026-07-21",
+   "setting": "outpatient",
+   "source": "office",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100228-2",
+   "quote": "Vitals: BP 112/65, HR 77, Temp 98.6 F, Wt 59 kg, SpO2 97%"
+  },
+  "confidence": 0.95,
+  "rationale": "The most recent eligible reading is 112/65, taken at an in-person office visit on 07/21/2026, and it is controlled. The earlier 148/98 from 04/09/2026 is superseded, and no exclusions are documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100228-2",
+   "start": 416,
+   "end": 473
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=112, diastolic=65"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "112 and 65 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "112/65 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-07-21"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-07-21 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-07-21"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=outpatient, source=office"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0006",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100228-1",
+    "DOC-100228-2"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUUt2DwCdyiPgFcC9",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUUt2DwCdyiPgFcC9",
+   "stop_reason": "end_turn",
+   "latency_ms": 5504,
+   "usage": {
+    "input_tokens": 3890,
+    "output_tokens": 473,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0007": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100228-2",
+    "quote": "He recalls his A1c was 7.0 a few months ago.",
+    "assessment": "Patient-recalled A1c value of 7.0 with vague timing ('a few months ago'); no exact collection date can be determined, so it cannot be used as numerator evidence."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "missing_or_ambiguous_date",
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100228-2",
+   "quote": "He recalls his A1c was 7.0 a few months ago."
+  },
+  "confidence": 0.9,
+  "rationale": "The only HbA1c mention is a patient-recalled value of 7.0 from 'a few months ago.' This is not an exact date, so the result cannot be dated. No exclusion evidence is present for this 47-year-old member.",
+  "evidence_span": {
+   "doc_id": "DOC-100228-2",
+   "start": 360,
+   "end": 404
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0007",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100228-1",
+    "DOC-100228-2"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUTsxtMh9GeWEUA4e",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUTsxtMh9GeWEUA4e",
+   "stop_reason": "end_turn",
+   "latency_ms": 4953,
+   "usage": {
+    "input_tokens": 3257,
+    "output_tokens": 324,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0008": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100235-1",
+    "quote": "Reviewed results by phone: A1c drawn at the lab last Wednesday returned 6.9%.",
+    "assessment": "Numeric lab A1c (6.9%) with a computable relative date. The date of service, 07/13/2026, is a Monday, so the most recent prior Wednesday is 2026-07-08. This falls within measurement year 2026."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": 6.9,
+   "test_date": "2026-07-08",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100235-1",
+   "quote": "Reviewed results by phone: A1c drawn at the lab last Wednesday returned 6.9%."
+  },
+  "confidence": 0.85,
+  "rationale": "The telephone follow-up on 07/13/2026 (a Monday) reports a lab A1c of 6.9% drawn 'last Wednesday', which resolves to 2026-07-08. No exclusion evidence is documented, and the member is 55.",
+  "evidence_span": {
+   "doc_id": "DOC-100235-1",
+   "start": 327,
+   "end": 404
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "value_present",
+    "passed": true,
+    "detail": "a1c_value=6.9"
+   },
+   {
+    "rule": "value_in_quote",
+    "passed": true,
+    "detail": "6.9 appears in the quoted passage"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "test_date=2026-07-08"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-07-08 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "test on or before 2026-07-13"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0008",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100235-1"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWF2RDDqSEbC7u9XP",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWF2RDDqSEbC7u9XP",
+   "stop_reason": "end_turn",
+   "latency_ms": 8615,
+   "usage": {
+    "input_tokens": 2903,
+    "output_tokens": 629,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0009": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100242-1",
+    "quote": "Triage vitals: BP 119/83, HR 92, RR 16, SpO2 98%.",
+    "assessment": "Exact value with a clear date (2026-02-05), but it was taken at ED triage. ED readings are not an eligible setting for CBP, so it is rejected."
+   },
+   {
+    "doc_id": "DOC-100242-2",
+    "quote": "Vitals: HR 70, Temp 98.4 F, Wt 85 kg, SpO2 99%",
+    "assessment": "The 2026-03-18 office visit vitals have no blood pressure recorded. The hypertension plan gives no reading."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "ineligible_setting",
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100242-1",
+   "quote": "Triage vitals: BP 119/83, HR 92, RR 16, SpO2 98%."
+  },
+  "confidence": 0.85,
+  "rationale": "The only blood pressure in the chart is 119/83, taken at ED triage on 2026-02-05, and ED readings are not eligible for CBP. The 2026-03-18 office visit recorded no BP, so there is no eligible reading and nurse review is needed.",
+  "evidence_span": {
+   "doc_id": "DOC-100242-1",
+   "start": 242,
+   "end": 291
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0009",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100242-1",
+    "DOC-100242-2"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWFX8YSou7J47gcCM",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWFX8YSou7J47gcCM",
+   "stop_reason": "end_turn",
+   "latency_ms": 6693,
+   "usage": {
+    "input_tokens": 3829,
+    "output_tokens": 472,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0010": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100242-2",
+    "quote": "Last A1c 6.7 per outside records; records not yet received.",
+    "assessment": "Numeric value 6.7 but no collection date; 'last' and 'per outside records' are vague timing, so the date cannot be determined and may not even fall in 2026."
+   },
+   {
+    "doc_id": "DOC-100242-1",
+    "quote": "Chief complaint: left ankle pain after a fall from a step stool.",
+    "assessment": "ED visit with no HbA1c content. The fall is irrelevant: the member is 51, so the frailty exclusion does not apply, and there is no hospice or palliative care."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "missing_or_ambiguous_date",
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100242-2",
+   "quote": "Last A1c 6.7 per outside records; records not yet received."
+  },
+  "confidence": 0.9,
+  "rationale": "The only HbA1c mention is a value of 6.7 reported from outside records with no test date, so it cannot be confirmed to fall in 2026. Obtaining the outside lab report would resolve the gap.",
+  "evidence_span": {
+   "doc_id": "DOC-100242-2",
+   "start": 339,
+   "end": 398
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0010",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100242-1",
+    "DOC-100242-2"
+   ],
+   "timestamp": "2026-10-05T02:42:02+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUWCYrPp8LT8YAj63p",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUWCYrPp8LT8YAj63p",
+   "stop_reason": "end_turn",
+   "latency_ms": 6294,
+   "usage": {
+    "input_tokens": 3196,
+    "output_tokens": 424,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0011": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100249-1",
+    "quote": "Vitals: Blood pressure 132/81 mmHg (seated, left arm), HR 70, Temp 98.2 F, Wt 77 kg, SpO2 98%",
+    "assessment": "Exact in-office reading at an in-person office visit on 2026-03-02, within the measurement year. 132 < 140 and 81 < 90, so it is controlled. This is the only and most recent reading."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 132,
+   "diastolic": 81,
+   "reading_date": "2026-03-02",
+   "setting": "outpatient",
+   "source": "office",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100249-1",
+   "quote": "Vitals: Blood pressure 132/81 mmHg (seated, left arm)"
+  },
+  "confidence": 0.95,
+  "rationale": "The only BP reading in 2026 is 132/81. It was taken at an in-person office visit on 03/02/2026 and is controlled (<140/<90). No exclusion evidence was found.",
+  "evidence_span": {
+   "doc_id": "DOC-100249-1",
+   "start": 345,
+   "end": 398
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=132, diastolic=81"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "132 and 81 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "132/81 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-03-02"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-03-02 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-03-02"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=outpatient, source=office"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0011",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100249-1"
+   ],
+   "timestamp": "2026-10-05T02:42:06+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUkjuus5JSNbbsqxvd",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUkjuus5JSNbbsqxvd",
+   "stop_reason": "end_turn",
+   "latency_ms": 5560,
+   "usage": {
+    "input_tokens": 3545,
+    "output_tokens": 384,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0012": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100256-1",
+    "quote": "Vitals: BP 154/82, HR 76, Temp 97.9 F, Wt 58 kg, SpO2 97%",
+    "assessment": "Eligible in-person office visit reading dated 2026-07-19 within the measurement year. Systolic 154 is 140 or higher, so the reading is uncontrolled. No later reading is documented."
+   }
+  ],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100256-1",
+   "quote": "Vitals: BP 154/82, HR 76, Temp 97.9 F, Wt 58 kg, SpO2 97%"
+  },
+  "confidence": 0.93,
+  "rationale": "The only and most recent eligible reading is 154/82 from the 07/19/2026 office visit, and it is uncontrolled (systolic 154). No exclusion evidence such as hospice, palliative care, ESRD, or advanced illness with frailty is documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100256-1",
+   "start": 347,
+   "end": 404
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0012",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100256-1"
+   ],
+   "timestamp": "2026-10-05T02:42:07+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUpaqTWgEtieEbFQeG",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUpaqTWgEtieEbFQeG",
+   "stop_reason": "end_turn",
+   "latency_ms": 6158,
+   "usage": {
+    "input_tokens": 3538,
+    "output_tokens": 396,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0013": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100263-1",
+    "quote": "Prior flexible sigmoidoscopy in February 2022, unremarkable.",
+    "assessment": "Completed flexible sigmoidoscopy dated 2022-02. The window for 2026 runs 2022 through 2026, so this test qualifies."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "flexible_sigmoidoscopy",
+   "procedure_date": "2022-02",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100263-1",
+   "quote": "Prior flexible sigmoidoscopy in February 2022, unremarkable."
+  },
+  "confidence": 0.85,
+  "rationale": "The 09/07/2026 progress note documents a completed, unremarkable flexible sigmoidoscopy in February 2022. That falls inside the 2022\u20132026 lookback window for flexible sigmoidoscopy, and no exclusions are documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100263-1",
+   "start": 339,
+   "end": 399
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=flexible_sigmoidoscopy"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2022-02"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2022 within 2022-2026 for flexible_sigmoidoscopy"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-09-07"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0013",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100263-1"
+   ],
+   "timestamp": "2026-10-05T02:42:08+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUun8Aaz1n4oSqrzXw",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUun8Aaz1n4oSqrzXw",
+   "stop_reason": "end_turn",
+   "latency_ms": 5480,
+   "usage": {
+    "input_tokens": 3198,
+    "output_tokens": 403,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0014": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100270-1",
+    "quote": "Goals of care meeting with patient and son: comfort care discussed and elected. Palliative care referral placed.",
+    "assessment": "Comfort care elected during the measurement year (2026-08-13). This meets the palliative_care exclusion. No start date is written separately, so the date of service is used."
+   },
+   {
+    "doc_id": "DOC-100270-1",
+    "quote": "Type 2 diabetes: relax glycemic targets; stop glipizide.",
+    "assessment": "Diabetes management only. No HbA1c value or test is documented."
+   }
+  ],
+  "finding_type": "exclusion",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": "palliative_care",
+   "supporting_date": "2026-08-13"
+  },
+  "evidence": {
+   "doc_id": "DOC-100270-1",
+   "quote": "Goals of care meeting with patient and son: comfort care discussed and elected. Palliative care referral placed."
+  },
+  "confidence": 0.85,
+  "rationale": "The 08/13/2026 progress note documents that comfort care was elected at a goals-of-care meeting, which supports a palliative care exclusion in 2026. No HbA1c result appears in the chart.",
+  "evidence_span": {
+   "doc_id": "DOC-100270-1",
+   "start": 410,
+   "end": 522
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "exclusion_applies_to_measure",
+    "passed": true,
+    "detail": "palliative_care for GSD"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "supporting_date=2026-08-13"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-08-13 in 2026"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0014",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100270-1"
+   ],
+   "timestamp": "2026-10-05T02:42:08+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUwJQn126EuRQse2nA",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUwJQn126EuRQse2nA",
+   "stop_reason": "end_turn",
+   "latency_ms": 5739,
+   "usage": {
+    "input_tokens": 2913,
+    "output_tokens": 417,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0015": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100277-1",
+    "quote": "History of colon cancer, stage II, s/p right hemicolectomy 2018; surveillance with oncology.",
+    "assessment": "History of colorectal cancer qualifies as an exclusion at any time. No diagnosis date is written, so the 2018 resection date is used as the supporting date."
+   },
+   {
+    "doc_id": "DOC-100277-1",
+    "quote": "s/p right hemicolectomy 2018",
+    "assessment": "A right hemicolectomy is a partial colectomy, so it does not qualify as a total_colectomy exclusion. It serves only as the cancer treatment date."
+   }
+  ],
+  "finding_type": "exclusion",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": "colorectal_cancer",
+   "supporting_date": "2018"
+  },
+  "evidence": {
+   "doc_id": "DOC-100277-1",
+   "quote": "History of colon cancer, stage II, s/p right hemicolectomy 2018; surveillance with oncology."
+  },
+  "confidence": 0.9,
+  "rationale": "The note documents a history of stage II colon cancer treated with right hemicolectomy in 2018, which meets the colorectal cancer exclusion. No diagnosis date is written, so the resection year (2018) is the supporting date.",
+  "evidence_span": {
+   "doc_id": "DOC-100277-1",
+   "start": 342,
+   "end": 434
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "exclusion_applies_to_measure",
+    "passed": true,
+    "detail": "colorectal_cancer for COL-E"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "supporting_date=2018"
+   },
+   {
+    "rule": "on_or_before_measurement_year",
+    "passed": true,
+    "detail": "2018 <= 2026"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0015",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100277-1"
+   ],
+   "timestamp": "2026-10-05T02:42:08+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUxvPKTF14FDQNpbGM",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUxvPKTF14FDQNpbGM",
+   "stop_reason": "end_turn",
+   "latency_ms": 6698,
+   "usage": {
+    "input_tokens": 3194,
+    "output_tokens": 588,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0016": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100284-1",
+    "quote": "Calling to review medications after her nurse BP check here last Wednesday: 124/79. No dizziness.",
+    "assessment": "Eligible. Exact values from a nurse BP check at this clinic (outpatient). The date of service, 08/17/2026, is a Monday, so 'last Wednesday' is 2026-08-12. The reading is controlled (124<140, 79<90)."
+   },
+   {
+    "doc_id": "DOC-100284-1",
+    "quote": "Vitals: not obtained (remote visit)",
+    "assessment": "No reading at the telephone visit itself. Nothing to evaluate."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 124,
+   "diastolic": 79,
+   "reading_date": "2026-08-12",
+   "setting": "outpatient",
+   "source": "office",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100284-1",
+   "quote": "Calling to review medications after her nurse BP check here last Wednesday: 124/79. No dizziness."
+  },
+  "confidence": 0.85,
+  "rationale": "The 08/17/2026 (Monday) telephone note documents a clinic nurse BP check 'last Wednesday' (2026-08-12) of 124/79, which is controlled. No later reading and no exclusion evidence appear in the chart.",
+  "evidence_span": {
+   "doc_id": "DOC-100284-1",
+   "start": 338,
+   "end": 435
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=124, diastolic=79"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "124 and 79 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "124/79 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-08-12"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-08-12 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-08-17"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=outpatient, source=office"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0016",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100284-1"
+   ],
+   "timestamp": "2026-10-05T02:42:09+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUyNvK1C2TuXzb7sDT",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUyNvK1C2TuXzb7sDT",
+   "stop_reason": "end_turn",
+   "latency_ms": 8574,
+   "usage": {
+    "input_tokens": 3546,
+    "output_tokens": 764,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0017": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100291-1",
+    "quote": "colonoscopy in 2021 with two small polyps removed.",
+    "assessment": "Completed colonoscopy dated 2021, within the colonoscopy lookback window (2017-2026). Polypectomy is not colorectal cancer, so it is valid numerator evidence."
+   },
+   {
+    "doc_id": "DOC-100291-1",
+    "quote": "Past surgical/procedural history: cholecystectomy;",
+    "assessment": "Not a colectomy and not a colorectal exclusion. Irrelevant."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "colonoscopy",
+   "procedure_date": "2021",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100291-1",
+   "quote": "colonoscopy in 2021 with two small polyps removed."
+  },
+  "confidence": 0.9,
+  "rationale": "The surgical history documents a completed colonoscopy in 2021 with polyps removed. That date falls within the 2017\u20132026 colonoscopy window, and no exclusions are documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100291-1",
+   "start": 385,
+   "end": 435
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=colonoscopy"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2021"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2021 within 2017-2026 for colonoscopy"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-03-18"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0017",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100291-1"
+   ],
+   "timestamp": "2026-10-05T02:42:09+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKUzCnBDi4n51HSaVfH",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKUzCnBDi4n51HSaVfH",
+   "stop_reason": "end_turn",
+   "latency_ms": 5482,
+   "usage": {
+    "input_tokens": 3192,
+    "output_tokens": 386,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0018": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.95,
+  "rationale": "The only document is a 2026 office visit for knee pain and medication refills, plus an influenza vaccine. It has no colorectal screening test and no exclusion content (no colorectal cancer, colectomy, hospice, palliative care, or advanced illness with frailty).",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0018",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100298-1"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUT9cnEmXvNhRzjEq",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUT9cnEmXvNhRzjEq",
+   "stop_reason": "end_turn",
+   "latency_ms": 3805,
+   "usage": {
+    "input_tokens": 3144,
+    "output_tokens": 196,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0019": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100305-1",
+    "quote": "Past surgical/procedural history: cholecystectomy; colonoscopy 2019, normal.",
+    "assessment": "Completed colonoscopy dated 2019. That falls within the colonoscopy window for MY 2026 (2017-2026), so it qualifies as numerator evidence at year precision."
+   },
+   {
+    "doc_id": "DOC-100305-1",
+    "quote": "cholecystectomy",
+    "assessment": "Gallbladder surgery, not a colectomy. This is not an exclusion."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "colonoscopy",
+   "procedure_date": "2019",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100305-1",
+   "quote": "colonoscopy 2019, normal."
+  },
+  "confidence": 0.88,
+  "rationale": "The progress note documents a completed colonoscopy in 2019 with a normal result. That date is within the 2017-2026 colonoscopy lookback window for measurement year 2026. No exclusion criteria are documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100305-1",
+   "start": 409,
+   "end": 434
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=colonoscopy"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2019"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2019 within 2017-2026 for colonoscopy"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-06-10"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0019",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100305-1"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUV8FsQyJKn6YjMDe",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUV8FsQyJKn6YjMDe",
+   "stop_reason": "end_turn",
+   "latency_ms": 5669,
+   "usage": {
+    "input_tokens": 3204,
+    "output_tokens": 386,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0020": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.93,
+  "rationale": "The only document is a 05/03/2026 office visit for type 2 diabetes that does not mention any HbA1c result, order, or test. It also shows no hospice or palliative care, and the member is 61, so the advanced illness and frailty exclusion does not apply.",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0020",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100312-1"
+   ],
+   "timestamp": "2026-10-05T02:42:11+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKV8X6h1fNz3MkKvUuv",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKV8X6h1fNz3MkKvUuv",
+   "stop_reason": "end_turn",
+   "latency_ms": 3602,
+   "usage": {
+    "input_tokens": 2926,
+    "output_tokens": 191,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0021": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100319-1",
+    "quote": "Vitals: HR 66, Temp 98.2 F, Wt 56 kg, SpO2 97%",
+    "assessment": "Vitals line has no blood pressure recorded; there is no BP reading anywhere in the chart."
+   },
+   {
+    "doc_id": "DOC-100319-1",
+    "quote": "Patient enrolled with hospice 6/2026 for end-stage COPD.",
+    "assessment": "Not a BP reading. It documents hospice enrollment in June 2026, within the measurement year, so the hospice exclusion applies."
+   }
+  ],
+  "finding_type": "exclusion",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": "hospice",
+   "supporting_date": "2026-06"
+  },
+  "evidence": {
+   "doc_id": "DOC-100319-1",
+   "quote": "Patient enrolled with hospice 6/2026 for end-stage COPD."
+  },
+  "confidence": 0.93,
+  "rationale": "The 07/08/2026 office note states the patient enrolled in hospice in 6/2026 and the plan continues the hospice plan of care, which meets the hospice exclusion for measurement year 2026. No BP reading is documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100319-1",
+   "start": 357,
+   "end": 413
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "exclusion_applies_to_measure",
+    "passed": true,
+    "detail": "hospice for CBP"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "supporting_date=2026-06"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-06 in 2026"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0021",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100319-1"
+   ],
+   "timestamp": "2026-10-05T02:42:11+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVAZ8Mr1NKmQU3B8z3",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVAZ8Mr1NKmQU3B8z3",
+   "stop_reason": "end_turn",
+   "latency_ms": 7773,
+   "usage": {
+    "input_tokens": 3546,
+    "output_tokens": 435,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0022": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100326-1",
+    "quote": "Type 2 diabetes: HbA1c ordered today, results pending; continue metformin.",
+    "assessment": "HbA1c was ordered on 03/11/2026 and the result is pending. No numeric value is documented, so the test is not completed."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "not_completed",
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100326-1",
+   "quote": "Type 2 diabetes: HbA1c ordered today, results pending; continue metformin."
+  },
+  "confidence": 0.93,
+  "rationale": "The only HbA1c mention is an order placed 03/11/2026 with results pending, and no value is documented. Please look for the resulted lab report. No exclusion evidence was found (member is 58).",
+  "evidence_span": {
+   "doc_id": "DOC-100326-1",
+   "start": 416,
+   "end": 490
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0022",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100326-1"
+   ],
+   "timestamp": "2026-10-05T02:42:13+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVGnvtMWZdPQN3eHJS",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVGnvtMWZdPQN3eHJS",
+   "stop_reason": "end_turn",
+   "latency_ms": 6089,
+   "usage": {
+    "input_tokens": 2889,
+    "output_tokens": 312,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0023": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100333-1",
+    "quote": "Colorectal cancer screening: FIT kit provided today with instructions; patient to return by mail.",
+    "assessment": "FIT kit handed out on 09/22/2026; no returned or resulted test documented. Not a completed screening."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "not_completed",
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100333-1",
+   "quote": "Colorectal cancer screening: FIT kit provided today with instructions; patient to return by mail."
+  },
+  "confidence": 0.93,
+  "rationale": "A FIT kit was given to the patient on 09/22/2026, but the chart has no completed or resulted FIT. The gap cannot be closed without a lab result showing the kit was returned and tested in 2026.",
+  "evidence_span": {
+   "doc_id": "DOC-100333-1",
+   "start": 415,
+   "end": 512
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0023",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100333-1"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUUdggYPUmoJ3YcRY",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUUdggYPUmoJ3YcRY",
+   "stop_reason": "end_turn",
+   "latency_ms": 4303,
+   "usage": {
+    "input_tokens": 3164,
+    "output_tokens": 316,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0024": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.9,
+  "rationale": "Neither document contains any blood pressure content. The 09/01/2026 office visit vitals list HR, temperature, weight, and SpO2 but no BP, and the lab report has only an HbA1c. No exclusion evidence was found.",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0024",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100340-1",
+    "DOC-100340-2"
+   ],
+   "timestamp": "2026-10-05T02:42:13+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVK5MMjaqaYneuSxaW",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVK5MMjaqaYneuSxaW",
+   "stop_reason": "end_turn",
+   "latency_ms": 2888,
+   "usage": {
+    "input_tokens": 3873,
+    "output_tokens": 201,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0025": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100340-1",
+    "quote": "HEMOGLOBIN A1C               9.5        %        4.0-5.6     H",
+    "assessment": "Valid result collected 05/18/2026, but superseded by the more recent POC result on 09/01/2026."
+   },
+   {
+    "doc_id": "DOC-100340-2",
+    "quote": "POC HbA1c today: 7.5%",
+    "assessment": "Point-of-care HbA1c of 7.5% done 'today', which is the date of service 2026-09-01. This is the most recent result in the measurement year."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": 7.5,
+   "test_date": "2026-09-01",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100340-2",
+   "quote": "POC HbA1c today: 7.5%"
+  },
+  "confidence": 0.95,
+  "rationale": "The most recent HbA1c in 2026 is a point-of-care result of 7.5% done at the 09/01/2026 office visit. It supersedes the 9.5% lab result collected 05/18/2026.",
+  "evidence_span": {
+   "doc_id": "DOC-100340-2",
+   "start": 398,
+   "end": 419
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "value_present",
+    "passed": true,
+    "detail": "a1c_value=7.5"
+   },
+   {
+    "rule": "value_in_quote",
+    "passed": true,
+    "detail": "7.5 appears in the quoted passage"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "test_date=2026-09-01"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-09-01 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "test on or before 2026-09-01"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0025",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100340-1",
+    "DOC-100340-2"
+   ],
+   "timestamp": "2026-10-05T02:42:14+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVMjawfF6RHgnjW9cx",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVMjawfF6RHgnjW9cx",
+   "stop_reason": "end_turn",
+   "latency_ms": 5156,
+   "usage": {
+    "input_tokens": 3240,
+    "output_tokens": 389,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0026": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100347-1",
+    "quote": "Vitals: HR 85, Temp 98.4 F, Wt 99 kg, SpO2 97%",
+    "assessment": "Vitals for the 2026-05-23 office visit have no blood pressure recorded. There is no BP reading anywhere in the chart."
+   }
+  ],
+  "finding_type": "exclusion",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": "esrd_dialysis",
+   "supporting_date": "2023-12"
+  },
+  "evidence": {
+   "doc_id": "DOC-100347-1",
+   "quote": "ESRD on in-center hemodialysis Mon/Wed/Fri, started 12/2023; nephrology following."
+  },
+  "confidence": 0.95,
+  "rationale": "The 2026-05-23 office note documents ESRD on in-center hemodialysis, started 12/2023, which is before the end of the measurement year. This meets the ESRD/dialysis exclusion; the chart also contains no BP reading.",
+  "evidence_span": {
+   "doc_id": "DOC-100347-1",
+   "start": 415,
+   "end": 497
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "exclusion_applies_to_measure",
+    "passed": true,
+    "detail": "esrd_dialysis for CBP"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "supporting_date=2023-12"
+   },
+   {
+    "rule": "on_or_before_measurement_year",
+    "passed": true,
+    "detail": "2023-12 <= 2026"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0026",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100347-1"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUQfpXBrb1DCTHmUp",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUQfpXBrb1DCTHmUp",
+   "stop_reason": "end_turn",
+   "latency_ms": 5140,
+   "usage": {
+    "input_tokens": 3563,
+    "output_tokens": 371,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0027": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.95,
+  "rationale": "The only document is a 06/15/2026 office visit for low back stiffness and a flu vaccine. It contains no colorectal cancer screening content and no exclusion evidence.",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0027",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100354-1"
+   ],
+   "timestamp": "2026-10-05T02:42:14+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVPYEGYKFFRrYTDJBA",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVPYEGYKFFRrYTDJBA",
+   "stop_reason": "end_turn",
+   "latency_ms": 3681,
+   "usage": {
+    "input_tokens": 3153,
+    "output_tokens": 165,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0028": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100361-1",
+    "quote": "Prior screening: FIT 09/12/2025: negative.",
+    "assessment": "A completed FIT dated 2025-09-12. FIT counts only in the measurement year (2026), so this test is outside its lookback window and cannot close the gap."
+   },
+   {
+    "doc_id": "DOC-100361-1",
+    "quote": "Colorectal cancer screening: due; FIT kit offered.",
+    "assessment": "A kit was offered on 2026-08-13. No completed result is documented, so this is not numerator evidence."
+   },
+   {
+    "doc_id": "DOC-100361-1",
+    "quote": "Mild low back stiffness after gardening, improving with heat.",
+    "assessment": "No colorectal cancer, colectomy, hospice, palliative care, advanced illness, or frailty is documented. No exclusion applies."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "outside_lookback_window",
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100361-1",
+   "quote": "Prior screening: FIT 09/12/2025: negative."
+  },
+  "confidence": 0.85,
+  "rationale": "The only completed screening is a negative FIT dated 09/12/2025, but FIT only counts in the measurement year (2026). The FIT kit offered at the 08/13/2026 visit has no documented result yet.",
+  "evidence_span": {
+   "doc_id": "DOC-100361-1",
+   "start": 397,
+   "end": 439
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0028",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100361-1"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUStwGagMtk61rwym",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUStwGagMtk61rwym",
+   "stop_reason": "end_turn",
+   "latency_ms": 7420,
+   "usage": {
+    "input_tokens": 3178,
+    "output_tokens": 620,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0029": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100368-2",
+    "quote": "Vitals: BP 149/88 on arrival; repeat after 5 minutes seated 120/71, HR 76, Temp 98.4 F, Wt 97 kg, SpO2 96%",
+    "assessment": "Two office readings on 06/07/2026 (149/88 and repeat 120/71). Both are eligible outpatient readings from the same date, so the lowest systolic (120) and lowest diastolic (71) are used: controlled."
+   },
+   {
+    "doc_id": "DOC-100368-1",
+    "quote": "HEMOGLOBIN A1C               7.8        %        4.0-5.6     H",
+    "assessment": "Lab report with no blood pressure content. Not relevant."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 120,
+   "diastolic": 71,
+   "reading_date": "2026-06-07",
+   "setting": "outpatient",
+   "source": "office",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100368-2",
+   "quote": "Vitals: BP 149/88 on arrival; repeat after 5 minutes seated 120/71"
+  },
+  "confidence": 0.9,
+  "rationale": "The in-person office visit on 06/07/2026 recorded BP 149/88 and a repeat of 120/71. Using the lowest systolic and diastolic from that date gives 120/71, which is controlled; no exclusion evidence was found.",
+  "evidence_span": {
+   "doc_id": "DOC-100368-2",
+   "start": 363,
+   "end": 429
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=120, diastolic=71"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "120 and 71 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "120/71 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-06-07"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-06-07 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-06-07"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=outpatient, source=office"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0029",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100368-1",
+    "DOC-100368-2"
+   ],
+   "timestamp": "2026-10-05T03:22:44+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaUQv3x9saWN3Kn4V7",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaUQv3x9saWN3Kn4V7",
+   "stop_reason": "end_turn",
+   "latency_ms": 6221,
+   "usage": {
+    "input_tokens": 3919,
+    "output_tokens": 497,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0030": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100368-1",
+    "quote": "HEMOGLOBIN A1C               7.8        %        4.0-5.6     H",
+    "assessment": "Final lab result, numeric value 7.8%, collected 05/08/2026, within measurement year. Most recent HbA1c in chart."
+   },
+   {
+    "doc_id": "DOC-100368-2",
+    "quote": "Reviewed outside lab report.",
+    "assessment": "Generic reference to an outside lab report with no HbA1c value or date; not a separate result."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": 7.8,
+   "test_date": "2026-05-08",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100368-1",
+   "quote": "HEMOGLOBIN A1C               7.8        %        4.0-5.6     H"
+  },
+  "confidence": 0.95,
+  "rationale": "The final lab report shows an HbA1c of 7.8% collected 05/08/2026, which falls in the 2026 measurement year. No later HbA1c result and no exclusion evidence appear in the chart.",
+  "evidence_span": {
+   "doc_id": "DOC-100368-1",
+   "start": 350,
+   "end": 412
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "value_present",
+    "passed": true,
+    "detail": "a1c_value=7.8"
+   },
+   {
+    "rule": "value_in_quote",
+    "passed": true,
+    "detail": "7.8 appears in the quoted passage"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "test_date=2026-05-08"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-05-08 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "test on or before 2026-05-08"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0030",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100368-1",
+    "DOC-100368-2"
+   ],
+   "timestamp": "2026-10-05T03:22:47+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNakPbDBrEWFUnFKC9j",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNakPbDBrEWFUnFKC9j",
+   "stop_reason": "end_turn",
+   "latency_ms": 4908,
+   "usage": {
+    "input_tokens": 3286,
+    "output_tokens": 390,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0031": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100375-1",
+    "quote": "Screening history: Cologuard (FIT-DNA) 04/2024: negative.",
+    "assessment": "Completed Cologuard (FIT-DNA) with a negative result, dated 04/2024. This is inside the FIT-DNA window of 2024 through 2026 for MY 2026, so it qualifies."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "fit_dna",
+   "procedure_date": "2024-04",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100375-1",
+   "quote": "Screening history: Cologuard (FIT-DNA) 04/2024: negative."
+  },
+  "confidence": 0.9,
+  "rationale": "The 07/09/2026 progress note documents a completed Cologuard (FIT-DNA) in 04/2024 with a negative result. That date falls within the MY-2 through MY window (2024\u20132026), and the chart shows no exclusions.",
+  "evidence_span": {
+   "doc_id": "DOC-100375-1",
+   "start": 332,
+   "end": 389
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=fit_dna"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2024-04"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2024 within 2024-2026 for fit_dna"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-07-09"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0031",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100375-1"
+   ],
+   "timestamp": "2026-10-05T02:42:14+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVPjda3nbmw2kMDkjW",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVPjda3nbmw2kMDkjW",
+   "stop_reason": "end_turn",
+   "latency_ms": 5992,
+   "usage": {
+    "input_tokens": 3178,
+    "output_tokens": 452,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0032": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100382-1",
+    "quote": "Vitals: BP 137/80, HR 87, Temp 98.4 F, Wt 59 kg, SpO2 98%",
+    "assessment": "Eligible office reading on 2026-06-10, controlled, but superseded by a later eligible reading."
+   },
+   {
+    "doc_id": "DOC-100382-3",
+    "quote": "Vitals: BP 136/91, HR 69, Temp 98.6 F, Wt 58 kg, SpO2 96%",
+    "assessment": "Most recent eligible office reading on 2026-09-12. Diastolic 91 is 90 or higher, so it is uncontrolled."
+   },
+   {
+    "doc_id": "DOC-100382-2",
+    "quote": "HEMOGLOBIN A1C               6.6        %        4.0-5.6     H",
+    "assessment": "Lab report with no blood pressure content; not relevant."
+   }
+  ],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100382-3",
+   "quote": "Vitals: BP 136/91, HR 69, Temp 98.6 F, Wt 58 kg, SpO2 96%"
+  },
+  "confidence": 0.93,
+  "rationale": "The most recent eligible reading is the 09/12/2026 office BP of 136/91, which is uncontrolled because the diastolic is 90 or higher. The earlier controlled reading of 137/80 on 06/10/2026 does not count, and no exclusions are documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100382-3",
+   "start": 359,
+   "end": 416
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0032",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100382-1",
+    "DOC-100382-2",
+    "DOC-100382-3"
+   ],
+   "timestamp": "2026-10-05T03:22:48+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNanaJYXRJBC8mFAWPS",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNanaJYXRJBC8mFAWPS",
+   "stop_reason": "end_turn",
+   "latency_ms": 4913,
+   "usage": {
+    "input_tokens": 4191,
+    "output_tokens": 559,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0033": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100382-2",
+    "quote": "HEMOGLOBIN A1C               6.6",
+    "assessment": "Final lab report with numeric HbA1c 6.6%, collected 08/13/2026, within the measurement year. This is the only dated numeric result and the most recent, so it is used."
+   },
+   {
+    "doc_id": "DOC-100382-3",
+    "quote": "Reviewed outside lab report.",
+    "assessment": "Nonspecific reference that likely points to the 08/13 lab. It gives no value and is not a separate result."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": 6.6,
+   "test_date": "2026-08-13",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100382-2",
+   "quote": "HEMOGLOBIN A1C               6.6"
+  },
+  "confidence": 0.95,
+  "rationale": "A final reference-lab report shows HbA1c 6.6% collected 08/13/2026, the most recent and only numeric result in 2026. The chart shows no hospice or palliative care, and the member is 58, so the advanced illness and frailty exclusion does not apply.",
+  "evidence_span": {
+   "doc_id": "DOC-100382-2",
+   "start": 349,
+   "end": 381
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "value_present",
+    "passed": true,
+    "detail": "a1c_value=6.6"
+   },
+   {
+    "rule": "value_in_quote",
+    "passed": true,
+    "detail": "6.6 appears in the quoted passage"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "test_date=2026-08-13"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-08-13 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "test on or before 2026-08-13"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0033",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100382-1",
+    "DOC-100382-2",
+    "DOC-100382-3"
+   ],
+   "timestamp": "2026-10-05T03:22:49+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNaqLVtwTuxLJUYGqsU",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNaqLVtwTuxLJUYGqsU",
+   "stop_reason": "end_turn",
+   "latency_ms": 6657,
+   "usage": {
+    "input_tokens": 3558,
+    "output_tokens": 668,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0034": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100389-1",
+    "quote": "Date of procedure: 06/18/2026",
+    "assessment": "Completed screening colonoscopy reaching the cecum, normal findings, dated 2026-06-18, which is within the MY-9 through MY window (2017-2026). Qualifies."
+   },
+   {
+    "doc_id": "DOC-100389-2",
+    "quote": "Reviewed colonoscopy report; normal.",
+    "assessment": "PCP review of the same colonoscopy, with no date of its own. Supporting only; the procedure note is the primary evidence."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "colonoscopy",
+   "procedure_date": "2026-06-18",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100389-1",
+   "quote": "Date of procedure: 06/18/2026"
+  },
+  "confidence": 0.93,
+  "rationale": "A procedure note documents a completed screening colonoscopy (cecum reached, normal colon) on 06/18/2026, inside the 2017-2026 lookback window. No exclusion evidence was found.",
+  "evidence_span": {
+   "doc_id": "DOC-100389-1",
+   "start": 119,
+   "end": 148
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=colonoscopy"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2026-06-18"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2026 within 2017-2026 for colonoscopy"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-06-18"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0034",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100389-1",
+    "DOC-100389-2"
+   ],
+   "timestamp": "2026-10-05T03:22:49+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNarELEA4DGCrKhWre4",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNarELEA4DGCrKhWre4",
+   "stop_reason": "end_turn",
+   "latency_ms": 5408,
+   "usage": {
+    "input_tokens": 3380,
+    "output_tokens": 394,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0035": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100396-1",
+    "quote": "She had a colonoscopy years ago and does not remember when; says it was fine.",
+    "assessment": "Patient-reported colonoscopy history with no year written. The date cannot be placed in the MY-9 through MY window (2017-2026). Outside GI records were requested but are not in the chart."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "missing_or_ambiguous_date",
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100396-1",
+   "quote": "She had a colonoscopy years ago and does not remember when; says it was fine."
+  },
+  "confidence": 0.9,
+  "rationale": "The member reports a past colonoscopy, but no year is documented, so it cannot be confirmed inside the 2017-2026 window. The outside GI records the provider requested may supply the date.",
+  "evidence_span": {
+   "doc_id": "DOC-100396-1",
+   "start": 347,
+   "end": 424
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0035",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100396-1"
+   ],
+   "timestamp": "2026-10-05T02:42:15+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVT5oU7GpZ93x2UtFn",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVT5oU7GpZ93x2UtFn",
+   "stop_reason": "end_turn",
+   "latency_ms": 3904,
+   "usage": {
+    "input_tokens": 3170,
+    "output_tokens": 327,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0036": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100403-1",
+    "quote": "Patient elected the hospice benefit on 03/28/2026; metastatic pancreatic cancer.",
+    "assessment": "Hospice election dated 03/28/2026, within measurement year 2026; qualifies as hospice exclusion. Pancreatic cancer is not colorectal cancer."
+   },
+   {
+    "doc_id": "DOC-100403-1",
+    "quote": "Coordinate with hospice team; no further screening indicated.",
+    "assessment": "Supports hospice status; no screening test documented."
+   }
+  ],
+  "finding_type": "exclusion",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": "hospice",
+   "supporting_date": "2026-03-28"
+  },
+  "evidence": {
+   "doc_id": "DOC-100403-1",
+   "quote": "Patient elected the hospice benefit on 03/28/2026; metastatic pancreatic cancer."
+  },
+  "confidence": 0.93,
+  "rationale": "The member elected the hospice benefit on 03/28/2026, during the measurement year, which meets the hospice exclusion for COL-E. No colorectal screening test is documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100403-1",
+   "start": 334,
+   "end": 414
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "exclusion_applies_to_measure",
+    "passed": true,
+    "detail": "hospice for COL-E"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "supporting_date=2026-03-28"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-03-28 in 2026"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0036",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100403-1"
+   ],
+   "timestamp": "2026-10-05T03:22:49+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNasopoAanRDRDqaqxk",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNasopoAanRDRDqaqxk",
+   "stop_reason": "end_turn",
+   "latency_ms": 5600,
+   "usage": {
+    "input_tokens": 3185,
+    "output_tokens": 398,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0037": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100410-1",
+    "quote": "Type 2 diabetes: recent A1c was good per patient; continue metformin.",
+    "assessment": "Patient-reported A1c described only as 'good' with no numeric value and vague timing ('recent'). It cannot serve as numerator evidence."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "missing_value",
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100410-1",
+   "quote": "Type 2 diabetes: recent A1c was good per patient; continue metformin."
+  },
+  "confidence": 0.9,
+  "rationale": "The only HbA1c mention is a patient report that a recent A1c was 'good', with no numeric value and no exact date. No usable result or exclusion evidence is in the chart.",
+  "evidence_span": {
+   "doc_id": "DOC-100410-1",
+   "start": 427,
+   "end": 496
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0037",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100410-1"
+   ],
+   "timestamp": "2026-10-05T03:22:49+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNatRnR7eEN3chTJsys",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNatRnR7eEN3chTJsys",
+   "stop_reason": "end_turn",
+   "latency_ms": 3466,
+   "usage": {
+    "input_tokens": 2890,
+    "output_tokens": 304,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0038": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100417-1",
+    "quote": "Advanced illness: heart failure, NYHA class IV, on home oxygen.",
+    "assessment": "Qualifying advanced illness (heart failure NYHA class IV) documented at the 2026-03-03 visit in the measurement year."
+   },
+   {
+    "doc_id": "DOC-100417-1",
+    "quote": "Frailty: uses a walker, two falls since spring.",
+    "assessment": "Qualifying frailty (walker dependence and falls) in the same note, so both required criteria are met for a member who is 74."
+   },
+   {
+    "doc_id": "DOC-100417-1",
+    "quote": "Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.",
+    "assessment": "Diabetes plan with no HbA1c value, order, or result. There is no HbA1c content anywhere in the chart."
+   }
+  ],
+  "finding_type": "exclusion",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": "advanced_illness_frailty",
+   "supporting_date": "2026-03-03"
+  },
+  "evidence": {
+   "doc_id": "DOC-100417-1",
+   "quote": "Advanced illness: heart failure, NYHA class IV, on home oxygen."
+  },
+  "confidence": 0.85,
+  "rationale": "The member is 74, and the 03/03/2026 note documents both an advanced illness (heart failure NYHA class IV on home oxygen) and frailty (walker use, two falls), which meets the advanced illness and frailty exclusion. No start date is written, so the visit date is used as the supporting date; there is no HbA1c result in the chart.",
+  "evidence_span": {
+   "doc_id": "DOC-100417-1",
+   "start": 349,
+   "end": 412
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "exclusion_applies_to_measure",
+    "passed": true,
+    "detail": "advanced_illness_frailty for GSD"
+   },
+   {
+    "rule": "age_66_plus",
+    "passed": true,
+    "detail": "age 74 at end of 2026"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "supporting_date=2026-03-03"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-03-03 in 2026"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0038",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100417-1"
+   ],
+   "timestamp": "2026-10-05T03:22:50+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNavnfsBEHxHcoYpTTV",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNavnfsBEHxHcoYpTTV",
+   "stop_reason": "end_turn",
+   "latency_ms": 7841,
+   "usage": {
+    "input_tokens": 2964,
+    "output_tokens": 792,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0039": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100424-2",
+    "quote": "Hypertension: BP under control on current regimen, continue lisinopril.",
+    "assessment": "Descriptive statement only, with no systolic/diastolic values. Not an eligible reading."
+   },
+   {
+    "doc_id": "DOC-100424-2",
+    "quote": "Vitals: HR 80, Temp 97.9 F, Wt 74 kg, SpO2 98%",
+    "assessment": "The office visit vitals line has no blood pressure recorded."
+   },
+   {
+    "doc_id": "DOC-100424-1",
+    "quote": "HEMOGLOBIN A1C               6.3        %        4.0-5.6     H",
+    "assessment": "Lab report has no blood pressure content. Not relevant to CBP."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "bp_range_or_threshold",
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100424-2",
+   "quote": "Hypertension: BP under control on current regimen, continue lisinopril."
+  },
+  "confidence": 0.9,
+  "rationale": "The 07/29/2026 office note describes BP only as 'under control' with no numeric reading, and the vitals line omits BP, so there is no eligible reading. No exclusion evidence was found.",
+  "evidence_span": {
+   "doc_id": "DOC-100424-2",
+   "start": 417,
+   "end": 488
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0039",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100424-1",
+    "DOC-100424-2"
+   ],
+   "timestamp": "2026-10-05T03:22:51+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNb1wyp32WF9xSHqhWs",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNb1wyp32WF9xSHqhWs",
+   "stop_reason": "end_turn",
+   "latency_ms": 6629,
+   "usage": {
+    "input_tokens": 3864,
+    "output_tokens": 474,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0040": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100424-1",
+    "quote": "HEMOGLOBIN A1C               6.3        %        4.0-5.6     H",
+    "assessment": "Final lab result with a numeric value of 6.3%, collected 07/20/2026, in the measurement year. It is the only and most recent HbA1c result, so it is used."
+   },
+   {
+    "doc_id": "DOC-100424-2",
+    "quote": "Reviewed outside lab report.",
+    "assessment": "This likely refers to the 07/20 lab, but no value is stated. It adds no new result."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": 6.3,
+   "test_date": "2026-07-20",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100424-1",
+   "quote": "HEMOGLOBIN A1C               6.3        %        4.0-5.6     H"
+  },
+  "confidence": 0.95,
+  "rationale": "A final reference lab report shows HbA1c 6.3%, collected 07/20/2026, which is the most recent result in 2026. The member is 67, but the chart documents no hospice, palliative care, or advanced illness with frailty.",
+  "evidence_span": {
+   "doc_id": "DOC-100424-1",
+   "start": 349,
+   "end": 411
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "value_present",
+    "passed": true,
+    "detail": "a1c_value=6.3"
+   },
+   {
+    "rule": "value_in_quote",
+    "passed": true,
+    "detail": "6.3 appears in the quoted passage"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "test_date=2026-07-20"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-07-20 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "test on or before 2026-07-20"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0040",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100424-1",
+    "DOC-100424-2"
+   ],
+   "timestamp": "2026-10-05T03:22:52+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNb7Q94HN78ZySto6Ro",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNb7Q94HN78ZySto6Ro",
+   "stop_reason": "end_turn",
+   "latency_ms": 6912,
+   "usage": {
+    "input_tokens": 3231,
+    "output_tokens": 708,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0041": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100431-1",
+    "quote": "FECAL IMMUNOCHEM TEST        NEGATIVE",
+    "assessment": "Completed FIT with a final result, collected 01/26/2026. This is within the measurement-year-only window for FIT, so it qualifies as numerator evidence."
+   },
+   {
+    "doc_id": "DOC-100431-2",
+    "quote": "Health maintenance: influenza vaccine administered today.",
+    "assessment": "This progress note has no colorectal screening or exclusion content. It is not relevant."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "fit",
+   "procedure_date": "2026-01-26",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100431-1",
+   "quote": "FECAL IMMUNOCHEM TEST        NEGATIVE"
+  },
+  "confidence": 0.93,
+  "rationale": "A final lab report shows a fecal immunochemical test collected 01/26/2026 with a negative result, inside measurement year 2026. No exclusion evidence appears in the chart.",
+  "evidence_span": {
+   "doc_id": "DOC-100431-1",
+   "start": 347,
+   "end": 384
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=fit"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2026-01-26"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2026 within 2026-2026 for fit"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-01-26"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0041",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100431-1",
+    "DOC-100431-2"
+   ],
+   "timestamp": "2026-10-05T02:42:16+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVXPWWSty6UsWRf9oU",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVXPWWSty6UsWRf9oU",
+   "stop_reason": "end_turn",
+   "latency_ms": 7903,
+   "usage": {
+    "input_tokens": 3462,
+    "output_tokens": 688,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0042": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100438-1",
+    "quote": "Past procedural history: colonoscopy 2015, normal.",
+    "assessment": "Colonoscopy is a qualifying test type, but its 2015 date falls before the 2017-2026 lookback window for MY 2026."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "outside_lookback_window",
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100438-1",
+   "quote": "Past procedural history: colonoscopy 2015, normal."
+  },
+  "confidence": 0.9,
+  "rationale": "The only screening evidence is a colonoscopy dated 2015, which is before the 2017-2026 colonoscopy window for measurement year 2026. The chart shows no other screening test and no exclusion.",
+  "evidence_span": {
+   "doc_id": "DOC-100438-1",
+   "start": 327,
+   "end": 377
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0042",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100438-1"
+   ],
+   "timestamp": "2026-10-05T02:42:17+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVbqei6WtenH1bnpNp",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVbqei6WtenH1bnpNp",
+   "stop_reason": "end_turn",
+   "latency_ms": 5285,
+   "usage": {
+    "input_tokens": 3176,
+    "output_tokens": 353,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0043": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100445-1",
+    "quote": "Notes BP was 125/84 when checked at urgent care a few months ago.",
+    "assessment": "Patient-reported reading with an exact value, but the date is vague ('a few months ago') and cannot be computed. It also cannot be confirmed to fall in the measurement year. Not eligible."
+   },
+   {
+    "doc_id": "DOC-100445-1",
+    "quote": "Vitals: HR 62, Temp 98.6 F, Wt 83 kg, SpO2 99%",
+    "assessment": "Office vitals on 05/29/2026 do not include a blood pressure. There is no reading from this visit."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "missing_or_ambiguous_date",
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100445-1",
+   "quote": "Notes BP was 125/84 when checked at urgent care a few months ago."
+  },
+  "confidence": 0.88,
+  "rationale": "The only blood pressure value is a patient-reported 125/84 from urgent care 'a few months ago,' so no exact date can be stated. The 05/29/2026 office vitals recorded no BP, which leaves no eligible reading.",
+  "evidence_span": {
+   "doc_id": "DOC-100445-1",
+   "start": 333,
+   "end": 398
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0043",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100445-1"
+   ],
+   "timestamp": "2026-10-05T02:42:18+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVfH2NqM2kgsYcN4rk",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVfH2NqM2kgsYcN4rk",
+   "stop_reason": "end_turn",
+   "latency_ms": 5287,
+   "usage": {
+    "input_tokens": 3602,
+    "output_tokens": 458,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0044": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100445-1",
+    "quote": "Reports A1c was normal at her last check.",
+    "assessment": "Patient-reported A1c described only as 'normal' with no numeric value and vague timing ('last check'); not usable as numerator evidence."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "missing_value",
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100445-1",
+   "quote": "Reports A1c was normal at her last check."
+  },
+  "confidence": 0.85,
+  "rationale": "The only HbA1c mention is a patient report that her A1c was 'normal' at her last check, with no number and no exact date. No exclusion evidence was found, so this needs nurse review or an actual lab result.",
+  "evidence_span": {
+   "doc_id": "DOC-100445-1",
+   "start": 399,
+   "end": 440
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0044",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100445-1"
+   ],
+   "timestamp": "2026-10-05T02:42:19+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKViqMBhMUtYPyFtpxt",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKViqMBhMUtYPyFtpxt",
+   "stop_reason": "end_turn",
+   "latency_ms": 3433,
+   "usage": {
+    "input_tokens": 2969,
+    "output_tokens": 286,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0045": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100452-1",
+    "quote": "He states his home BP last week was 124/69.",
+    "assessment": "Member-reported home reading with no digital device documented, so it is ineligible. 'Last week' also cannot be converted to an exact date."
+   },
+   {
+    "doc_id": "DOC-100452-1",
+    "quote": "Vitals: HR 68, Temp 98.2 F, Wt 104 kg, SpO2 96%",
+    "assessment": "The office vitals from the 06/12/2026 visit do not include a blood pressure, so there is no office reading to use."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "home_reading_not_digital",
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100452-1",
+   "quote": "He states his home BP last week was 124/69."
+  },
+  "confidence": 0.85,
+  "rationale": "The only BP value is a member-reported home reading of 124/69 with no digital device documented, and its date ('last week') is not exact. The office vitals for 06/12/2026 contain no blood pressure, so there is no eligible reading.",
+  "evidence_span": {
+   "doc_id": "DOC-100452-1",
+   "start": 351,
+   "end": 394
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0045",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100452-1"
+   ],
+   "timestamp": "2026-10-05T02:42:19+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVjkexXGziPZYLmVXC",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVjkexXGziPZYLmVXC",
+   "stop_reason": "end_turn",
+   "latency_ms": 6846,
+   "usage": {
+    "input_tokens": 3592,
+    "output_tokens": 555,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0046": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.9,
+  "rationale": "The only document is a 06/12/2026 progress note that lists type 2 diabetes on metformin but has no HbA1c result, order, or mention. It also has no hospice, palliative care, or frailty exclusion, and the member is 59.",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0046",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100452-1"
+   ],
+   "timestamp": "2026-10-05T02:42:19+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVjmQFSzz5vcowENBs",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVjmQFSzz5vcowENBs",
+   "stop_reason": "end_turn",
+   "latency_ms": 3564,
+   "usage": {
+    "input_tokens": 2959,
+    "output_tokens": 183,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0047": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100459-1",
+    "quote": "She uploaded readings from her digital upper-arm BP monitor to the patient portal; the most recent reading from 03/14/2026 was 118/72.",
+    "assessment": "Member-reported home reading from a documented digital device (uploaded to the portal), exact value, exact date 2026-03-14 within the measurement year, controlled. Eligible."
+   },
+   {
+    "doc_id": "DOC-100459-1",
+    "quote": "Vitals: not obtained (remote visit)",
+    "assessment": "No office vitals at the telehealth visit; there is no reading here."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 118,
+   "diastolic": 72,
+   "reading_date": "2026-03-14",
+   "setting": "home",
+   "source": "digital_home_device",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100459-1",
+   "quote": "the most recent reading from 03/14/2026 was 118/72."
+  },
+  "confidence": 0.9,
+  "rationale": "The most recent eligible reading is 118/72 on 2026-03-14. It came from a digital upper-arm monitor and was uploaded to the patient portal, and it is controlled. The chart shows no exclusion evidence.",
+  "evidence_span": {
+   "doc_id": "DOC-100459-1",
+   "start": 408,
+   "end": 459
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=118, diastolic=72"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "118 and 72 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "118/72 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-03-14"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-03-14 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-03-19"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=home, source=digital_home_device"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0047",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100459-1"
+   ],
+   "timestamp": "2026-10-05T02:42:19+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVjkAG1KL73R27aTPB",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVjkAG1KL73R27aTPB",
+   "stop_reason": "end_turn",
+   "latency_ms": 4776,
+   "usage": {
+    "input_tokens": 3555,
+    "output_tokens": 434,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0048": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100466-1",
+    "quote": "FIT (fecal immunochemical test) 03/29/2026: negative",
+    "assessment": "Completed FIT with result, dated 2026-03-29, within MY 2026 window. Qualifies."
+   },
+   {
+    "doc_id": "DOC-100466-1",
+    "quote": "Colorectal cancer screening: FIT negative, repeat in one year.",
+    "assessment": "Restates the same FIT result in the plan; supports the finding, not a separate test."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "fit",
+   "procedure_date": "2026-03-29",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100466-1",
+   "quote": "FIT (fecal immunochemical test) 03/29/2026: negative"
+  },
+  "confidence": 0.95,
+  "rationale": "The progress note documents a completed FIT dated 03/29/2026 with a negative result, which falls within the 2026 measurement year. No exclusion evidence is present.",
+  "evidence_span": {
+   "doc_id": "DOC-100466-1",
+   "start": 405,
+   "end": 457
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=fit"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2026-03-29"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2026 within 2026-2026 for fit"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-06-07"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0048",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100466-1"
+   ],
+   "timestamp": "2026-10-05T02:42:20+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVqK2WsAncvLmkgVgL",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVqK2WsAncvLmkgVgL",
+   "stop_reason": "end_turn",
+   "latency_ms": 7112,
+   "usage": {
+    "input_tokens": 3193,
+    "output_tokens": 366,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0049": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100473-1",
+    "quote": "Screening history: CT colonography (10/2023): no polyps identified.",
+    "assessment": "Completed CT colonography dated 10/2023 with a result; the window for MY 2026 is 2022-2026, so it qualifies."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": "ct_colonography",
+   "procedure_date": "2023-10",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100473-1",
+   "quote": "Screening history: CT colonography (10/2023): no polyps identified."
+  },
+  "confidence": 0.9,
+  "rationale": "The progress note documents a completed CT colonography in 10/2023 with a result (no polyps). That date falls within the MY-4 through MY window (2022-2026).",
+  "evidence_span": {
+   "doc_id": "DOC-100473-1",
+   "start": 345,
+   "end": 412
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "procedure_type",
+    "passed": true,
+    "detail": "procedure_type=ct_colonography"
+   },
+   {
+    "rule": "dated",
+    "passed": true,
+    "detail": "procedure_date=2023-10"
+   },
+   {
+    "rule": "in_lookback_window",
+    "passed": true,
+    "detail": "2023 within 2022-2026 for ct_colonography"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "procedure on or before 2026-09-04"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0049",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100473-1"
+   ],
+   "timestamp": "2026-10-05T02:42:22+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVyUujZiqpP4g4h7wZ",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVyUujZiqpP4g4h7wZ",
+   "stop_reason": "end_turn",
+   "latency_ms": 6732,
+   "usage": {
+    "input_tokens": 3187,
+    "output_tokens": 297,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0050": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100480-1",
+    "quote": "Colorectal cancer screening: discussed colonoscopy and stool-based options; patient declines at this time.",
+    "assessment": "Screening discussed and declined; no completed test, no history of screening, no exclusion. Does not close the gap."
+   }
+  ],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "procedure_type": null,
+   "procedure_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.95,
+  "rationale": "The only screening content is a discussion in which the patient declined colonoscopy and stool-based testing. The chart has no completed test and no exclusion evidence.",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0050",
+   "measure": "COL-E",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cole.v2",
+   "document_ids": [
+    "DOC-100480-1"
+   ],
+   "timestamp": "2026-10-05T02:42:22+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKVzRD5MfNXfZVWPSZ9",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKVzRD5MfNXfZVWPSZ9",
+   "stop_reason": "end_turn",
+   "latency_ms": 3990,
+   "usage": {
+    "input_tokens": 3157,
+    "output_tokens": 256,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0051": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100487-1",
+    "quote": "Pre-procedure vitals: BP 137/68, HR 70.",
+    "assessment": "Rejected: pre-procedure vitals taken on the day of an EGD at an endoscopy center. Day-of-procedure readings are not an eligible setting."
+   },
+   {
+    "doc_id": "DOC-100487-2",
+    "quote": "Vitals: HR 68, Temp 98.6 F, Wt 60 kg, SpO2 97%",
+    "assessment": "Office visit vitals include no blood pressure value, so there is no reading here to use."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "ineligible_setting",
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100487-1",
+   "quote": "Pre-procedure vitals: BP 137/68, HR 70."
+  },
+  "confidence": 0.88,
+  "rationale": "The only exact BP in 2026 (137/68 on 2026-02-18) was a pre-procedure vital at an endoscopy center, which is not eligible. The 04/19/2026 office visit recorded no BP, so no eligible reading exists and no exclusion is documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100487-1",
+   "start": 189,
+   "end": 228
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0051",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100487-1",
+    "DOC-100487-2"
+   ],
+   "timestamp": "2026-10-05T02:42:23+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKW1REweWWvRCLzg8N8",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKW1REweWWvRCLzg8N8",
+   "stop_reason": "end_turn",
+   "latency_ms": 6074,
+   "usage": {
+    "input_tokens": 3732,
+    "output_tokens": 445,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0052": {
+  "candidates_considered": [],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": null,
+   "quote": null
+  },
+  "confidence": 0.9,
+  "rationale": "The only document is a 03/10/2026 office visit whose vitals list HR, temperature, weight, and SpO2 but no blood pressure. There is no BP content or exclusion evidence in the chart.",
+  "evidence_span": null,
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0052",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100494-1"
+   ],
+   "timestamp": "2026-10-05T02:42:23+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKW3sL7uesZTc2DAune",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKW3sL7uesZTc2DAune",
+   "stop_reason": "end_turn",
+   "latency_ms": 3610,
+   "usage": {
+    "input_tokens": 3503,
+    "output_tokens": 190,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0053": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100501-1",
+    "quote": "Reports BPs have been running in the 130s over 80s at recent checks.",
+    "assessment": "Range, not an exact systolic/diastolic value. The timing is also vague ('recent checks'). Not an eligible reading."
+   },
+   {
+    "doc_id": "DOC-100501-1",
+    "quote": "Vitals: HR 74, Temp 97.9 F, Wt 64 kg, SpO2 97%",
+    "assessment": "The office vitals line for the 04/30/2026 visit has no blood pressure recorded."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "bp_range_or_threshold",
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100501-1",
+   "quote": "Reports BPs have been running in the 130s over 80s at recent checks."
+  },
+  "confidence": 0.9,
+  "rationale": "The only blood pressure content is a range ('130s over 80s') with vague timing, and no BP was recorded in the 04/30/2026 office vitals. There is no eligible exact reading, and no exclusion evidence was found.",
+  "evidence_span": {
+   "doc_id": "DOC-100501-1",
+   "start": 345,
+   "end": 413
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0053",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100501-1"
+   ],
+   "timestamp": "2026-10-05T02:42:24+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKW6FhYLXVVMmqW5ziC",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKW6FhYLXVVMmqW5ziC",
+   "stop_reason": "end_turn",
+   "latency_ms": 5721,
+   "usage": {
+    "input_tokens": 3624,
+    "output_tokens": 425,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0054": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100501-1",
+    "quote": "Most recent labs: HbA1c 7.3% (11/06/2025).",
+    "assessment": "Numeric and exactly dated, but 11/06/2025 falls before measurement year 2026, so it cannot close the gap."
+   },
+   {
+    "doc_id": "DOC-100501-1",
+    "quote": "Repeat A1c ordered.",
+    "assessment": "Ordered on 04/30/2026 with no result documented. The test is not completed."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "outside_lookback_window",
+  "fields": {
+   "a1c_value": null,
+   "test_date": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100501-1",
+   "quote": "Most recent labs: HbA1c 7.3% (11/06/2025)."
+  },
+  "confidence": 0.85,
+  "rationale": "The only HbA1c result (7.3% on 11/06/2025) is from before measurement year 2026. A repeat A1c was ordered on 04/30/2026, but no result is documented, so the gap stays open pending that result.",
+  "evidence_span": {
+   "doc_id": "DOC-100501-1",
+   "start": 472,
+   "end": 514
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0054",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100501-1"
+   ],
+   "timestamp": "2026-10-05T02:42:24+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKW7Am1taQX9zsQyB26",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKW7Am1taQX9zsQyB26",
+   "stop_reason": "end_turn",
+   "latency_ms": 7137,
+   "usage": {
+    "input_tokens": 2991,
+    "output_tokens": 536,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0055": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100508-1",
+    "quote": "Vitals: Blood pressure 122/86 mmHg (seated, left arm), HR 88, Temp 98.6 F, Wt 63 kg, SpO2 96%",
+    "assessment": "Exact office reading on the date of service 2026-07-24, an in-person outpatient visit in the measurement year. 122 < 140 and 86 < 90, so it is controlled. It is the only and most recent reading."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 122,
+   "diastolic": 86,
+   "reading_date": "2026-07-24",
+   "setting": "outpatient",
+   "source": "office",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100508-1",
+   "quote": "Vitals: Blood pressure 122/86 mmHg (seated, left arm), HR 88, Temp 98.6 F, Wt 63 kg, SpO2 96%"
+  },
+  "confidence": 0.95,
+  "rationale": "The only BP in the chart is 122/86, taken at an in-person office visit on 07/24/2026. It is controlled (<140/<90), and no exclusion evidence is present.",
+  "evidence_span": {
+   "doc_id": "DOC-100508-1",
+   "start": 359,
+   "end": 452
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=122, diastolic=86"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "122 and 86 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "122/86 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-07-24"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-07-24 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-07-24"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=outpatient, source=office"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0055",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100508-1"
+   ],
+   "timestamp": "2026-10-05T02:42:26+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKWF23CyuzPkzAaWb9R",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKWF23CyuzPkzAaWb9R",
+   "stop_reason": "end_turn",
+   "latency_ms": 5027,
+   "usage": {
+    "input_tokens": 3547,
+    "output_tokens": 415,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0056": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100515-2",
+    "quote": "Vital signs at discharge: BP 123/64, HR 80, SpO2 96% on room air.",
+    "assessment": "Inpatient discharge vitals from a hospital admission (02/13-02/16/2026). The setting is not eligible."
+   },
+   {
+    "doc_id": "DOC-100515-3",
+    "quote": "Vitals: HR 73, Temp 98.2 F, Wt 108 kg, SpO2 96%",
+    "assessment": "Outpatient office visit on 03/07/2026, but no BP was recorded in the vitals. The hypertension plan gives no reading."
+   },
+   {
+    "doc_id": "DOC-100515-1",
+    "quote": "HEMOGLOBIN A1C               8.1        %        4.0-5.6     H",
+    "assessment": "Lab report only. It has no BP content."
+   }
+  ],
+  "finding_type": "abstain",
+  "abstain_reason": "ineligible_setting",
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100515-2",
+   "quote": "Vital signs at discharge: BP 123/64, HR 80, SpO2 96% on room air."
+  },
+  "confidence": 0.85,
+  "rationale": "The only BP reading in 2026 is 123/64, taken as inpatient discharge vitals, which is not an eligible setting for CBP. The 03/07/2026 office visit recorded no blood pressure, and the chart shows no exclusion evidence.",
+  "evidence_span": {
+   "doc_id": "DOC-100515-2",
+   "start": 322,
+   "end": 387
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0056",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100515-1",
+    "DOC-100515-2",
+    "DOC-100515-3"
+   ],
+   "timestamp": "2026-10-05T02:42:26+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKWHXMyJxZFe4pHakgW",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKWHXMyJxZFe4pHakgW",
+   "stop_reason": "end_turn",
+   "latency_ms": 5309,
+   "usage": {
+    "input_tokens": 4151,
+    "output_tokens": 533,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0057": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100515-1",
+    "quote": "HEMOGLOBIN A1C               8.1        %        4.0-5.6     H",
+    "assessment": "Final lab result with a numeric value of 8.1%, collected 02/14/2026 in the measurement year. This is the only numeric HbA1c and therefore the most recent. Collection fell during the pneumonia admission, but a lab HbA1c result is usable regardless of setting."
+   },
+   {
+    "doc_id": "DOC-100515-3",
+    "quote": "Reviewed outside lab report.",
+    "assessment": "Not used: this is a general reference to an outside lab with no HbA1c value or date. It likely refers to the 02/14 result, so it adds no new evidence."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": 8.1,
+   "test_date": "2026-02-14",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100515-1",
+   "quote": "HEMOGLOBIN A1C               8.1        %        4.0-5.6     H"
+  },
+  "confidence": 0.9,
+  "rationale": "The final lab report shows HbA1c 8.1% collected 02/14/2026, which is the only and most recent dated numeric result in 2026. No hospice or palliative care is documented, and the member is too young (53) for the advanced illness and frailty exclusion.",
+  "evidence_span": {
+   "doc_id": "DOC-100515-1",
+   "start": 349,
+   "end": 411
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "value_present",
+    "passed": true,
+    "detail": "a1c_value=8.1"
+   },
+   {
+    "rule": "value_in_quote",
+    "passed": true,
+    "detail": "8.1 appears in the quoted passage"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "test_date=2026-02-14"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-02-14 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "test on or before 2026-02-14"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0057",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100515-1",
+    "DOC-100515-2",
+    "DOC-100515-3"
+   ],
+   "timestamp": "2026-10-05T02:42:27+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKWKKWqL7v39DC1ykwp",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKWKKWqL7v39DC1ykwp",
+   "stop_reason": "end_turn",
+   "latency_ms": 8557,
+   "usage": {
+    "input_tokens": 3518,
+    "output_tokens": 749,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0058": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100522-1",
+    "quote": "Vitals: BP 147/75 on arrival; repeat after 5 minutes seated 112/66",
+    "assessment": "Two office readings were taken at the same in-person visit on 2026-05-02. The rule for multiple readings on one date is to use the lowest systolic (112) and the lowest diastolic (66). That gives 112/66, which is controlled."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": 112,
+   "diastolic": 66,
+   "reading_date": "2026-05-02",
+   "setting": "outpatient",
+   "source": "office",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100522-1",
+   "quote": "Vitals: BP 147/75 on arrival; repeat after 5 minutes seated 112/66, HR 65, Temp 97.9 F, Wt 100 kg, SpO2 97%"
+  },
+  "confidence": 0.93,
+  "rationale": "At the 05/02/2026 office visit, BP was 147/75 on arrival and 112/66 on repeat. Taking the lowest systolic and lowest diastolic from that date gives 112/66, which is controlled, and no exclusions are documented.",
+  "evidence_span": {
+   "doc_id": "DOC-100522-1",
+   "start": 347,
+   "end": 454
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "values_present",
+    "passed": true,
+    "detail": "systolic=112, diastolic=66"
+   },
+   {
+    "rule": "values_in_quote",
+    "passed": true,
+    "detail": "112 and 66 appear in the quoted passage"
+   },
+   {
+    "rule": "controlled",
+    "passed": true,
+    "detail": "112/66 vs <140/90"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "reading_date=2026-05-02"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-05-02 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "reading on or before 2026-05-02"
+   },
+   {
+    "rule": "eligible_setting_source",
+    "passed": true,
+    "detail": "setting=outpatient, source=office"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0058",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100522-1"
+   ],
+   "timestamp": "2026-10-05T02:42:27+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKWMkrHe9EKqGBetvqU",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKWMkrHe9EKqGBetvqU",
+   "stop_reason": "end_turn",
+   "latency_ms": 5818,
+   "usage": {
+    "input_tokens": 3602,
+    "output_tokens": 426,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0059": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100522-1",
+    "quote": "POC HbA1c today: 11.3%",
+    "assessment": "Point-of-care HbA1c with numeric value 11.3%, dated 'today' = date of service 2026-05-02, within measurement year. Only result; used."
+   }
+  ],
+  "finding_type": "numerator",
+  "abstain_reason": null,
+  "fields": {
+   "a1c_value": 11.3,
+   "test_date": "2026-05-02",
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100522-1",
+   "quote": "POC HbA1c today: 11.3%"
+  },
+  "confidence": 0.95,
+  "rationale": "A point-of-care HbA1c of 11.3% was done at the 05/02/2026 office visit. It is the only HbA1c result in the measurement year, and the chart shows no exclusions.",
+  "evidence_span": {
+   "doc_id": "DOC-100522-1",
+   "start": 455,
+   "end": 477
+  },
+  "rule_checks": [
+   {
+    "rule": "evidence_in_source",
+    "passed": true,
+    "detail": "quoted passage found verbatim in the cited document"
+   },
+   {
+    "rule": "value_present",
+    "passed": true,
+    "detail": "a1c_value=11.3"
+   },
+   {
+    "rule": "value_in_quote",
+    "passed": true,
+    "detail": "11.3 appears in the quoted passage"
+   },
+   {
+    "rule": "exact_date",
+    "passed": true,
+    "detail": "test_date=2026-05-02"
+   },
+   {
+    "rule": "in_measurement_year",
+    "passed": true,
+    "detail": "2026-05-02 in 2026"
+   },
+   {
+    "rule": "not_after_document",
+    "passed": true,
+    "detail": "test on or before 2026-05-02"
+   }
+  ],
+  "call": {
+   "gap_id": "GAP-0059",
+   "measure": "GSD",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "gsd.v1",
+   "document_ids": [
+    "DOC-100522-1"
+   ],
+   "timestamp": "2026-10-05T02:42:29+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiKWSweQfGAjPkkbbJES",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiKWSweQfGAjPkkbbJES",
+   "stop_reason": "end_turn",
+   "latency_ms": 4686,
+   "usage": {
+    "input_tokens": 2969,
+    "output_tokens": 294,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ },
+ "GAP-0060": {
+  "candidates_considered": [
+   {
+    "doc_id": "DOC-100529-1",
+    "quote": "Vitals: BP 158/88, HR 79, Temp 98.6 F, Wt 71 kg, SpO2 98%",
+    "assessment": "Eligible in-person office reading dated 2026-04-23 (date of service). Systolic 158 is 140 or higher, so it is uncontrolled. It is the only and most recent eligible reading in 2026."
+   }
+  ],
+  "finding_type": "none",
+  "abstain_reason": null,
+  "fields": {
+   "systolic": null,
+   "diastolic": null,
+   "reading_date": null,
+   "setting": null,
+   "source": null,
+   "exclusion_type": null,
+   "supporting_date": null
+  },
+  "evidence": {
+   "doc_id": "DOC-100529-1",
+   "quote": "Vitals: BP 158/88, HR 79, Temp 98.6 F, Wt 71 kg, SpO2 98%"
+  },
+  "confidence": 0.9,
+  "rationale": "The only and most recent eligible reading is the office BP of 158/88 on 2026-04-23, which is uncontrolled (systolic 140 or higher), so the gap stays open. The chart documents no hospice, palliative care, ESRD, or advanced illness with frailty.",
+  "evidence_span": {
+   "doc_id": "DOC-100529-1",
+   "start": 350,
+   "end": 407
+  },
+  "rule_checks": [],
+  "call": {
+   "gap_id": "GAP-0060",
+   "measure": "CBP",
+   "model_requested": "claude-opus-5-5",
+   "effort": "high",
+   "prompt_version": "cbp.v1",
+   "document_ids": [
+    "DOC-100529-1"
+   ],
+   "timestamp": "2026-10-05T03:22:53+00:00",
+   "attempts": [
+    {
+     "request_id": "req_011CfiNb9CneqyqxdZEyuUCU",
+     "model_served": "claude-opus-5-5",
+     "stop_reason": "end_turn",
+     "refusal_category": null
+    }
+   ],
+   "model_served": "claude-opus-5-5",
+   "request_id": "req_011CfiNb9CneqyqxdZEyuUCU",
+   "stop_reason": "end_turn",
+   "latency_ms": 5467,
+   "usage": {
+    "input_tokens": 3544,
+    "output_tokens": 404,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 0
+   }
+  }
+ }
+}

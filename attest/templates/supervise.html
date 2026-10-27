@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% macro rate(p) -%}
+  {%- if p.value is none %}<span class="muted">no audits yet</span>{% else %}{{ '%.0f' | format(p.value * 100) }}% <span class="muted">({{ p.k }}/{{ p.n }}, LB {{ '%.2f' | format(p.lb) if p.lb is not none else '-' }})</span>{% endif -%}
+{%- endmacro %}
+{% block title %}Supervisor · Attest{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Supervisor</h1>
+  <span class="sub">{{ view.date.strftime('%A %-d %B') }}. One tranche at a time: open work, today's decisions, and what QA found. Catches sit next to throughput on purpose.</span>
+</div>
+{% if tranches %}
+<div class="filters">
+  <span class="lbl">Tranche</span>
+  <div class="group">
+    <a class="{{ 'on' if not tranche }}" href="/supervise">All</a>
+    {% for t in tranches.values() %}<a class="{{ 'on' if tranche == t.tranche_id }}" href="?tranche={{ t.tranche_id }}" title="{{ t.kind | replace('_', ' ') }}">{{ t.name }}</a>{% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div class="counters set-counters">
+  <div class="card counter"><div class="label">Open to review</div><div class="value">{{ view.open }}</div><div class="muted small">of {{ view.gaps }} gaps</div></div>
+  <div class="card counter human"><div class="label">Decisions today</div><div class="value">{{ view.decisions_today }}</div><div class="muted small">{{ view.reviewers_today | length }} reviewer{{ '' if view.reviewers_today | length == 1 else 's' }}</div></div>
+  <div class="card counter catch"><div class="label">Confirmed catches</div><div class="value">{{ view.confirmed_catches }}</div><div class="muted small">of {{ view.catches_audited }} audited rejections</div></div>
+  <div class="card counter abstain"><div class="label">Abstain rate</div><div class="value">{{ '%.0f%%' | format(view.abstain_rate.value * 100) if view.abstain_rate.value is not none else '-' }}</div><div class="muted small">{{ view.abstain_rate.k }} of {{ view.processed }} processed</div></div>
+  <div class="card counter error"><div class="label">Audited error rate</div><div class="value">{% if view.audited_error_rate.value is none %}-{% else %}{{ '%.0f%%' | format(view.audited_error_rate.value * 100) }}{% endif %}</div><div class="muted small">{{ view.audited_error_rate.k }} of {{ view.audited_error_rate.n }} audited accepts{% if view.audits_pending %} · {{ view.audits_pending }} pending{% endif %}</div></div>
+</div>
+
+<div class="two-col">
+<div>
+<h2>Open gaps by status</h2>
+<div class="card" style="margin-bottom:16px">
+  <table class="queue">
+    <thead><tr><th>Status</th><th class="num">Gaps</th></tr></thead>
+    <tbody>
+      {% for k in ['numerator', 'exclusion', 'abstain', 'none', 'not_processed', 'no_document', 'needs_more', 'accept', 'reject'] %}
+      {% if view.by_status.get(k) %}<tr><td>{{ status_labels[k] }}</td><td class="num">{{ view.by_status[k] }}</td></tr>{% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+<div>
+<h2>Reviewers today</h2>
+<div class="card" style="margin-bottom:16px">
+  <table class="queue">
+    <thead><tr><th>Reviewer</th><th class="num">Decisions</th><th class="num">Accepts</th><th class="num">Catches</th><th class="num">Abstains resolved</th><th class="num">Needs more</th><th class="num">Sets</th></tr></thead>
+    <tbody>
+      {% for r in view.per_reviewer %}
+      <tr><td>{{ r.reviewer }}</td><td class="num">{{ r.decisions }}</td><td class="num">{{ r.accepts }}</td><td class="num">{{ r.catches_unaudited }}</td><td class="num">{{ r.abstains_resolved }}</td><td class="num">{{ r.needs_more }}</td><td class="num">{{ r.sets_complete }}/{{ r.sets }}</td></tr>
+      {% else %}
+      <tr><td colspan="7" class="muted">No decisions yet today.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+</div>
+<p class="footnote">Rows are alphabetical, not ranked. Catches here are unaudited rejections of proposals; the confirmed count at the top comes from QA. The audited error rate is overturned accepts over audited accepts, with its n and 95% lower bound: with a handful of audits it says little, and the page says so rather than hiding it.</p>
+{% endblock %}

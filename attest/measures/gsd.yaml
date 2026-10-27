@@ -1,0 +1,21 @@
+code: GSD
+name: Glycemic Status Assessment
+star_weight: 3
+collection: admin + hybrid (ECDS MY2029)
+chart_lever: strong
+status: active
+prompt: gsd.v2
+submission_channel: hybrid (medical record review)
+closes: Most recent HbA1c in the measurement year with a numeric result and a date (<8.0 controlled, >9.0 poor).
+family: lab_value
+fields: [a1c_value, test_date]
+field_schema:
+  a1c_value: {type: number}
+  test_date: {type: string}
+field_labels: {a1c_value: "HbA1c (%)", test_date: Test date}
+params:
+  value_field: a1c_value
+  date_field: test_date
+  plausible_range: [3, 20]
+exclusions: [hospice, palliative_care, advanced_illness_frailty]
+synthetic_age: [40, 75]

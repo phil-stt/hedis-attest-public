@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Gus Thistlewood    DOB: 06/15/1957    Member ID: SYN-100375
+Date of service: 07/09/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+Requests refills of maintenance medications.
+Screening history: Cologuard (FIT-DNA) 04/2024: negative.
+
+OBJECTIVE
+Vitals: HR 83, Temp 98.6 F, Wt 111 kg, SpO2 95%
+
+ASSESSMENT AND PLAN
+Health maintenance: influenza vaccine administered today.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 07/09/2026

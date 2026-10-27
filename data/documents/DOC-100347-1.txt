@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Northgate Primary Care
+Provider: Priya Vantongeren, MD
+Patient: Gus Delacroix    DOB: 05/28/1967    Member ID: SYN-100347
+Date of service: 05/23/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Walking about 20 minutes most days with a neighbor.
+
+OBJECTIVE
+Vitals: HR 85, Temp 98.4 F, Wt 99 kg, SpO2 97%
+
+ASSESSMENT AND PLAN
+ESRD on in-center hemodialysis Mon/Wed/Fri, started 12/2023; nephrology following.
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Follow up in 3 months.
+
+Electronically signed by Priya Vantongeren, MD on 05/23/2026

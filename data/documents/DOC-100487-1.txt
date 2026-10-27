@@ -1,0 +1,10 @@
+PROCEDURE NOTE - UPPER ENDOSCOPY (EGD)
+Facility: Lakeshore Endoscopy Center
+Patient: Lena Bellweather    Member ID: SYN-100487
+Date of procedure: 02/18/2026
+
+Indication: chronic dyspepsia.
+Pre-procedure vitals: BP 137/68, HR 70.
+Sedation: moderate sedation.
+Findings: mild antral gastritis; biopsies taken.
+Complications: none.

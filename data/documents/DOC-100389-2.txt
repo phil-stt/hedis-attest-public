@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Tobias Bellweather    DOB: 12/24/1954    Member ID: SYN-100389
+Date of service: 07/23/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Mild low back stiffness after gardening, improving with heat.
+
+OBJECTIVE
+Vitals: HR 70, Temp 98.2 F, Wt 108 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Reviewed colonoscopy report; normal.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 07/23/2026

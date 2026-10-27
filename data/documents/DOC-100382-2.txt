@@ -1,0 +1,12 @@
+*** FAX ***   FROM: Cardinal Point Reference Laboratory   TO: PCP OFFICE   08/14/2026 07:20   PAGE 1 OF 1
+
+        LABORATORY REPORT - FINAL
+PATIENT: EDITH CASTELLANO        DOB: 07/01/1968
+MEMBER ID: SYN-100382
+COLLECTED: 08/13/2026    RECEIVED: 08/13/2026    REPORTED: 08/14/2026
+
+TEST                         RESULT     UNITS    REF RANGE   FLAG
+HEMOGLOBIN A1C               6.6        %        4.0-5.6     H
+
+Results verified by: M. Ostrowski, MLS(ASCP)
+CONFIDENTIAL - intended only for the addressee

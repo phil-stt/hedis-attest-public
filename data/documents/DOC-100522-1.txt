@@ -1,0 +1,21 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Paula Quintero    DOB: 07/05/1975    Member ID: SYN-100522
+Date of service: 05/02/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+Here for routine follow-up of chronic conditions.
+
+OBJECTIVE
+Vitals: BP 147/75 on arrival; repeat after 5 minutes seated 112/66, HR 65, Temp 97.9 F, Wt 100 kg, SpO2 97%
+POC HbA1c today: 11.3%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 05/02/2026

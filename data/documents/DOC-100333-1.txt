@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Lakeshore Internal Medicine
+Provider: Helena Quarshie, MD
+Patient: Gus Valdivia    DOB: 01/17/1974    Member ID: SYN-100333
+Date of service: 09/22/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Here for routine follow-up of chronic conditions.
+
+OBJECTIVE
+Vitals: HR 82, Temp 98.4 F, Wt 64 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Colorectal cancer screening: FIT kit provided today with instructions; patient to return by mail.
+Follow up in 3 months.
+
+Electronically signed by Helena Quarshie, MD on 09/22/2026

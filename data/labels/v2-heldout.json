@@ -1,0 +1,3344 @@
+[
+  {
+    "gap_id": "G2-000001",
+    "member_id": "SYN-2000001",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 118,
+      "diastolic": 84,
+      "reading_date": "2026-05-30",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000001-1",
+      "start": 392,
+      "end": 401,
+      "text": "BP 118/84"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000002",
+    "member_id": "SYN-2000002",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000003",
+    "member_id": "SYN-2000003",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_trap_vague_date",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-2000003-1",
+      "start": 368,
+      "end": 426,
+      "text": "BP was 133/72 when checked at urgent care a few months ago"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000004",
+    "member_id": "SYN-2000004",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_excl_esrd",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "esrd_dialysis",
+      "supporting_date": "2024-09"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000004-1",
+      "start": 445,
+      "end": 504,
+      "text": "ESRD on in-center hemodialysis Mon/Wed/Fri, started 09/2024"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000005",
+    "member_id": "SYN-2000005",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_pos_controlled",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 7.5,
+      "test_date": "2026-06-15"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000005-1",
+      "start": 351,
+      "end": 383,
+      "text": "HEMOGLOBIN A1C               7.5"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000006",
+    "member_id": "SYN-2000006",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000007",
+    "member_id": "SYN-2000007",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_trap_vague_date",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-2000007-1",
+      "start": 365,
+      "end": 393,
+      "text": "A1c was 7.0 a few months ago"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000008",
+    "member_id": "SYN-2000008",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_excl_frailty",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "advanced_illness_frailty",
+      "supporting_date": "2026-07-19"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000008-1",
+      "start": 442,
+      "end": 488,
+      "text": "Frailty: uses a walker, two falls since spring"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "requires age 66+ and both advanced illness and frailty"
+  },
+  {
+    "gap_id": "G2-000009",
+    "member_id": "SYN-2000009",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_hist_colonoscopy",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "colonoscopy",
+      "procedure_date": "2019"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000009-1",
+      "start": 437,
+      "end": 461,
+      "text": "colonoscopy 2019, normal"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": "history with a stated year counts; lands as supplemental data"
+  },
+  {
+    "gap_id": "G2-000010",
+    "member_id": "SYN-2000010",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_neg_declined",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000011",
+    "member_id": "SYN-2000011",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_trap_fit_old",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000011-1",
+      "start": 433,
+      "end": 457,
+      "text": "FIT 08/27/2025: negative"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "FIT must be in the measurement year"
+  },
+  {
+    "gap_id": "G2-000012",
+    "member_id": "SYN-2000012",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_excl_crc",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "colorectal_cancer",
+      "supporting_date": "2018"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000012-1",
+      "start": 368,
+      "end": 431,
+      "text": "History of colon cancer, stage II, s/p right hemicolectomy 2018"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000013",
+    "member_id": "SYN-2000013",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cbp_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 138,
+      "diastolic": 73,
+      "reading_date": "2026-04-21",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000013-1",
+      "start": 407,
+      "end": 416,
+      "text": "BP 138/73"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000014",
+    "member_id": "SYN-2000014",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cbp_neg_uncontrolled",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": "most recent reading 133/95 does not meet <140/90; gap remains open"
+  },
+  {
+    "gap_id": "G2-000015",
+    "member_id": "SYN-2000015",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cbp_trap_vague_date",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-2000015-1",
+      "start": 355,
+      "end": 413,
+      "text": "BP was 122/85 when checked at urgent care a few months ago"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000016",
+    "member_id": "SYN-2000016",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cbp_excl_esrd",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "esrd_dialysis",
+      "supporting_date": "2024-11"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000016-1",
+      "start": 478,
+      "end": 537,
+      "text": "ESRD on in-center hemodialysis Mon/Wed/Fri, started 11/2024"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000017",
+    "member_id": "SYN-2000017",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "gsd_pos_mid",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 8.9,
+      "test_date": "2026-06-12"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000017-1",
+      "start": 446,
+      "end": 479,
+      "text": "HbA1c 8.9% (collected 06/12/2026)"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "between tiers (8.0-9.0)"
+  },
+  {
+    "gap_id": "G2-000018",
+    "member_id": "SYN-2000018",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000019",
+    "member_id": "SYN-2000019",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "gsd_trap_normal_nodate",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_value",
+    "evidence": {
+      "doc_id": "DOC-2000019-1",
+      "start": 401,
+      "end": 433,
+      "text": "A1c was normal at her last check"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000020",
+    "member_id": "SYN-2000020",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "gsd_excl_frailty",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "advanced_illness_frailty",
+      "supporting_date": "2026-05-06"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000020-1",
+      "start": 415,
+      "end": 461,
+      "text": "Frailty: uses a walker, two falls since spring"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "requires age 66+ and both advanced illness and frailty"
+  },
+  {
+    "gap_id": "G2-000021",
+    "member_id": "SYN-2000021",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cole_flexsig",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "flexible_sigmoidoscopy",
+      "procedure_date": "2022-07"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000021-1",
+      "start": 391,
+      "end": 440,
+      "text": "flexible sigmoidoscopy in July 2022, unremarkable"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000022",
+    "member_id": "SYN-2000022",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000023",
+    "member_id": "SYN-2000023",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cole_trap_ordered",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "not_completed",
+    "evidence": {
+      "doc_id": "DOC-2000023-1",
+      "start": 519,
+      "end": 559,
+      "text": "FIT kit provided today with instructions"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": "a kit handed out is not a completed test"
+  },
+  {
+    "gap_id": "G2-000024",
+    "member_id": "SYN-2000024",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "cole_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-05-11"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000024-1",
+      "start": 422,
+      "end": 463,
+      "text": "elected the hospice benefit on 05/11/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000025",
+    "member_id": "SYN-2000025",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cbp_pos_relative",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 126,
+      "diastolic": 86,
+      "reading_date": "2026-03-25",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000025-1",
+      "start": 451,
+      "end": 493,
+      "text": "nurse BP check here last Wednesday: 126/86"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": "relative date resolved from the dated note (Monday note, prior Wednesday)"
+  },
+  {
+    "gap_id": "G2-000026",
+    "member_id": "SYN-2000026",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000027",
+    "member_id": "SYN-2000027",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cbp_trap_home_nondigital",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "home_reading_not_digital",
+    "evidence": {
+      "doc_id": "DOC-2000027-1",
+      "start": 385,
+      "end": 413,
+      "text": "home BP last week was 121/77"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "member-reported home reading with no digital device documented"
+  },
+  {
+    "gap_id": "G2-000028",
+    "member_id": "SYN-2000028",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cbp_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-06"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000028-1",
+      "start": 416,
+      "end": 444,
+      "text": "enrolled with hospice 6/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000029",
+    "member_id": "SYN-2000029",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "gsd_pos_multi",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 7.6,
+      "test_date": "2026-05-05"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000029-2",
+      "start": 469,
+      "end": 490,
+      "text": "POC HbA1c today: 7.6%"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document"
+    ],
+    "note": "earlier result 10.2 on 2026-03-01 is superseded"
+  },
+  {
+    "gap_id": "G2-000030",
+    "member_id": "SYN-2000030",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000031",
+    "member_id": "SYN-2000031",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "gsd_trap_pending",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "not_completed",
+    "evidence": {
+      "doc_id": "DOC-2000031-1",
+      "start": 495,
+      "end": 531,
+      "text": "HbA1c ordered today, results pending"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": "ordered with no result is not evidence"
+  },
+  {
+    "gap_id": "G2-000032",
+    "member_id": "SYN-2000032",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "gsd_excl_frailty",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "advanced_illness_frailty",
+      "supporting_date": "2026-04-01"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000032-1",
+      "start": 431,
+      "end": 477,
+      "text": "Frailty: uses a walker, two falls since spring"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": "requires age 66+ and both advanced illness and frailty"
+  },
+  {
+    "gap_id": "G2-000033",
+    "member_id": "SYN-2000033",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cole_hist_colonoscopy",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "colonoscopy",
+      "procedure_date": "2021"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000033-1",
+      "start": 440,
+      "end": 489,
+      "text": "colonoscopy in 2021 with two small polyps removed"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "history with a stated year counts; lands as supplemental data"
+  },
+  {
+    "gap_id": "G2-000034",
+    "member_id": "SYN-2000034",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000035",
+    "member_id": "SYN-2000035",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cole_trap_old_colonoscopy",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000035-1",
+      "start": 435,
+      "end": 459,
+      "text": "colonoscopy 2015, normal"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": "2015 is outside the 10-year window (2017-2026)"
+  },
+  {
+    "gap_id": "G2-000036",
+    "member_id": "SYN-2000036",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "cole_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-04-04"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000036-1",
+      "start": 415,
+      "end": 456,
+      "text": "elected the hospice benefit on 04/04/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000037",
+    "member_id": "SYN-2000037",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 130,
+      "diastolic": 67,
+      "reading_date": "2026-05-13",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000037-1",
+      "start": 362,
+      "end": 407,
+      "text": "Blood pressure 130/67 mmHg (seated, left arm)"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000038",
+    "member_id": "SYN-2000038",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000039",
+    "member_id": "SYN-2000039",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_trap_home_nondigital",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "home_reading_not_digital",
+    "evidence": {
+      "doc_id": "DOC-2000039-1",
+      "start": 375,
+      "end": 403,
+      "text": "home BP last week was 115/67"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "member-reported home reading with no digital device documented"
+  },
+  {
+    "gap_id": "G2-000040",
+    "member_id": "SYN-2000040",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cbp_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-02"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000040-1",
+      "start": 408,
+      "end": 436,
+      "text": "enrolled with hospice 2/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000041",
+    "member_id": "SYN-2000041",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_pos_controlled",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 7.0,
+      "test_date": "2026-06-29"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000041-1",
+      "start": 351,
+      "end": 383,
+      "text": "HEMOGLOBIN A1C               7.0"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000042",
+    "member_id": "SYN-2000042",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000043",
+    "member_id": "SYN-2000043",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_trap_normal_nodate",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_value",
+    "evidence": {
+      "doc_id": "DOC-2000043-1",
+      "start": 373,
+      "end": 405,
+      "text": "A1c was normal at her last check"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000044",
+    "member_id": "SYN-2000044",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "gsd_excl_palliative",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "palliative_care",
+      "supporting_date": "2026-09-02"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000044-1",
+      "start": 498,
+      "end": 532,
+      "text": "comfort care discussed and elected"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000045",
+    "member_id": "SYN-2000045",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_ct",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "ct_colonography",
+      "procedure_date": "2023-07"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000045-1",
+      "start": 395,
+      "end": 442,
+      "text": "CT colonography (07/2023): no polyps identified"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000046",
+    "member_id": "SYN-2000046",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000047",
+    "member_id": "SYN-2000047",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_trap_undated",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-2000047-1",
+      "start": 360,
+      "end": 414,
+      "text": "had a colonoscopy years ago and does not remember when"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000048",
+    "member_id": "SYN-2000048",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "cole_excl_colectomy",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "total_colectomy",
+      "supporting_date": "2012"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000048-1",
+      "start": 366,
+      "end": 415,
+      "text": "s/p total colectomy (2012) for ulcerative colitis"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000049",
+    "member_id": "SYN-2000049",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cbp_pos_multi",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 116,
+      "diastolic": 69,
+      "reading_date": "2026-08-10",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000049-2",
+      "start": 370,
+      "end": 379,
+      "text": "BP 116/69"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": "earlier reading 152/95 on 2026-05-27 is superseded by the most recent"
+  },
+  {
+    "gap_id": "G2-000050",
+    "member_id": "SYN-2000050",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000051",
+    "member_id": "SYN-2000051",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cbp_trap_threshold",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "bp_range_or_threshold",
+    "evidence": {
+      "doc_id": "DOC-2000051-1",
+      "start": 438,
+      "end": 473,
+      "text": "BP under control on current regimen"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000052",
+    "member_id": "SYN-2000052",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cbp_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-01"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000052-1",
+      "start": 418,
+      "end": 446,
+      "text": "enrolled with hospice 1/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000053",
+    "member_id": "SYN-2000053",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "gsd_pos_controlled",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 7.4,
+      "test_date": "2026-05-20"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000053-1",
+      "start": 442,
+      "end": 475,
+      "text": "HbA1c 7.4% (collected 05/20/2026)"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000054",
+    "member_id": "SYN-2000054",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000055",
+    "member_id": "SYN-2000055",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "gsd_trap_recent",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_value",
+    "evidence": {
+      "doc_id": "DOC-2000055-1",
+      "start": 452,
+      "end": 483,
+      "text": "recent A1c was good per patient"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000056",
+    "member_id": "SYN-2000056",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "gsd_excl_frailty",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "advanced_illness_frailty",
+      "supporting_date": "2026-08-10"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000056-1",
+      "start": 467,
+      "end": 513,
+      "text": "Frailty: uses a walker, two falls since spring"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": "requires age 66+ and both advanced illness and frailty"
+  },
+  {
+    "gap_id": "G2-000057",
+    "member_id": "SYN-2000057",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cole_colonoscopy_report",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "colonoscopy",
+      "procedure_date": "2026-01-25"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000057-1",
+      "start": 330,
+      "end": 364,
+      "text": "Findings: normal colon. No polyps."
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000058",
+    "member_id": "SYN-2000058",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000059",
+    "member_id": "SYN-2000059",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cole_trap_fit_old",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000059-1",
+      "start": 476,
+      "end": 500,
+      "text": "FIT 05/08/2025: negative"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "FIT must be in the measurement year"
+  },
+  {
+    "gap_id": "G2-000060",
+    "member_id": "SYN-2000060",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "cole_excl_crc",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "colorectal_cancer",
+      "supporting_date": "2018"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000060-1",
+      "start": 382,
+      "end": 445,
+      "text": "History of colon cancer, stage II, s/p right hemicolectomy 2018"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000061",
+    "member_id": "SYN-2000061",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cbp_pos_relative",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 133,
+      "diastolic": 70,
+      "reading_date": "2026-05-27",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000061-1",
+      "start": 432,
+      "end": 474,
+      "text": "nurse BP check here last Wednesday: 133/70"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document"
+    ],
+    "note": "relative date resolved from the dated note (Monday note, prior Wednesday)"
+  },
+  {
+    "gap_id": "G2-000062",
+    "member_id": "SYN-2000062",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000063",
+    "member_id": "SYN-2000063",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cbp_trap_range",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "bp_range_or_threshold",
+    "evidence": {
+      "doc_id": "DOC-2000063-1",
+      "start": 370,
+      "end": 429,
+      "text": "BPs have been running in the 130s over 80s at recent checks"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000064",
+    "member_id": "SYN-2000064",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cbp_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-03"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000064-1",
+      "start": 403,
+      "end": 431,
+      "text": "enrolled with hospice 3/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000065",
+    "member_id": "SYN-2000065",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "gsd_pos_relative",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 6.5,
+      "test_date": "2026-05-13"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000065-1",
+      "start": 434,
+      "end": 483,
+      "text": "A1c drawn at the lab last Wednesday returned 6.5%"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "relative date resolved from the dated note"
+  },
+  {
+    "gap_id": "G2-000066",
+    "member_id": "SYN-2000066",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000067",
+    "member_id": "SYN-2000067",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "gsd_trap_prior_year",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000067-1",
+      "start": 446,
+      "end": 469,
+      "text": "HbA1c 7.0% (10/03/2025)"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "result is from the prior year, outside MY2026"
+  },
+  {
+    "gap_id": "G2-000068",
+    "member_id": "SYN-2000068",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "gsd_excl_palliative",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "palliative_care",
+      "supporting_date": "2026-08-01"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000068-1",
+      "start": 499,
+      "end": 533,
+      "text": "comfort care discussed and elected"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000069",
+    "member_id": "SYN-2000069",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cole_hist_colonoscopy",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "colonoscopy",
+      "procedure_date": "2019"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000069-1",
+      "start": 445,
+      "end": 469,
+      "text": "colonoscopy 2019, normal"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": "history with a stated year counts; lands as supplemental data"
+  },
+  {
+    "gap_id": "G2-000070",
+    "member_id": "SYN-2000070",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000071",
+    "member_id": "SYN-2000071",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cole_trap_old_colonoscopy",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000071-1",
+      "start": 415,
+      "end": 439,
+      "text": "colonoscopy 2015, normal"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "2015 is outside the 10-year window (2017-2026)"
+  },
+  {
+    "gap_id": "G2-000072",
+    "member_id": "SYN-2000072",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "cole_excl_crc",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "colorectal_cancer",
+      "supporting_date": "2018"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000072-1",
+      "start": 346,
+      "end": 409,
+      "text": "History of colon cancer, stage II, s/p right hemicolectomy 2018"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000073",
+    "member_id": "SYN-2000073",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cbp_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 134,
+      "diastolic": 81,
+      "reading_date": "2026-08-05",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000073-1",
+      "start": 425,
+      "end": 461,
+      "text": "repeat after 5 minutes seated 134/81"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "same-day repeat: lowest systolic and lowest diastolic govern"
+  },
+  {
+    "gap_id": "G2-000074",
+    "member_id": "SYN-2000074",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000075",
+    "member_id": "SYN-2000075",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cbp_trap_threshold",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "bp_range_or_threshold",
+    "evidence": {
+      "doc_id": "DOC-2000075-1",
+      "start": 504,
+      "end": 539,
+      "text": "BP under control on current regimen"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000076",
+    "member_id": "SYN-2000076",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cbp_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-03"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000076-1",
+      "start": 411,
+      "end": 439,
+      "text": "enrolled with hospice 3/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000077",
+    "member_id": "SYN-2000077",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "gsd_pos_controlled",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 7.0,
+      "test_date": "2026-02-25"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000077-1",
+      "start": 392,
+      "end": 424,
+      "text": "HEMOGLOBIN A1C               7.0"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000078",
+    "member_id": "SYN-2000078",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000079",
+    "member_id": "SYN-2000079",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "gsd_trap_normal_nodate",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_value",
+    "evidence": {
+      "doc_id": "DOC-2000079-1",
+      "start": 373,
+      "end": 405,
+      "text": "A1c was normal at her last check"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000080",
+    "member_id": "SYN-2000080",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "gsd_excl_frailty",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "advanced_illness_frailty",
+      "supporting_date": "2026-03-02"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000080-1",
+      "start": 426,
+      "end": 472,
+      "text": "Frailty: uses a walker, two falls since spring"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": "requires age 66+ and both advanced illness and frailty"
+  },
+  {
+    "gap_id": "G2-000081",
+    "member_id": "SYN-2000081",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cole_fit",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "fit",
+      "procedure_date": "2026-03-17"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000081-1",
+      "start": 389,
+      "end": 426,
+      "text": "FECAL IMMUNOCHEM TEST        NEGATIVE"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000082",
+    "member_id": "SYN-2000082",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000083",
+    "member_id": "SYN-2000083",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cole_trap_fitdna_old",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000083-1",
+      "start": 373,
+      "end": 397,
+      "text": "Cologuard 2022, negative"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "FIT-DNA window is 2024-2026"
+  },
+  {
+    "gap_id": "G2-000084",
+    "member_id": "SYN-2000084",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "cole_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-05-16"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000084-1",
+      "start": 385,
+      "end": 426,
+      "text": "elected the hospice benefit on 05/16/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000085",
+    "member_id": "SYN-2000085",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cbp_pos_relative",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "systolic": 112,
+      "diastolic": 76,
+      "reading_date": "2026-09-02",
+      "setting": "outpatient",
+      "source": "office"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000085-1",
+      "start": 410,
+      "end": 452,
+      "text": "nurse BP check here last Wednesday: 112/76"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "relative date resolved from the dated note (Monday note, prior Wednesday)"
+  },
+  {
+    "gap_id": "G2-000086",
+    "member_id": "SYN-2000086",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cbp_neg_no_bp",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000087",
+    "member_id": "SYN-2000087",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cbp_trap_inpatient",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "ineligible_setting",
+    "evidence": {
+      "doc_id": "DOC-2000087-1",
+      "start": 329,
+      "end": 364,
+      "text": "Vital signs at discharge: BP 131/75"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": "inpatient readings are not eligible for CBP"
+  },
+  {
+    "gap_id": "G2-000088",
+    "member_id": "SYN-2000088",
+    "measure": "CBP",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cbp_excl_esrd",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "esrd_dialysis",
+      "supporting_date": "2024-09"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000088-1",
+      "start": 462,
+      "end": 521,
+      "text": "ESRD on in-center hemodialysis Mon/Wed/Fri, started 09/2024"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000089",
+    "member_id": "SYN-2000089",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "gsd_pos_mid",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "a1c_value": 8.5,
+      "test_date": "2026-05-10"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000089-1",
+      "start": 355,
+      "end": 387,
+      "text": "HEMOGLOBIN A1C               8.5"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document"
+    ],
+    "note": "between tiers (8.0-9.0)"
+  },
+  {
+    "gap_id": "G2-000090",
+    "member_id": "SYN-2000090",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "gsd_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000091",
+    "member_id": "SYN-2000091",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "gsd_trap_normal_nodate",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_value",
+    "evidence": {
+      "doc_id": "DOC-2000091-1",
+      "start": 401,
+      "end": 433,
+      "text": "A1c was normal at his last check"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000092",
+    "member_id": "SYN-2000092",
+    "measure": "GSD",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "gsd_excl_frailty",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "advanced_illness_frailty",
+      "supporting_date": "2026-07-03"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000092-1",
+      "start": 455,
+      "end": 501,
+      "text": "Frailty: uses a walker, two falls since spring"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "requires age 66+ and both advanced illness and frailty"
+  },
+  {
+    "gap_id": "G2-000093",
+    "member_id": "SYN-2000093",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cole_flexsig",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "procedure_type": "flexible_sigmoidoscopy",
+      "procedure_date": "2022-04"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000093-1",
+      "start": 378,
+      "end": 428,
+      "text": "flexible sigmoidoscopy in April 2022, unremarkable"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000094",
+    "member_id": "SYN-2000094",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cole_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000095",
+    "member_id": "SYN-2000095",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cole_trap_old_colonoscopy",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000095-1",
+      "start": 372,
+      "end": 396,
+      "text": "colonoscopy 2015, normal"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": "2015 is outside the 10-year window (2017-2026)"
+  },
+  {
+    "gap_id": "G2-000096",
+    "member_id": "SYN-2000096",
+    "measure": "COL-E",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "cole_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-03-01"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000096-1",
+      "start": 409,
+      "end": 450,
+      "text": "elected the hospice benefit on 03/01/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000097",
+    "member_id": "SYN-2000097",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_nia_pos",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "admission_date": "2026-03-21",
+      "notification_date": "2026-03-21"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000097-2",
+      "start": 408,
+      "end": 521,
+      "text": "Admission notification received from Mercy Vale Regional Medical Center on 03/21/2026 for admission on 03/21/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000098",
+    "member_id": "SYN-2000098",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "trc_nia_pos",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "admission_date": "2026-06-05",
+      "notification_date": "2026-06-06"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000098-2",
+      "start": 396,
+      "end": 509,
+      "text": "Admission notification received from Mercy Vale Regional Medical Center on 06/06/2026 for admission on 06/05/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000099",
+    "member_id": "SYN-2000099",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "trc_nia_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "no notification documented; the discharge summary alone is not a notification of admission"
+  },
+  {
+    "gap_id": "G2-000100",
+    "member_id": "SYN-2000100",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_nia_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": "no notification documented; the discharge summary alone is not a notification of admission"
+  },
+  {
+    "gap_id": "G2-000101",
+    "member_id": "SYN-2000101",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "trc_nia_trap_late",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000101-2",
+      "start": 404,
+      "end": 477,
+      "text": "Admission notification received on 05/29/2026 for admission on 05/26/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "notification must land on the admission day or the next day"
+  },
+  {
+    "gap_id": "G2-000102",
+    "member_id": "SYN-2000102",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "trc_nia_trap_late",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000102-2",
+      "start": 403,
+      "end": 476,
+      "text": "Admission notification received on 07/01/2026 for admission on 06/25/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": "notification must land on the admission day or the next day"
+  },
+  {
+    "gap_id": "G2-000103",
+    "member_id": "SYN-2000103",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-04-18"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000103-2",
+      "start": 456,
+      "end": 491,
+      "text": "enrolled with hospice on 04/18/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000104",
+    "member_id": "SYN-2000104",
+    "measure": "TRC",
+    "indicator": "NIA",
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-03-23"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000104-2",
+      "start": 493,
+      "end": 528,
+      "text": "enrolled with hospice on 03/23/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000105",
+    "member_id": "SYN-2000105",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_rdi_pos",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "discharge_date": "2026-06-04",
+      "receipt_date": "2026-06-05"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000105-2",
+      "start": 421,
+      "end": 482,
+      "text": "Discharge summary received 06/05/2026 (discharged 06/04/2026)"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000106",
+    "member_id": "SYN-2000106",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "trc_rdi_pos",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "discharge_date": "2026-06-18",
+      "receipt_date": "2026-06-18"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000106-2",
+      "start": 420,
+      "end": 481,
+      "text": "Discharge summary received 06/18/2026 (discharged 06/18/2026)"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000107",
+    "member_id": "SYN-2000107",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "trc_rdi_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000108",
+    "member_id": "SYN-2000108",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_rdi_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000109",
+    "member_id": "SYN-2000109",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "trc_rdi_trap_late",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000109-2",
+      "start": 416,
+      "end": 477,
+      "text": "Discharge summary received 06/21/2026 (discharged 06/09/2026)"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "discharge information must arrive on the discharge day or the next day"
+  },
+  {
+    "gap_id": "G2-000110",
+    "member_id": "SYN-2000110",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "trc_rdi_trap_undated",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "missing_or_ambiguous_date",
+    "evidence": {
+      "doc_id": "DOC-2000110-2",
+      "start": 473,
+      "end": 518,
+      "text": "Discharge paperwork brought in by the patient"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000111",
+    "member_id": "SYN-2000111",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-03-07"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000111-2",
+      "start": 465,
+      "end": 500,
+      "text": "enrolled with hospice on 03/07/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000112",
+    "member_id": "SYN-2000112",
+    "measure": "TRC",
+    "indicator": "RDI",
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-05-11"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000112-2",
+      "start": 452,
+      "end": 487,
+      "text": "enrolled with hospice on 05/11/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000113",
+    "member_id": "SYN-2000113",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_ped_pos_telephone",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "discharge_date": "2026-05-26",
+      "engagement_date": "2026-05-31",
+      "encounter_type": "telephone_visit"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000113-2",
+      "start": 346,
+      "end": 422,
+      "text": "Telephone visit with the patient today, 5 days after discharge on 05/26/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000114",
+    "member_id": "SYN-2000114",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "trc_ped_pos_office",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "discharge_date": "2026-02-12",
+      "engagement_date": "2026-03-05",
+      "encounter_type": "office_visit"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000114-2",
+      "start": 368,
+      "end": 440,
+      "text": "Post-discharge office visit today, 21 days after discharge on 02/12/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000115",
+    "member_id": "SYN-2000115",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "trc_ped_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": "a portal refill message is not patient engagement"
+  },
+  {
+    "gap_id": "G2-000116",
+    "member_id": "SYN-2000116",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_ped_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": "a portal refill message is not patient engagement"
+  },
+  {
+    "gap_id": "G2-000117",
+    "member_id": "SYN-2000117",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "trc_ped_trap_outreach_only",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "not_completed",
+    "evidence": {
+      "doc_id": "DOC-2000117-2",
+      "start": 472,
+      "end": 534,
+      "text": "Outreach call attempted 02/27/2026; voicemail left, no contact"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": "an attempted contact is not patient engagement; this note records no encounter"
+  },
+  {
+    "gap_id": "G2-000118",
+    "member_id": "SYN-2000118",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "trc_ped_trap_same_day",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": {
+      "doc_id": "DOC-2000118-2",
+      "start": 391,
+      "end": 442,
+      "text": "Seen in the office the day of discharge, 09/21/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document"
+    ],
+    "note": "engagement on the discharge date itself does not count"
+  },
+  {
+    "gap_id": "G2-000119",
+    "member_id": "SYN-2000119",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-04-17"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000119-2",
+      "start": 477,
+      "end": 512,
+      "text": "enrolled with hospice on 04/17/2026"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000120",
+    "member_id": "SYN-2000120",
+    "measure": "TRC",
+    "indicator": "PED",
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-08-12"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000120-2",
+      "start": 449,
+      "end": 484,
+      "text": "enrolled with hospice on 08/12/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000121",
+    "member_id": "SYN-2000121",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_mrp_pos_rn",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "discharge_date": "2026-03-17",
+      "reconciliation_date": "2026-03-22",
+      "author_role": "registered_nurse"
+    },
+    "abstain_reason": null,
+    "evidence": [
+      {
+        "doc_id": "DOC-2000121-2",
+        "start": 417,
+        "end": 438,
+        "text": "discharged 03/17/2026"
+      },
+      {
+        "doc_id": "DOC-2000121-2",
+        "start": 520,
+        "end": 616,
+        "text": "Discharge medication list reconciled against current medications on 03/22/2026 by A. Dunmore, RN"
+      }
+    ],
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000122",
+    "member_id": "SYN-2000122",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "trc_mrp_pos_md",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "discharge_date": "2026-05-27",
+      "reconciliation_date": "2026-06-18",
+      "author_role": "prescribing_practitioner"
+    },
+    "abstain_reason": null,
+    "evidence": [
+      {
+        "doc_id": "DOC-2000122-2",
+        "start": 410,
+        "end": 431,
+        "text": "discharged 05/27/2026"
+      },
+      {
+        "doc_id": "DOC-2000122-2",
+        "start": 513,
+        "end": 613,
+        "text": "Discharge medication list reconciled against current medications on 06/18/2026 by Mateo Farahani, DO"
+      }
+    ],
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000123",
+    "member_id": "SYN-2000123",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "trc_mrp_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000124",
+    "member_id": "SYN-2000124",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "trc_mrp_neg",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000125",
+    "member_id": "SYN-2000125",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "trc_mrp_trap_late",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "outside_lookback_window",
+    "evidence": [
+      {
+        "doc_id": "DOC-2000125-2",
+        "start": 423,
+        "end": 444,
+        "text": "discharged 01/30/2026"
+      },
+      {
+        "doc_id": "DOC-2000125-2",
+        "start": 526,
+        "end": 624,
+        "text": "Discharge medication list reconciled against current medications on 03/07/2026 by Mira Oyelowo, NP"
+      }
+    ],
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": "reconciliation after day 30"
+  },
+  {
+    "gap_id": "G2-000126",
+    "member_id": "SYN-2000126",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "trc_mrp_trap_reviewed_only",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "incomplete_evidence",
+    "evidence": {
+      "doc_id": "DOC-2000126-2",
+      "start": 520,
+      "end": 553,
+      "text": "Medications reviewed with patient"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": "a medication review without reconciliation against the discharge list is not med rec"
+  },
+  {
+    "gap_id": "G2-000127",
+    "member_id": "SYN-2000127",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-04-14"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000127-2",
+      "start": 492,
+      "end": 527,
+      "text": "enrolled with hospice on 04/14/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000128",
+    "member_id": "SYN-2000128",
+    "measure": "TRC",
+    "indicator": "MRP",
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "trc_excl_hospice",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "hospice",
+      "supporting_date": "2026-05-16"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000128-2",
+      "start": 434,
+      "end": 469,
+      "text": "enrolled with hospice on 05/16/2026"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000129",
+    "member_id": "SYN-2000129",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-IMA-OWN",
+    "split": "heldout",
+    "scenario": "ked_pos_note",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "egfr_value": 50,
+      "egfr_date": "2026-06-19",
+      "uacr_value": 12,
+      "uacr_date": "2026-06-19"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000129-1",
+      "start": 412,
+      "end": 476,
+      "text": "Labs 06/19/2026: eGFR 50, urine albumin/creatinine ratio 12 mg/g"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000130",
+    "member_id": "SYN-2000130",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IPA",
+    "split": "heldout",
+    "scenario": "ked_pos_fax",
+    "category": "positive",
+    "expected_finding": "numerator",
+    "expected_fields": {
+      "egfr_value": 69,
+      "egfr_date": "2026-05-01",
+      "uacr_value": 34,
+      "uacr_date": "2026-05-01"
+    },
+    "abstain_reason": null,
+    "evidence": [
+      {
+        "doc_id": "DOC-2000130-1",
+        "start": 415,
+        "end": 446,
+        "text": "EGFR (CKD-EPI 2021)          69"
+      },
+      {
+        "doc_id": "DOC-2000130-1",
+        "start": 477,
+        "end": 508,
+        "text": "UALB/CREAT RATIO             34"
+      }
+    ],
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000131",
+    "member_id": "SYN-2000131",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-IMA-IND",
+    "split": "heldout",
+    "scenario": "ked_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [
+      "duplicate_document",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000132",
+    "member_id": "SYN-2000132",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OWN",
+    "split": "heldout",
+    "scenario": "ked_neg_none",
+    "category": "negative",
+    "expected_finding": "none",
+    "expected_fields": {},
+    "abstain_reason": null,
+    "evidence": null,
+    "evidence_source": "none",
+    "fragmentation": [],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000133",
+    "member_id": "SYN-2000133",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-GMA-OON",
+    "split": "heldout",
+    "scenario": "ked_trap_dipstick",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "incomplete_evidence",
+    "evidence": {
+      "doc_id": "DOC-2000133-1",
+      "start": 429,
+      "end": 482,
+      "text": "eGFR 46 (06/09/2026); urine dipstick protein negative"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": "a dipstick protein is not a quantitative uACR"
+  },
+  {
+    "gap_id": "G2-000134",
+    "member_id": "SYN-2000134",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-DSNP-IND",
+    "split": "heldout",
+    "scenario": "ked_trap_ordered",
+    "category": "trap",
+    "expected_finding": "abstain",
+    "expected_fields": {},
+    "abstain_reason": "not_completed",
+    "evidence": {
+      "doc_id": "DOC-2000134-1",
+      "start": 456,
+      "end": 509,
+      "text": "eGFR and urine albumin/creatinine ratio ordered today"
+    },
+    "evidence_source": "primary",
+    "fragmentation": [
+      "duplicate_document"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000135",
+    "member_id": "SYN-2000135",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-MCD-IND",
+    "split": "heldout",
+    "scenario": "ked_excl_esrd",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "esrd_dialysis",
+      "supporting_date": "2024-03"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000135-1",
+      "start": 491,
+      "end": 544,
+      "text": "ESRD on hemodialysis three times weekly since 03/2024"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  },
+  {
+    "gap_id": "G2-000136",
+    "member_id": "SYN-2000136",
+    "measure": "KED",
+    "indicator": null,
+    "tranche_id": "TR-MCD-OON",
+    "split": "heldout",
+    "scenario": "ked_excl_esrd",
+    "category": "exclusion",
+    "expected_finding": "exclusion",
+    "expected_fields": {
+      "exclusion_type": "esrd_dialysis",
+      "supporting_date": "2023-01"
+    },
+    "abstain_reason": null,
+    "evidence": {
+      "doc_id": "DOC-2000136-1",
+      "start": 454,
+      "end": 507,
+      "text": "ESRD on hemodialysis three times weekly since 01/2023"
+    },
+    "evidence_source": "secondary",
+    "fragmentation": [
+      "evidence_in_secondary_source",
+      "cross_provider"
+    ],
+    "note": ""
+  }
+]

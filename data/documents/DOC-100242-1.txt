@@ -1,0 +1,11 @@
+EMERGENCY DEPARTMENT NOTE
+Facility: Mercy Vale Regional Medical Center
+Attending: R. Feldkamp, MD
+Patient: Carla Brightwater    Member ID: SYN-100242
+Arrival: 02/05/2026 18:42
+
+Chief complaint: left ankle pain after a fall from a step stool.
+Triage vitals: BP 119/83, HR 92, RR 16, SpO2 98%.
+Exam: swelling over lateral malleolus, able to bear weight with pain.
+X-ray: no fracture.
+Disposition: discharged home with ankle brace; follow up with PCP.

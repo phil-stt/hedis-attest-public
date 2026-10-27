@@ -1,0 +1,23 @@
+code: KED
+name: Kidney Health Evaluation for Patients With Diabetes
+star_weight: 1
+collection: admin only
+chart_lever: supplemental
+status: active
+prompt: ked.v1
+submission_channel: supplemental data (nonstandard)
+closes: An eGFR and a uACR (urine albumin with urine creatinine) both resulted in the measurement year, as supplemental data.
+family: paired_labs
+fields: [egfr_value, egfr_date, uacr_value, uacr_date]
+field_schema:
+  egfr_value: {type: number}
+  egfr_date: {type: string}
+  uacr_value: {type: number}
+  uacr_date: {type: string}
+field_labels: {egfr_value: "eGFR (mL/min/1.73m²)", egfr_date: eGFR date, uacr_value: "uACR (mg/g)", uacr_date: uACR date}
+params:
+  components:
+    - {value_field: egfr_value, date_field: egfr_date, plausible_range: [1, 200]}
+    - {value_field: uacr_value, date_field: uacr_date, plausible_range: [0, 10000]}
+exclusions: [hospice, palliative_care, advanced_illness_frailty, esrd_dialysis]
+synthetic_age: [40, 85]

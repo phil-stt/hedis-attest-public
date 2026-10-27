@@ -1,0 +1,17 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Jerome Zielinski    DOB: 01/01/1976    Member ID: SYN-100200
+Date of service: 04/17/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+
+OBJECTIVE
+Vitals: BP 152/92, HR 85, Temp 98.6 F, Wt 67 kg, SpO2 96%
+
+ASSESSMENT AND PLAN
+Elevated blood pressure: increase amlodipine to 10 mg daily; recheck in 6-8 weeks.
+
+Electronically signed by Dana Okonjo-Lind, MD on 04/17/2026

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Experiments · Attest{% endblock %}
+{% macro rate(p) -%}
+  {%- if p.value is none %}<span class="muted">-</span>{% else %}{{ '%.0f' | format(p.value * 100) }}% <span class="muted">({{ p.k }}/{{ p.n }}, LB {{ '%.2f' | format(p.lb) if p.lb is not none else '-' }})</span>{% endif -%}
+{%- endmacro %}
+{% block content %}
+<div class="page-head">
+  <h1>Experiments</h1>
+  <span class="sub">Which arm each reviewer works in, what they did there, and how the extraction variants compare. Every rate shows its n.</span>
+</div>
+
+<div class="card card-pad" style="margin-bottom:12px">
+  <h2>Your arm</h2>
+  <p style="margin:0 0 8px">You are <strong>{{ reviewer }}</strong> in <strong>{{ surfaces[surface].label }}</strong>{% if arm_override %} by override{% else %} by assignment (a stable hash of your reviewer id){% endif %}. Overrides are marked in the exposure log so they never count as assigned traffic.</p>
+  <form method="post" action="/experiments/arm" class="actions">
+    <select name="arm">
+      <option value="">Clear override (use assignment)</option>
+      {% for sid, s in surfaces.items() %}<option value="{{ sid }}" {{ 'selected' if arm_override and sid == surface }}>{{ s.label }}</option>{% endfor %}
+    </select>
+    <button type="submit">Switch arm</button>
+  </form>
+</div>
+
+<h2>Surface arms</h2>
+<div class="card" style="margin-bottom:8px">
+  <table class="queue">
+    <thead><tr><th>Arm</th><th class="num">Reviewers</th><th class="num">Exposures</th><th class="num">Reviewer-hours</th><th class="num">Decisions</th><th class="num">Decisions / hour</th><th>Accept</th><th>Reject</th><th>Needs more</th><th class="num">Abstains resolved</th><th class="num">Catches (unaudited / confirmed)</th><th>QA-audited error rate</th></tr></thead>
+    <tbody>
+      {% for a in arms %}
+      <tr>
+        <td><strong>{{ a.label }}</strong><div class="muted" style="font-size:12px">{{ surfaces[a.surface].description if a.surface in surfaces else '' }}</div></td>
+        <td class="num">{{ a.reviewers }}</td>
+        <td class="num">{{ a.exposures }}</td>
+        <td class="num">{{ a.reviewer_hours }}</td>
+        <td class="num">{{ a.decisions }}</td>
+        <td class="num">{{ a.decisions_per_hour if a.decisions_per_hour is not none else "-" }}</td>
+        <td>{{ rate(a.accept) }}</td>
+        <td>{{ rate(a.reject) }}</td>
+        <td>{{ rate(a.needs_more) }}</td>
+        <td class="num">{{ a.abstain_resolutions }}</td>
+        <td class="num">{{ a.catches_unaudited }} / {{ a.catches_confirmed }}</td>
+        <td>{% if a.qa_audited_error_rate.n %}{{ rate(a.qa_audited_error_rate) }}{% else %}<span class="muted">no audits yet{% if a.qa_pending %} ({{ a.qa_pending }} pending){% endif %}</span>{% endif %}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">With one reviewer there is no statistical test here. The layer is instrumented so that when several nurses work in parallel, assignment, exposure, and decisions are already recorded per arm. The rate that decides between arms is the QA-audited error rate: a sample of accepted findings re-reviewed by a second person on the <a href="/qa">QA page</a>, overturned over audited. A "catch" is a rejection of a proposed finding; it is confirmed when QA upholds it. Decisions per hour is context, never the score.</p>
+
+<h2>Extraction variants</h2>
+<div class="card" style="margin-bottom:8px">
+  <table class="queue">
+    <thead><tr><th>Variant</th><th>Config</th><th class="num">Findings in store</th><th>Mix</th><th class="num">Pipeline items</th><th class="num">$ / gap</th><th class="num">Skip share</th><th class="num">Unread-bucket recall</th></tr></thead>
+    <tbody>
+      {% for v in extraction %}
+      <tr>
+        <td class="mono">{{ v.variant_id }}</td>
+        <td class="muted" style="white-space:normal; font-size:12px">{% if v.config %}{{ v.config.model }} · {{ v.config.effort }} · {% for k, p in (v.config.prompts or {}).items() %}{{ p }}{{ ', ' if not loop.last }}{% endfor %}{% if v.config.router %} · router {{ v.config.router }}{% endif %}{% else %}-{% endif %}</td>
+        <td class="num">{{ v.findings }}</td>
+        <td class="muted" style="font-size:12px">{% for k, n in v.mix.items() %}{{ k }} {{ n }}{{ ' · ' if not loop.last }}{% endfor %}</td>
+        <td class="num">{{ v["items"] }}</td>
+        <td class="num">{{ '%.4f' | format(v.cost_per_gap) if v.cost_per_gap is not none else '-' }}</td>
+        <td class="num">{{ '%.0f%%' | format(v.skip_share * 100) if v.skip_share is not none else '-' }}</td>
+        <td class="num">{{ v.unread_bucket_recall if v.unread_bucket_recall is not none else '-' }}</td>
+      </tr>
+      {% else %}
+      <tr><td colspan="8" class="muted">No extraction variants recorded yet; the pipeline registers one per run.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">Pipeline items, cost per gap, skip share, and unread-bucket recall are read from this store's pipeline job rows. The measured population run (1,088 gaps, $0.0119 per gap at 83% cache share; router 23% skipped, 0 closures lost) was made in a separate population store and is reported in the README and changelog; a store that only holds imported findings shows 0 items here.</p>
+<p class="footnote">Extraction variants are compared offline, where the labels are: <code>python -m attest.eval diff &lt;run A&gt; &lt;run B&gt;</code> shows two runs on one label set gap by gap, and <code>python -m attest.pipeline compare A B</code> shows two variants on the gaps both processed. A variant becomes the production default only after it passes the held-out gate.</p>
+{% endblock %}

@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Abel Abernathy    DOB: 11/10/1949    Member ID: SYN-100256
+Date of service: 07/19/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Mild low back stiffness after gardening, improving with heat.
+Here for routine follow-up of chronic conditions.
+
+OBJECTIVE
+Vitals: BP 154/82, HR 76, Temp 97.9 F, Wt 58 kg, SpO2 97%
+
+ASSESSMENT AND PLAN
+Hypertension, above goal today: add hydrochlorothiazide 12.5 mg daily; recheck in 4 weeks.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 07/19/2026

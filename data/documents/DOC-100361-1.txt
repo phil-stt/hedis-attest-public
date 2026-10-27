@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Bruno Underhill    DOB: 06/28/1956    Member ID: SYN-100361
+Date of service: 08/13/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Mild low back stiffness after gardening, improving with heat.
+Walking about 20 minutes most days with a neighbor.
+
+OBJECTIVE
+Vitals: HR 82, Temp 98.6 F, Wt 75 kg, SpO2 97%
+Prior screening: FIT 09/12/2025: negative.
+
+ASSESSMENT AND PLAN
+Colorectal cancer screening: due; FIT kit offered.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 08/13/2026

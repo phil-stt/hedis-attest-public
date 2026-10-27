@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Rosa Marchetti    DOB: 11/17/1971    Member ID: SYN-100235
+Date of service: 07/13/2026
+Visit type: Telephone follow-up
+
+SUBJECTIVE
+Seasonal allergies flaring; using over-the-counter loratadine.
+Requests refills of maintenance medications.
+Reviewed results by phone: A1c drawn at the lab last Wednesday returned 6.9%.
+
+OBJECTIVE
+Vitals: not obtained (remote visit)
+
+ASSESSMENT AND PLAN
+Type 2 diabetes: continue metformin 1000 mg twice daily; foot exam normal.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 07/13/2026

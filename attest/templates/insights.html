@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}Insights · Attest{% endblock %}
+{% set seg_labels = {'evidence': 'Evidence found', 'abstain': 'Abstained', 'none': 'Nothing found', 'no_chart': 'No chart yet'} %}
+{% block content %}
+<div class="page-head">
+  <h1>Insights</h1>
+  <span class="sub">Built from the gap list and what Attest found in the queue. Synthetic data.</span>
+</div>
+{% if tranches | length > 1 %}
+<div class="filters">
+  <span class="lbl">Tranche</span>
+  <div class="group">
+    <a class="{{ 'on' if not tranche }}" href="/insights">All</a>
+    {% for t in tranches.values() %}<a class="{{ 'on' if tranche == t.tranche_id }}" href="?tranche={{ t.tranche_id }}">{{ t.name }}</a>{% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if by_tranche | length > 1 %}
+<h2>Yield by tranche</h2>
+<div class="card" style="margin-bottom:16px">
+  <table class="queue">
+    <thead><tr><th>Tranche</th><th>Line of business</th><th class="num">Gaps</th><th class="num">Charted</th><th class="num">Evidence found</th><th class="num">Abstained</th><th class="num">No chart</th><th>Yield (95% LB)</th><th class="num">Accepted</th></tr></thead>
+    <tbody>
+      {% for r in by_tranche %}
+      <tr>
+        <td><a href="?tranche={{ r.tranche.tranche_id }}">{{ r.tranche.name }}</a></td>
+        <td class="muted">{{ r.lob or '-' }}</td>
+        <td class="num">{{ r.gaps }}</td><td class="num">{{ r.charted }}</td><td class="num">{{ r.found }}</td>
+        <td class="num">{{ r.abstain }}</td><td class="num">{{ r.no_chart }}</td>
+        <td>{{ '%.0f%%' | format(r.share * 100) }} <span class="muted">(≥ {{ '%.0f%%' | format(r.share_lb * 100) }})</span></td>
+        <td class="num">{{ r.accepted }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">Ranked by the lower bound of the share of charted gaps where Attest found evidence, so a tranche with few charts can't top the list on a lucky ratio. The tables below honor the tranche filter above; this one always shows every tranche.</p>
+{% endif %}
+
+<h2>Open gaps by measure</h2>
+<div class="card card-pad" style="margin-bottom:8px">
+  <div class="legend" aria-hidden="true">
+    {% for k in ['evidence', 'abstain', 'none', 'no_chart'] %}<span><i class="sw seg-{{ k }}"></i>{{ seg_labels[k] }}</span>{% endfor %}
+  </div>
+  <table class="queue stack-table">
+    <thead><tr><th>Measure</th><th style="width:44%">Where the gaps stand</th>
+      {% for k in ['evidence', 'abstain', 'none', 'no_chart'] %}<th class="num">{{ seg_labels[k] }}</th>{% endfor %}
+      <th class="num">Accepted</th></tr></thead>
+    <tbody>
+      {% for r in by_measure %}
+      <tr>
+        <td><strong>{{ r.measure }}</strong> <span class="muted">{{ r.total }} gaps</span></td>
+        <td>
+          <div class="stack" role="img" aria-label="{{ r.measure }}: {% for k in ['evidence', 'abstain', 'none', 'no_chart'] %}{{ r[k] }} {{ seg_labels[k] | lower }}{{ ', ' if not loop.last }}{% endfor %}">
+            {% for k in ['evidence', 'abstain', 'none', 'no_chart'] %}{% if r[k] %}
+            <span class="seg seg-{{ k }}" style="flex: {{ r[k] }}" title="{{ seg_labels[k] }}: {{ r[k] }} of {{ r.total }}"></span>
+            {% endif %}{% endfor %}
+          </div>
+        </td>
+        {% for k in ['evidence', 'abstain', 'none', 'no_chart'] %}<td class="num">{{ r[k] }}</td>{% endfor %}
+        <td class="num">{{ r.accepted }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">Every gap here is open in the claims-based gap list. "Evidence found" means the chart already documents care that closes it (or excludes the member): the care was delivered but never coded.</p>
+
+{% if excluded %}
+<p class="footnote">Excluded from the gap engine: {% for e in excluded %}<strong>{{ e.name }}</strong>, {{ e.members }} member{{ '' if e.members == 1 else 's' }} ({{ e.reason }}){{ '; ' if not loop.last }}{% endfor %}. They appear here so the exclusion is a visible decision, not a silent omission.</p>
+{% endif %}
+
+<h2>Where evidence exists but isn't coded</h2>
+<div class="card" style="margin-bottom:8px">
+  <table class="queue">
+    <thead><tr><th>Provider</th><th>Clinic</th><th class="num">Open gaps</th><th class="num">Charts read</th>
+      <th style="width:30%">Evidence found in chart</th><th class="num">95% LB</th><th class="num">Abstained</th><th class="num">Accepted</th></tr></thead>
+    <tbody>
+      {% for r in by_provider %}
+      <tr>
+        <td>{{ r.provider.name }}</td>
+        <td class="muted">{{ r.provider.clinic }}</td>
+        <td class="num">{{ r.gaps }}</td>
+        <td class="num">{{ r.charted }}</td>
+        <td>
+          <span class="sharebar" title="{{ r.found }} of {{ r.charted }} charts read">
+            <span class="track"><span class="fill" style="width: {{ (r.share * 100) | round | int }}%"></span></span>
+            {{ '%.0f' | format(r.share * 100) }}% <span class="muted">({{ r.found }}/{{ r.charted }})</span>
+          </span>
+        </td>
+        <td class="num">{{ '%.2f' | format(r.share_lb) }}</td>
+        <td class="num">{{ r.abstain }}</td>
+        <td class="num">{{ r.accepted }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">Sorted by the 95% lower bound on the share, so a provider with few charts doesn't outrank one with many on a lucky ratio. A provider near the top delivers the care and doesn't code it. That's a coding-education conversation and a standing supplemental-data feed, not a chart chase every year. Read it as where to look, not a ranking of people.</p>
+
+<h2>Chase worthiness: gaps with no chart yet</h2>
+<div class="card" style="margin-bottom:8px">
+  <table class="queue">
+    <thead><tr><th>Rank</th><th>Gap</th><th>Member</th><th>Measure</th><th>Provider</th>
+      <th class="num">Provider yield</th><th class="num">Measure yield</th><th class="num">Urgency</th><th style="width:20%">Score</th></tr></thead>
+    <tbody>
+      {% for r in chase %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td class="mono">{{ r.gap.gap_id }}</td>
+        <td>{{ r.member.name }} <span class="mono">{{ r.member.member_id }}</span></td>
+        <td>{{ r.gap.measure }}</td>
+        <td class="muted">{{ r.provider.name }}</td>
+        <td class="num">{{ '%.2f' | format(r.components.provider_yield) }}</td>
+        <td class="num">{{ '%.2f' | format(r.components.measure_yield) }}</td>
+        <td class="num">{{ '%.2f' | format(r.components.urgency) }}</td>
+        <td><span class="sharebar"><span class="track"><span class="fill" style="width: {{ (r.score * 100) | round | int }}%"></span></span>{{ '%.2f' | format(r.score) }}</span></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="9" class="muted">Every gap has a chart.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">
+  Rule-based on purpose. Score = {{ weights.provider_yield }} × provider yield (share of that provider's charts where Attest found evidence, pulled toward the overall {{ '%.0f' | format(overall_yield * 100) }}% by {{ prior }} pseudo-charts so a small sample can't dominate)
+  + {{ weights.measure_yield }} × measure yield + {{ weights.urgency }} × urgency ({{ days_left }} days to the assumed supplemental-data cutoff, {{ cutoff }}).
+  This is where prediction enters the product first: a trained model replaces these weights once there's chase history to learn from.
+</p>
+{% endblock %}

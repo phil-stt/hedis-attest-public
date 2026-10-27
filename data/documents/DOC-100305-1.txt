@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Ezra Delacroix    DOB: 01/17/1972    Member ID: SYN-100305
+Date of service: 06/10/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Reports intermittent right knee pain with stairs, worse in the morning.
+Mild low back stiffness after gardening, improving with heat.
+Past surgical/procedural history: cholecystectomy; colonoscopy 2019, normal.
+
+OBJECTIVE
+Vitals: HR 85, Temp 98.4 F, Wt 84 kg, SpO2 97%
+
+ASSESSMENT AND PLAN
+Knee pain: likely osteoarthritis; trial of topical diclofenac gel.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 06/10/2026

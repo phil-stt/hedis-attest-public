@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Marcus Tellefsen, DO
+Patient: Zora Castellano    DOB: 07/17/1965    Member ID: SYN-100438
+Date of service: 03/17/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Denies chest pain, shortness of breath, or palpitations.
+Requests refills of maintenance medications.
+Past procedural history: colonoscopy 2015, normal.
+
+OBJECTIVE
+Vitals: HR 87, Temp 98.2 F, Wt 95 kg, SpO2 98%
+
+ASSESSMENT AND PLAN
+Knee pain: likely osteoarthritis; trial of topical diclofenac gel.
+Follow up in 3 months.
+
+Electronically signed by Marcus Tellefsen, DO on 03/17/2026

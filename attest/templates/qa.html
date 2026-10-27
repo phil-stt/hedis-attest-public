@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "_macros.html" import finding_badge %}
+{% block title %}QA · Attest{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>QA audits</h1>
+  <span class="sub">A second person re-reviews a sample of decisions: {{ (sample_rate * 100) | round | int }}% of accepts, and every rejection of a proposed finding. You cannot audit your own.</span>
+</div>
+<div class="filters">
+  <span class="lbl">Show</span>
+  <div class="group">
+    <a class="{{ 'on' if show == 'pending' }}" href="?show=pending">Pending</a>
+    <a class="{{ 'on' if show == 'all' }}" href="?show=all">All</a>
+  </div>
+</div>
+<div class="card">
+  <table class="queue">
+    <thead><tr><th>Gap</th><th>Member</th><th>Measure</th><th>Attest said</th><th>Decision</th><th>Reviewer</th><th>Verdict</th></tr></thead>
+    <tbody>
+      {% for r in rows %}
+      <tr>
+        <td><a class="mono" href="/gap/{{ r.gap_id }}">{{ r.gap_id }}</a></td>
+        <td>{{ r.member.name if r.member else '-' }}</td>
+        <td>{{ r.gap.measure }}{% if r.gap.indicator %}:{{ r.gap.indicator }}{% endif %}</td>
+        <td>{% if r.finding %}{{ finding_badge(r.finding.finding_type, finding_labels) }}{% endif %}</td>
+        <td>{{ r.action | replace('_', ' ') }}{% if r.reason %} <span class="muted">· {{ r.reason }}</span>{% endif %}</td>
+        <td>{{ r.reviewer }}</td>
+        <td>
+          {% if r.verdict %}
+            <span class="badge {{ 'b-human' if r.verdict == 'upheld' else 'b-error' }}">{{ r.verdict }}</span> <span class="muted">by {{ r.auditor }}{% if r.note %} · {{ r.note }}{% endif %}</span>
+          {% elif r.mine %}
+            <span class="muted">your decision; someone else audits it</span>
+          {% else %}
+            <form method="post" action="/qa/{{ r.id }}" class="action-row">
+              <input type="text" name="note" placeholder="Note (optional)" style="min-width:160px">
+              <button name="verdict" value="upheld" class="accept">Uphold</button>
+              <button name="verdict" value="overturned">Overturn</button>
+            </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% else %}
+      <tr><td colspan="7" class="muted">Nothing to audit.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">An overturned accept is an audited error, the number the experiment is scored on. An upheld rejection of a proposal is a confirmed catch. Open the gap first: the chart, the finding, and the record are all there.</p>
+{% endblock %}

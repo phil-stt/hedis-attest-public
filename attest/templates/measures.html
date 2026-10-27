@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Measures · Attest{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Measures</h1>
+  <span class="sub">The priority list, with what Attest can and cannot do for each. Weights per CMS Star Ratings; verify before quoting.</span>
+</div>
+<div class="card">
+  <table class="queue">
+    <thead><tr><th>Measure</th><th>Name</th><th class="num">Star weight</th><th>Collection (MY{{ my }})</th><th>Chart lever</th><th>Attest status</th><th>What closes it</th></tr></thead>
+    <tbody>
+      {% for m in measures_all %}
+      <tr>
+        <td><strong>{{ m.code }}</strong></td>
+        <td>{{ m.name }}{% if m.indicators %}<div class="muted" style="font-size:12px">{% for k, ind in m.indicators.items() %}{{ k }}: {{ ind.name }}{{ '; ' if not loop.last }}{% endfor %}</div>{% endif %}</td>
+        <td class="num">{{ m.star_weight }}x</td>
+        <td class="muted">{{ m.collection }}</td>
+        <td>{% if m.chart_lever == 'none' %}<span class="badge b-gray">none</span>{% elif m.chart_lever == 'strong' %}<span class="badge b-ai">strong</span>{% else %}<span class="badge b-gray">{{ m.chart_lever }}</span>{% endif %}</td>
+        <td>{% if m.status == 'active' %}<span class="badge b-human">active</span>{% elif m.status == 'planned' %}<span class="badge b-abstain">planned</span>{% else %}<span class="muted">registry only</span>{% endif %}</td>
+        <td class="muted" style="white-space:normal; min-width:260px">{{ m.closes }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<p class="footnote">"Chart lever" is how much of the proof sits in unstructured records. Measures with none (readmissions, the three adherence measures) are listed so the product says plainly which measures it does not help with. Order of build: TRC and KED, then BCS-E and EED, then COA-FSA and OMW.</p>
+{% endblock %}

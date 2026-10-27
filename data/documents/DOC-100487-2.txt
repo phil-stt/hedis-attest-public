@@ -1,0 +1,19 @@
+PROGRESS NOTE
+Clinic: Lakeshore Internal Medicine
+Provider: Helena Quarshie, MD
+Patient: Lena Bellweather    DOB: 04/23/1970    Member ID: SYN-100487
+Date of service: 04/19/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Sleeping poorly over the last month; discussed sleep hygiene.
+Denies chest pain, shortness of breath, or palpitations.
+
+OBJECTIVE
+Vitals: HR 68, Temp 98.6 F, Wt 60 kg, SpO2 97%
+
+ASSESSMENT AND PLAN
+Hypertension: continue lisinopril 20 mg daily; low-sodium diet reviewed.
+Follow up in 3 months.
+
+Electronically signed by Helena Quarshie, MD on 04/19/2026

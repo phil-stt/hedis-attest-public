@@ -1,0 +1,20 @@
+PROGRESS NOTE
+Clinic: Riverbend Family Medicine
+Provider: Dana Okonjo-Lind, MD
+Patient: Wanda Nakashima-Reyes    DOB: 11/27/1977    Member ID: SYN-100207
+Date of service: 05/15/2026
+Visit type: Office visit (in person)
+
+SUBJECTIVE
+Denies chest pain, shortness of breath, or palpitations.
+Requests refills of maintenance medications.
+Past surgical history: s/p total colectomy (2012) for ulcerative colitis.
+
+OBJECTIVE
+Vitals: HR 68, Temp 98.2 F, Wt 70 kg, SpO2 99%
+
+ASSESSMENT AND PLAN
+Allergic rhinitis: continue loratadine, add saline rinses.
+Follow up in 3 months.
+
+Electronically signed by Dana Okonjo-Lind, MD on 05/15/2026
